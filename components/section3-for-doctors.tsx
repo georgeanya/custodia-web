@@ -10,7 +10,7 @@ const Section3 = () => {
   return (
     <div className="px-5 md:px-32 md:pt-28 pt-20 md:pb-36 pb-24 " id="benefits">
       <h2 className="text-2xl leading-9 md:text-start md:text-4xl md:max-w-xl font-bold text-[#002A47] md:pr-6">
-        Here’s why you should partner with us
+        Here&apos;s why you should partner with us
       </h2>
       <div className="md:mt-6 flex flex-wrap justify-between">
         <div className="mt-17 sm:max-w-s">

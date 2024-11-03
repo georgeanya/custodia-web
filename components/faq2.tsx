@@ -9,6 +9,8 @@ const FAQ2 = ({ faq, index, toggleFAQ }: any) => {
         className="flex justify-between"
         onClick={() => toggleFAQ(index)}
         key={index}
+        role="button"
+        tabIndex={0}
       >
         <div className="self-center">
           <p className="text-lg leading-6 md:text-1xl md:leading-8 text-[#002A47] font-medium">

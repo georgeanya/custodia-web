@@ -109,11 +109,11 @@ const Research = () => {
           significant dietary changes and weight loss.
         </p>
         <p className="mt-[30px] text-[15px] leading-[25px]  md:text-[18px] md:leading-[30px] text-[#476D85]">
-          Professor Taylor's "Twin Cycle Hypothesis" proposes that type 2
-          diabetes results from energy overload. When the body's healthy fat
+          Professor Taylor&apos;s &apos;Twin Cycle Hypothesis&apos; proposes that type 2
+          diabetes results from energy overload. When the body&apos;s healthy fat
           storage capacity is overwhelmed, fat is stored inappropriately in
           organs like the liver and pancreas, leading to insulin resistance and
-          eventually diabetes. Crucially, Professor Taylor's work indicates that
+          eventually diabetes. Crucially, Professor Taylor&apos;s work indicates that
           this process can be reversed by removing excess fat.
         </p>
         <p className="mt-[30px] text-[15px] leading-[25px]  md:text-[18px] md:leading-[30px] text-[#476D85]">
@@ -127,9 +127,9 @@ const Research = () => {
           linked to the amount of weight lost.
         </p>
         <p className="mt-[30px] text-[15px] leading-[25px]  md:text-[18px] md:leading-[30px] text-[#476D85]">
-          Professor Taylor's research defines remission as achieving an HbA1c
+          Professor Taylor&apos;s research defines remission as achieving an HbA1c
           level below 6.5% without diabetes medications. The work also
-          introduces the concept of a "personal fat threshold," explaining why
+          introduces the concept of a &apos;personal fat threshold,&apos; explaining why
           some people develop diabetes at lower BMIs than others. This research
           offers hope for diabetes reversal through dietary intervention,
           especially when implemented early in the disease course.

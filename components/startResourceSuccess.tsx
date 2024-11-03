@@ -25,7 +25,7 @@ const StartTestSuccess = () => {
         Your ebook has been sent
       </h1>
       <p className="mt-4 text-base leading-[23px] md:leading-[27px] md:text-lg font-normal md:text-start text-[#476D85] mb-7">
-        You're all set, a copy has been sent to your WhatsApp number!
+        You&apos;re all set, a copy has been sent to your WhatsApp number!
       </p>
       <Link href="https://chat.whatsapp.com/FRbf5Bs3IgE77YDfbZUV1U">
         <SustainButton

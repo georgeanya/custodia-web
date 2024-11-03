@@ -60,7 +60,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="lg:w-2/4 flex lg:p-10 justify-center">
-        <img src={hero.src} alt="Custodia Hero Image" />
+        <img src={hero.src} alt="Custodia Hero" />
       </div>
     </div>
   );

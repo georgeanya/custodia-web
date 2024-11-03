@@ -9,6 +9,8 @@ const FAQ = ({ faq, index, toggleFAQ }: any) => {
         className=" inline-flex"
         onClick={() => toggleFAQ(index)}
         key={index}
+        role="button"
+        tabIndex={0}
       >
         <div className="self-start min-w-fit cursor-pointer h-4 md:h-5">
           {faq.open ? (

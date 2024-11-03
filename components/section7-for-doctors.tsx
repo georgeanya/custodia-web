@@ -39,7 +39,7 @@ const Section7 = () => {
         </div>
       </div>
       <div className="flex justify-center flex-col max-w-lg mt-17 md:mt-0">
-        <img src={labs.src} alt="Lab Image" />
+        <img src={labs.src} alt="Lab" />
       </div>
     </div>
   );

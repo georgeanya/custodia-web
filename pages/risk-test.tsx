@@ -14,7 +14,7 @@ type Question = {
     text: string;
     count: number;
   }[];
-  
+
 };
 
 const questions: Question[] = [
@@ -156,12 +156,12 @@ const RiskTest = () => {
                   ))}
                 </ul>
               </div>
-              <p
+             <button
                 onClick={() => restartTest()}
-                className="text-[#4F9EEA] text-[14px] leading-[17px] text-center font-medium pt-7"
+                className="text-[#4F9EEA] text-[14px] leading-[17px] text-center font-medium pt-7 hover:underline focus:outline-none focus:ring-2 focus:ring-[#4F9EEA] focus:ring-opacity-50 rounded"
               >
                 Click here to start again
-              </p>
+              </button>
             </div>
           )}
         </div>

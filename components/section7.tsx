@@ -31,7 +31,7 @@ const Section7 = () => {
       </h2>
       <div className="md:flex justify-between">
         <div className="max-w-[344px] ">
-          <img src={phone.src} alt="Phone Image" className="" />
+          <img src={phone.src} alt="Phone" className="" />
           <img
             src={one.src}
             alt="Icon"
@@ -61,7 +61,7 @@ const Section7 = () => {
           </p>
         </div>
         <div className="max-w-[344px] mt-[50px] md:mt-0">
-          <img src={meal.src} alt="Menu Image" className="" />
+          <img src={meal.src} alt="Menu" className="" />
           <img
             src={three.src}
             alt="Icon"
