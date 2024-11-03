@@ -43,7 +43,7 @@ const Hero = () => {
         </div>
       </div>
       <div className=" md:w-2/4 flex md:p-10 justify-center">
-        <img src={hero.src} alt="Custodia Hero Image" />
+        <img src={hero.src} alt="Custodia Hero" />
       </div>
     </div>
   );
