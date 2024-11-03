@@ -50,7 +50,7 @@ const Section3 = () => {
           </p>
           <p className="text-base leading-6 md:text-lg md:leading-relaxed text-[#476D85] mt-2">
             Referring patients is very easy. Simply fill out our referral form,
-            and we'll take care of the rest.
+            and we&apos;ll take care of the rest.
           </p>
         </div>
         <div className="mt-17 sm:max-w-s">

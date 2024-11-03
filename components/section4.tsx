@@ -99,7 +99,7 @@ const Section4 = () => {
         </div>
       </div>
       <div className="flex justify-center items-start md:mt-48 max-w-xl mt-18 ">
-        <img src={support.src} alt="Support Image" className="md:w-11/12" />
+        <img src={support.src} alt="Support" className="md:w-11/12" />
       </div>
     </div>
   );

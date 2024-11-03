@@ -149,6 +149,8 @@ const RiskTest = () => {
                       <div
                         className="py-[16px] text-[#002A47] max-w-[400px] border border-[#D7D7DB] hover:border-[#4F9EEA] my-2 text-center rounded-2xl text-sm md:text-base md:leading-5 leading-4"
                         onClick={() => handleOptionClick(option?.count)}
+                        role="button"
+                        tabIndex={0}
                       >
                         {option?.text}
                       </div>

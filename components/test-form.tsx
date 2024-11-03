@@ -223,14 +223,14 @@ const TestForm = ({ tScore, start }: any) => {
                 </div>
               </SustainButton>
             )}
-            <p
+            <button
               onClick={() => {
                 start();
               }}
               className="mt-7 text-[#4F9EEA] text-center text-sm"
             >
               Click here to start again
-            </p>
+            </button>
           </div>
         </form>
       </div>
