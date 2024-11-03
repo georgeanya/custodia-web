@@ -14,6 +14,7 @@ type Question = {
     text: string;
     count: number;
   }[];
+  
 };
 
 const questions: Question[] = [
