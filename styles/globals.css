@@ -39,6 +39,14 @@
   font-family: "Circular Std" !important;
 }
 
+:root {
+  --nextui-colors-background: #ffffff;
+  
+  --nextui-fonts-sans: "Circular Std";
+  /* Add other color and typography variables as needed */
+}
+
+
 /* styles.css or global.css */
 .hide-scrollbar::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
