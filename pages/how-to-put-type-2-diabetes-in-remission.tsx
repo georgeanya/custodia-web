@@ -40,7 +40,8 @@ interface IState {
   };
 }
 
-const url = "https://custodia-health-api-b53b05e2c965.herokuapp.com/v1/crm/webinar/join";
+const url =
+  "https://custodia-health-api-b53b05e2c965.herokuapp.com/v1/crm/webinar/join";
 
 const Webinar = () => {
   const [state, setState] = useState<IState>({
@@ -55,8 +56,6 @@ const Webinar = () => {
   const [isSuccess, setIsSuccess] = useState(false);
 
   const [isError, setIsError] = useState(false);
-
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const script = document.createElement("script");
@@ -99,7 +98,7 @@ const Webinar = () => {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>): any => {
     event.preventDefault();
-    setIsLoadingFunc();
+
     axios
       .post(url, {
         first_name: state.user.first_name,
@@ -108,14 +107,12 @@ const Webinar = () => {
         phone_number: `234${state.user.phone_number?.slice(1)}`,
       })
       .then((res) => {
-        if (
-          res.data.message === "webinar registration successful" 
-        ) {
+        if (res.data.message === "webinar registration successful") {
           setIsSuccessFunc();
-          console.log("registeration successful")
+          console.log("registeration successful");
         } else {
           setIsErrorFunc();
-          console.log("registeration failed")
+          console.log("registeration failed");
         }
       })
       .catch((error) => {
@@ -124,9 +121,6 @@ const Webinar = () => {
       });
   };
 
-  const setIsLoadingFunc = () => {
-    setIsLoading(!isLoading);
-  };
   return (
     <div>
       <Head>
@@ -253,7 +247,7 @@ const Webinar = () => {
         </div>
         <div className={isSuccess || isError ? "hidden" : "block"}>
           <div className="md:w-[460px] px-5 md:px-8 py-[40px] md:py-[52px] bg-[#FFFFFF] rounded-[20px]">
-            <p className="text-[22px] leading-[28px] md:text-[24px] md:leading-[30px] font-medium ">
+            <p className="text-[22px] leading-[28px] md:text-[24px] md:leading-[30px] font-medium text-[#002A47]">
               Book your seat now
             </p>
             <form onSubmit={handleSubmit}>
@@ -323,25 +317,24 @@ const Webinar = () => {
                 </p>
               </div>
               <div>
-              <SustainButton type="submit">Book a seat</SustainButton>
-            </div>
-            </form>
-            
-          </div>
-          <div className={isSuccess ? "block" : "hidden"}>
-            <div className="md:w-[460px] px-8 py-[64px] md:py-[80px] bg-[#FFFFFF] rounded-[20px]">
-              <div className="flex justify-center">
-                <img src={circle.src} alt="" />
+                <SustainButton type="submit">Book a seat</SustainButton>
               </div>
-              <p className="text-[22px] leading-[28px] md:text-[24px] md:leading-[30px] font-medium mt-4 mb-3 md:mt-[24px] md:mb-4 text-center">
-                You’re all set
-              </p>
-              <p className="text-[#476D85] text-[16px] leading-[24px] px-6 md:text-[18px] md:leading-[24px] text-center mb-7 md:mb-8">
-                You’ll receive a confirmation email shortly and a brief reminder
-                before the webinar
-              </p>
-              <SustainButton>Join our WhatsApp community</SustainButton>
+            </form>
+          </div>
+        </div>
+        <div className={isSuccess ? "block" : "hidden"}>
+          <div className="md:w-[460px] px-8 py-[64px] md:py-[80px] bg-[#FFFFFF] rounded-[20px]">
+            <div className="flex justify-center">
+              <img src={circle.src} alt="" />
             </div>
+            <p className="text-[22px] leading-[28px] md:text-[24px] md:leading-[30px] font-medium mt-4 mb-3 md:mt-[24px] md:mb-4 text-center">
+              You&apos;re all set
+            </p>
+            <p className="text-[#476D85] text-[16px] leading-[24px] px-6 md:text-[18px] md:leading-[24px] text-center mb-7 md:mb-8">
+              You&apos;ll receive a confirmation email shortly and a brief
+              reminder before the webinar
+            </p>
+            <SustainButton>Join our WhatsApp community</SustainButton>
           </div>
         </div>
         <div className={isError ? "block" : "hidden"}>

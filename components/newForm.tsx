@@ -8,6 +8,8 @@ import StartSuccess from "./startSuccess";
 import blue from "../public/assets/blue.png";
 import white from "../public/assets/white.png";
 import icon from "../public/assets/icon.svg";
+import { Input } from "@nextui-org/react";
+import { Select, SelectSection, SelectItem } from "@nextui-org/select";
 
 const SustainButton = styled(Button)({
   background: "#4F9EEA !important",
@@ -130,13 +132,16 @@ const Form = () => {
 
           <form>
             <div className="">
-              <input
-                type="text"
-                name="email_address"
+              <Input
+                type="email"
+                name="email"
+                label="Email"
                 value={state.user.email}
                 onChange={handleChange}
-                className="border h-[60px] border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5"
-                placeholder="Email address"
+                className="h-12  text-sm rounded-lg bg-[#FFFFFF]  block w-full"
+                placeholder=""
+                variant="bordered"
+                required
               />
             </div>
 
@@ -185,24 +190,31 @@ const Form = () => {
 
           <form>
             <div className="mb-[15px]">
-              <input
+              <Input
                 type="text"
-                name="email_address"
-                value={state.user.email}
+                name="first_name"
+                label="First name"
+                variant="bordered"
+                value={state.user.first_name}
                 onChange={handleChange}
-                className="border h-[60px] border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5"
-                placeholder="First name"
+                size="md"
+                className="h-12 text-sm rounded-lg bg-[#FFFFFF]  block w-full"
+                placeholder=""
+                required
               />
             </div>
 
             <div className="mb-10">
-              <input
+              <Input
                 type="text"
-                name="email_address"
-                value={state.user.email}
+                name="last_name"
+                label="Last name"
+                variant="bordered"
+                value={state.user.last_name}
                 onChange={handleChange}
-                className="border h-[60px] border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5"
-                placeholder="Last name (Surname)"
+                className="h-12  text-sm rounded-lg bg-[#FFFFFF]  block w-full"
+                placeholder=""
+                required
               />
             </div>
 
@@ -233,13 +245,16 @@ const Form = () => {
 
           <form>
             <div className="mb-[40px]">
-              <input
+              <Input
                 type="tel"
                 name="phone_number"
+                label="Phone number"
+                variant="bordered"
                 value={state.user.phone_number}
                 onChange={handleChange}
-                className="border h-[60px] border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5"
-                placeholder="Phone number"
+                className="h-12  text-sm rounded-lg bg-[#FFFFFF]  block w-full"
+                placeholder=""
+                required
               />
               <p className="text-[#476D85] text-[12px] md:text-[13px] leading-4 mt-[12px]">
                 Enter your Nigerian WhatsApp phone number eg. 08012345678
@@ -270,14 +285,10 @@ const Form = () => {
 
           <form>
             <div className="mb-[40px]">
-              <input
-                type="tel"
-                name="phone_number"
-                value={state.user.phone_number}
-                onChange={handleChange}
-                className="border h-[60px] border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5"
-                placeholder="Select your gender"
-              />
+              <Select label="Select your gender" className="">
+                <SelectItem key="male">Male</SelectItem>
+                <SelectItem key="female">Female</SelectItem>
+              </Select>
             </div>
 
             <div className="mb-16 md:mb-36">
@@ -304,14 +315,12 @@ const Form = () => {
 
           <form>
             <div className="mb-[40px]">
-              <input
-                type="tel"
-                name="phone_number"
-                value={state.user.phone_number}
-                onChange={handleChange}
-                className="border h-[60px] border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5"
-                placeholder="Select"
-              />
+              <Select label="Select" className="">
+                <SelectItem key="friend">Friend</SelectItem>
+                <SelectItem key="advert">Advert</SelectItem>
+                <SelectItem key="social_media">Social Media</SelectItem>
+                <SelectItem key="doctor">Doctor</SelectItem>
+              </Select>
             </div>
 
             <div className="mb-16 md:mb-36">
@@ -476,9 +485,11 @@ const Form = () => {
               <hr className="mt-[22px] mb-[22px] " />
               <div className="flex justify-between mt-1.5">
                 <p className="text-[18px] font-medium leading-5 text-[#002A47]">
-                Total
+                  Total
                 </p>
-                <p className="text-[18px] font-medium leading-5 text-[#002A47]">₦36,000</p>
+                <p className="text-[18px] font-medium leading-5 text-[#002A47]">
+                  ₦36,000
+                </p>
               </div>
             </div>
           </div>
