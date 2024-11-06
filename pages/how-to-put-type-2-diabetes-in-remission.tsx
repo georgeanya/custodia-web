@@ -10,11 +10,11 @@ import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Link from "next/link";
 import axios from "axios";
-
+import circle from "../public/assets/circle.png";
 import lock from "../public/assets/lock.svg";
 import icon from "../public/assets/custodia-icon.svg";
 import Section5 from "../components/section5";
-import { Input } from "@nextui-org/input";
+import { Input } from "@nextui-org/react";
 
 const SustainButton = styled(Button)({
   background: "#4F9EEA !important",
@@ -37,11 +37,10 @@ interface IState {
     last_name: string;
     email: string;
     phone_number: string;
-    country_code: string;
   };
 }
 
-const url = "https://getsustainapp.herokuapp.com/v1/consult";
+const url = "https://custodia-health-api-b53b05e2c965.herokuapp.com/v1/crm/webinar/join";
 
 const Webinar = () => {
   const [state, setState] = useState<IState>({
@@ -50,7 +49,6 @@ const Webinar = () => {
       last_name: "",
       email: "",
       phone_number: "",
-      country_code: "234",
     },
   });
 
@@ -107,17 +105,17 @@ const Webinar = () => {
         first_name: state.user.first_name,
         last_name: state.user.last_name,
         email: state.user.email,
-        phone_number: state.user.phone_number?.slice(1),
-        country_code: state.user.country_code,
+        phone_number: `234${state.user.phone_number?.slice(1)}`,
       })
       .then((res) => {
         if (
-          res.data.message === "user previously subscribed" ||
-          "user subscribed successfully"
+          res.data.message === "webinar registration successful" 
         ) {
           setIsSuccessFunc();
+          console.log("registeration successful")
         } else {
           setIsErrorFunc();
+          console.log("registeration failed")
         }
       })
       .catch((error) => {
@@ -253,8 +251,113 @@ const Webinar = () => {
             </p>
           </div>
         </div>
-        <div className="md:w-[460px]">
-          <Input type="email" label="Email" />
+        <div className={isSuccess || isError ? "hidden" : "block"}>
+          <div className="md:w-[460px] px-5 md:px-8 py-[40px] md:py-[52px] bg-[#FFFFFF] rounded-[20px]">
+            <p className="text-[22px] leading-[28px] md:text-[24px] md:leading-[30px] font-medium ">
+              Book your seat now
+            </p>
+            <form onSubmit={handleSubmit}>
+              <div className="md:grid grid-cols-2 gap-5 mt-6 md:mt-7">
+                <div className="mb-5 md:mb-[12px]">
+                  <Input
+                    type="text"
+                    name="first_name"
+                    label="First name"
+                    variant="bordered"
+                    value={state.user.first_name}
+                    onChange={handleChange}
+                    size="md"
+                    className="h-12 text-sm rounded-lg bg-[#FFFFFF]  block w-full"
+                    placeholder=""
+                    required
+                  />
+                </div>
+                <div className="mb-[12px]">
+                  <Input
+                    type="text"
+                    name="last_name"
+                    label="Last name"
+                    variant="bordered"
+                    value={state.user.last_name}
+                    onChange={handleChange}
+                    className="h-12  text-sm rounded-lg bg-[#FFFFFF]  block w-full"
+                    placeholder=""
+                    required
+                  />
+                </div>
+              </div>
+              <div className="flex mb-5">
+                <img src={lock.src} alt="Icon" />
+                <p className="md:text-[13px] leading-4 text-xs text-[#476D85] ml-1">
+                  Your information will never be shared with anyone
+                </p>
+              </div>
+              <div className="mb-5">
+                <Input
+                  type="email"
+                  name="email"
+                  label="Email"
+                  value={state.user.email}
+                  onChange={handleChange}
+                  className="h-12  text-sm rounded-lg bg-[#FFFFFF]  block w-full"
+                  placeholder=""
+                  variant="bordered"
+                  required
+                />
+              </div>
+
+              <div className="mb-10">
+                <Input
+                  type="tel"
+                  name="phone_number"
+                  label="Phone number"
+                  variant="bordered"
+                  value={state.user.phone_number}
+                  onChange={handleChange}
+                  className="h-12  text-sm rounded-lg bg-[#FFFFFF]  block w-full"
+                  placeholder=""
+                  required
+                />
+                <p className="text-[#476D85] text-[12px] md:text-[13px] leading-4 mt-[10px]">
+                  Enter your Nigerian WhatsApp phone number eg. 08012345678
+                </p>
+              </div>
+              <div>
+              <SustainButton type="submit">Book a seat</SustainButton>
+            </div>
+            </form>
+            
+          </div>
+          <div className={isSuccess ? "block" : "hidden"}>
+            <div className="md:w-[460px] px-8 py-[64px] md:py-[80px] bg-[#FFFFFF] rounded-[20px]">
+              <div className="flex justify-center">
+                <img src={circle.src} alt="" />
+              </div>
+              <p className="text-[22px] leading-[28px] md:text-[24px] md:leading-[30px] font-medium mt-4 mb-3 md:mt-[24px] md:mb-4 text-center">
+                You’re all set
+              </p>
+              <p className="text-[#476D85] text-[16px] leading-[24px] px-6 md:text-[18px] md:leading-[24px] text-center mb-7 md:mb-8">
+                You’ll receive a confirmation email shortly and a brief reminder
+                before the webinar
+              </p>
+              <SustainButton>Join our WhatsApp community</SustainButton>
+            </div>
+          </div>
+        </div>
+        <div className={isError ? "block" : "hidden"}>
+          <div className="md:w-[460px] px-8 py-[64px] md:py-[80px] bg-[#FFFFFF] rounded-[20px]">
+            <div className="flex justify-center">
+              <img src={circle.src} alt="" />
+            </div>
+            <p className="text-[22px] leading-[28px] md:text-[24px] md:leading-[30px] font-medium mt-4 mb-3 md:mt-[24px] md:mb-4 text-center">
+              An error occurred
+            </p>
+            <p className="text-[#476D85] text-[16px] leading-[24px] px-6 md:text-[18px] md:leading-[24px] text-center mb-7 md:mb-8">
+              Please make sure you entered a valid email and phone number and
+              try again
+            </p>
+            <SustainButton>Try again</SustainButton>
+          </div>
         </div>
       </div>
       <Section5 />
