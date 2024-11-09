@@ -312,7 +312,7 @@ const Webinar = () => {
                   placeholder=""
                   required
                 />
-                <p className="text-[#476D85] text-[12px] md:text-[13px] leading-4 mt-[10px]">
+                <p className="text-[#476D85] text-[12px] md:text-[13px] leading-4 mt-[12px]">
                   Enter your Nigerian WhatsApp phone number eg. 08012345678
                 </p>
               </div>
@@ -334,7 +334,11 @@ const Webinar = () => {
               You&apos;ll receive a confirmation email shortly and a brief
               reminder before the webinar
             </p>
-            <SustainButton>Join our WhatsApp community</SustainButton>
+            <Link href="https://chat.whatsapp.com/FRbf5Bs3IgE77YDfbZUV1U">
+              <SustainButton className="self-center text-sm md:text-base font-medium">
+                Join our WhatsApp community
+              </SustainButton>
+            </Link>
           </div>
         </div>
         <div className={isError ? "block" : "hidden"}>

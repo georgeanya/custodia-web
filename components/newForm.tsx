@@ -7,9 +7,14 @@ import StartError from "./startError";
 import StartSuccess from "./startSuccess";
 import blue from "../public/assets/blue.png";
 import white from "../public/assets/white.png";
+import circle from "../public/assets/circle.png";
 import icon from "../public/assets/icon.svg";
 import { Input } from "@nextui-org/react";
+import { DateInput } from "@nextui-org/react";
+import { DatePicker } from "@nextui-org/react";
+import { DateValue, parseDate, getLocalTimeZone } from "@internationalized/date";
 import { Select, SelectSection, SelectItem } from "@nextui-org/select";
+import { useDateFormatter } from "@react-aria/i18n";
 
 const SustainButton = styled(Button)({
   background: "#4F9EEA !important",
@@ -48,30 +53,47 @@ interface IState {
     last_name: string;
     email: string;
     phone_number: string;
-    country_code: string;
+    referrer: string;
+    dob: DateValue | null;
+    gender: string;
+    discount_code: string;
+  };
+  plan: {
+    _id: string;
+    plan_name: string;
+    price: number;
+    duration: string;
   };
 }
-
-const url = "https://getsustainapp.herokuapp.com/v1/consult";
 
 const Form = () => {
   const [state, setState] = useState<IState>({
     user: {
       first_name: "",
       last_name: "",
-      email: "",
+      email: "georgeanya4real@gmail.com",
       phone_number: "",
-      country_code: "234",
+      dob: parseDate("1995-02-06"),
+      gender: "",
+      referrer: "",
+      discount_code: "",
+    },
+    plan: {
+      _id: "",
+      plan_name: "",
+      price: 0,
+      duration: "",
     },
   });
 
+  const [discountPrice, setDiscountPrice] = useState(0);
   const [pageNumber, setPageNumber] = useState(1);
-  const [isSuccess, setIsSuccess] = useState(false);
-  const [isError, setIsError] = useState(false);
+
   const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): any => {
     setState({
+      ...state,
       user: {
         ...state.user,
         [event.target.name]: event.target.value,
@@ -83,41 +105,151 @@ const Form = () => {
   const prevPage = () =>
     setPageNumber((prevPage) => (prevPage > 1 ? prevPage - 1 : 1));
 
-  const setIsSuccessFunc = () => {
-    setIsSuccess(!isSuccess);
-  };
-
-  const setIsErrorFunc = () => {
-    setIsError(!isError);
-  };
-
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>): any => {
+  const signUp = (event: React.FormEvent<HTMLFormElement>): any => {
     event.preventDefault();
     setIsLoading(true);
     axios
-      .post(url, {
-        first_name: state.user.first_name,
-        last_name: state.user.last_name,
-        email: state.user.email,
-        phone_number: state.user.phone_number?.slice(1),
-        country_code: state.user.country_code,
-      })
+      .post(
+        "https://custodia-health-api-b53b05e2c965.herokuapp.com/v1/patient/auth/sign-up",
+        {
+          email: state.user.email,
+        }
+      )
       .then((res) => {
-        if (
-          res.data.message === "user previously subscribed" ||
-          "user subscribed successfully"
-        ) {
-          setIsSuccessFunc();
+        if (res.data.message === "patient created") {
+          setPageNumber(2);
+        } else if (res.data.message === "patient already exists") {
+          setPageNumber(7);
         } else {
-          setIsErrorFunc();
         }
       })
       .catch((error) => {
-        setIsErrorFunc();
         console.log(error);
       })
       .finally(() => setIsLoading(false));
   };
+
+  const completeProfile = (event: React.FormEvent<HTMLFormElement>): any => {
+    event.preventDefault();
+    const isoDob = getISODateString(state.user.dob);
+    console.log("Submitting DOB as ISO string:", isoDob);
+    console.log(state);
+    
+    axios
+      .post(
+        "https://custodia-health-api-b53b05e2c965.herokuapp.com/v1/patient/auth/complete-profile",
+        {
+          first_name: state.user.first_name,
+          last_name: state.user.last_name,
+          email: state.user.email,
+          phone_number: state.user.phone_number?.slice(1),
+          dob: isoDob,
+          gender: state.user.gender,
+          referrer: state.user.referrer,
+        }
+      )
+      .then((res) => {
+        if (res.data.message === "proceed to payment") {
+          console.log(state);
+          
+          setPageNumber(7);
+        } else {
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+      .finally(() => setIsLoading(false));
+  };
+
+  const fetchPlanData = async () => {
+    try {
+      const response = await axios.get(
+        "https://custodia-health-api-b53b05e2c965.herokuapp.com/v1/patient/payment/plans"
+      );
+
+      const plan = response.data.data.plans[0];
+
+      setState({
+        ...state,
+        plan: {
+          ...state.plan,
+          price: plan.price,
+          _id: plan._id,
+        },
+      });
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      throw error;
+    }
+  };
+
+  const discountCode = (event: React.FormEvent<HTMLFormElement>): any => {
+    event.preventDefault();
+    setIsLoading(true);
+    axios
+      .post(
+        "https://custodia-health-api-b53b05e2c965.herokuapp.com/v1/patient/payment/discount",
+        {
+          discount_code: state.user.discount_code,
+        }
+      )
+      .then((res) => {
+        if (res.data.message === "discount code validated successfully") {
+          setDiscountPrice(res.data.data.amount);
+        } else {
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+      .finally(() => setIsLoading(false));
+  };
+
+  const initializePayment = (event: React.FormEvent<HTMLFormElement>): any => {
+    event.preventDefault();
+    setIsLoading(true);
+    axios
+      .post(
+        "https://custodia-health-api-b53b05e2c965.herokuapp.com/v1/patient/payment/initialize",
+        {
+          discount_code: state.user.discount_code,
+          email: state.user.email,
+          membership_plan_id: state.plan._id,
+        }
+      )
+      .then((res) => {
+        if (res.data.message === "payment initialized successfully") {
+          window.location.href = res.data.data.authorization_url;
+        } else {
+          throw new Error(res.data.message || 'Payment initialization failed');
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+      .finally(() => setIsLoading(false));
+  };
+
+  const formatter = useDateFormatter({ dateStyle: "full" });
+
+  // Handle date change
+  const handleDateChange = (date: DateValue | null) => {
+    setState((prevState) => ({
+      ...prevState,
+      user: {
+        ...prevState.user,
+        dob: date,
+      },
+    }));
+  };
+
+  // Convert CalendarDate to ISO string for submission
+  const getISODateString = (date: DateValue | null): string => {
+    if (!date) return "";
+    return date.toDate(getLocalTimeZone()).toISOString();
+  };
+
 
   return (
     <div className="max-w-m mx-5 md:mx-auto mt-[32px] md:mt-[40px]">
@@ -130,7 +262,7 @@ const Form = () => {
             What is your email?
           </h1>
 
-          <form>
+          <form onSubmit={signUp}>
             <div className="">
               <Input
                 type="email"
@@ -167,7 +299,6 @@ const Form = () => {
               <SustainButton
                 className="self-center text-sm md:text-base font-medium"
                 type="submit"
-                onClick={nextPage}
               >
                 <p>Next</p>
               </SustainButton>
@@ -303,8 +434,36 @@ const Form = () => {
           </form>
         </div>
       )}
-
       {pageNumber === 5 && (
+        <div id="page2">
+          <div className="flex">
+            <img src={white.src} alt="" />
+          </div>
+          <h1 className="mt-[32px] md:mt-[40px] leading-7  md:text-[24px] md:leading-[30px] mb-8 text-1lg font-bold text-[#002A47]">
+            What is your date of birth?
+          </h1>
+
+          <form>
+            <div className="mb-[40px]">
+              <DatePicker
+                label="Birth date"
+                value={state.user.dob}
+                onChange={handleDateChange}
+              />
+            </div>
+
+            <div className="mb-16 md:mb-36">
+              <SustainButton
+                className="self-center text-sm md:text-base font-medium"
+                onClick={nextPage}
+              >
+                <p>Continue</p>
+              </SustainButton>
+            </div>
+          </form>
+        </div>
+      )}
+      {pageNumber === 6 && (
         <div id="page2">
           <div className="flex">
             <img src={white.src} alt="" />
@@ -313,7 +472,7 @@ const Form = () => {
             How did you hear about us?
           </h1>
 
-          <form>
+          <form onSubmit={completeProfile}>
             <div className="mb-[40px]">
               <Select label="Select" className="">
                 <SelectItem key="friend">Friend</SelectItem>
@@ -327,7 +486,7 @@ const Form = () => {
               <SustainButton
                 className="self-center text-sm md:text-base font-medium"
                 type="submit"
-                onClick={nextPage}
+                onClick={fetchPlanData}
               >
                 <p>Continue</p>
               </SustainButton>
@@ -335,7 +494,7 @@ const Form = () => {
           </form>
         </div>
       )}
-      {pageNumber === 6 && (
+      {pageNumber === 7 && (
         <div>
           <h1 className="mt-[32px] md:mt-[40px] leading-7  md:text-[24px] md:leading-[30px] mb-8 text-1lg text-center font-bold text-[#002A47]">
             Choose your membership plan
@@ -346,7 +505,7 @@ const Form = () => {
                 BASIC
               </p>
               <p className="mt-2 text-1xxl md:text-[30px] leading-[38px] font-medium text-[#002A47] ">
-                ₦40,000
+                ₦{state.plan.price.toLocaleString()}
                 <span className=" text-base">/quarterly</span>
               </p>
               <p className="mt-3  mb-5 md:text-[16px] text-[16px] leading-[22px] text-[#002A47]">
@@ -439,7 +598,7 @@ const Form = () => {
         </div>
       )}
 
-      {pageNumber === 7 && (
+      {pageNumber === 8 && (
         <div>
           <h1 className="mt-[32px] md:mt-[40px] leading-7  md:text-[24px] md:leading-[30px] mb-8 text-1lg text-center font-bold text-[#002A47]">
             Order summary
@@ -453,34 +612,40 @@ const Form = () => {
                 <p className="text-[16px]  leading-5 text-[#002A47]">
                   1 quarter
                 </p>
-                <p className="text-[16px]  leading-5 text-[#002A47]">₦40,000</p>
+                <p className="text-[16px]  leading-5 text-[#002A47]">
+                  ₦{state.plan.price.toLocaleString()}
+                </p>
               </div>
               <hr className="mt-[22px] mb-[22px] " />
-              <div className="flex ">
+              <form className="flex " onSubmit={discountCode}>
                 <input
                   type="tel"
-                  name="phone_number"
-                  value={state.user.phone_number}
+                  name="discount_code"
+                  value={state.user.discount_code}
                   onChange={handleChange}
                   className="border h-[44px] md:h-[50px] border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5"
                   placeholder="Promo code"
                 />
                 <div className="w-[120px] ml-4">
-                  <SustainWhiteButton>Apply</SustainWhiteButton>
+                  <SustainWhiteButton type="submit">Apply</SustainWhiteButton>
                 </div>
-              </div>
+              </form>
               <hr className="mt-[24px] mb-[24px]" />
               <div className="flex justify-between mt-1.5">
                 <p className="text-[16px]  leading-5 text-[#002A47]">
                   Subtotal
                 </p>
-                <p className="text-[16px]  leading-5 text-[#002A47]">₦40,000</p>
+                <p className="text-[16px]  leading-5 text-[#002A47]">
+                  ₦{state.plan.price.toLocaleString()}
+                </p>
               </div>
               <div className="flex justify-between mt-1.5">
                 <p className="text-[16px]  leading-5 text-[#002A47]">
                   Promo discount
                 </p>
-                <p className="text-[16px]  leading-5 text-[#002A47]">-₦4,000</p>
+                <p className="text-[16px]  leading-5 text-[#002A47]">
+                  -₦{discountPrice.toLocaleString()}
+                </p>
               </div>
               <hr className="mt-[22px] mb-[22px] " />
               <div className="flex justify-between mt-1.5">
@@ -488,20 +653,40 @@ const Form = () => {
                   Total
                 </p>
                 <p className="text-[18px] font-medium leading-5 text-[#002A47]">
-                  ₦36,000
+                  ₦{(state.plan.price - discountPrice).toLocaleString()}
                 </p>
               </div>
             </div>
           </div>
-          <div className="mb-16 md:mb-36 mt-10">
-            <SustainButton
-              className="self-center text-sm md:text-base font-medium"
-              type="submit"
-              onClick={nextPage}
-            >
-              <p>Pay now</p>
-            </SustainButton>
+          <form onSubmit={initializePayment}>
+            <div className="mb-16 md:mb-36 mt-10">
+              <SustainButton
+                className="self-center text-sm md:text-base font-medium"
+                type="submit"
+              >
+                <p>Pay now</p>
+              </SustainButton>
+            </div>
+          </form>
+        </div>
+      )}
+      {pageNumber === 9 && (
+        <div id="page8">
+          <div className="flex justify-center mt-24">
+            <img src={circle.src} alt="" className="w-20" />
           </div>
+          <p className="text-[22px] leading-[28px] md:text-[28px] md:leading-[35px] font-medium mt-4 mb-3 md:mt-[24px] md:mb-4 text-center">
+            Payment successful
+          </p>
+          <p className="text-[#476D85] text-[16px] leading-[22px] md:text-[18px] md:leading-[24px] text-center mb-7 md:mb-8">
+            Thank you for joining Custodia. Our enrollment advisor will contact
+            you in 24 hours to complete your enrollment
+          </p>
+          <Link href="https://chat.whatsapp.com/FRbf5Bs3IgE77YDfbZUV1U">
+            <SustainButton className="self-center text-sm md:text-base font-medium">
+              Join our WhatsApp community
+            </SustainButton>
+          </Link>
         </div>
       )}
     </div>
