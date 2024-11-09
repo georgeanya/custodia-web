@@ -220,7 +220,14 @@ const Form = () => {
       )
       .then((res) => {
         if (res.data.message === "payment initialized successfully") {
-          window.open(res.data.data.authorization_url, '_blank');
+          // Note the nested data.data structure
+          const link = document.createElement('a');
+          link.href = res.data.data.data.authorization_url;
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
         } else {
           throw new Error(res.data.message || 'Payment initialization failed');
         }
