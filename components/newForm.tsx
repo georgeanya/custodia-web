@@ -71,7 +71,7 @@ const Form = () => {
     user: {
       first_name: "",
       last_name: "",
-      email: "georgeanya4real@gmail.com",
+      email: "",
       phone_number: "",
       dob: parseDate("1995-02-06"),
       gender: "",
@@ -220,7 +220,7 @@ const Form = () => {
       )
       .then((res) => {
         if (res.data.message === "payment initialized successfully") {
-          window.location.href = res.data.data.authorization_url;
+          window.open(res.data.data.authorization_url, '_blank');
         } else {
           throw new Error(res.data.message || 'Payment initialization failed');
         }
