@@ -21,7 +21,7 @@ const SustainButton = styled(Button)({
 
 const Section2 = () => {
   return (
-    <div className="px-5 md:px-32 md:pt-28 pt-20 md:pb-36 pb-24 bg-[#236DAD] flex flex-col md:flex-row md:justify-between">
+    <div className="px-5 md:px-32 md:pt-28 pt-20 md:pb-36 pb-24 bg-[#236DAD] flex flex-col md:flex-row md:justify-between container mx-auto">
       <div className="md:max-w-[550px]">
         <h2 className=" pb-[35px] md:pb-[50px] text-2xl leading-9 md:text-start md:text-4xl font-bold text-white pr-3 md:max-w-[535px]">
           A holistic approach designed to treat the root cause

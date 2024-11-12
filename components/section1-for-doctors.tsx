@@ -23,7 +23,7 @@ const SustainButton = styled(Button)({
 
 const Section1 = () => {
   return (
-    <div className="px-5 sm:px-8 md:px-32 md:pt-28 pt-20 md:pb-36 pb-24  flex justify-between flex-col md:flex-row">
+    <div className="px-5 sm:px-8 md:px-[84px] md:pt-28 pt-20 md:pb-36 pb-24  flex justify-between flex-col md:flex-row container mx-auto">
       <div className="md:max-w-[535px]">
         <h2 className=" text-[28px] leading-[35px] md:text-start md:text-4xl font-bold text-[#002A47]">
           We treat multiple chronic metabolic diseases
