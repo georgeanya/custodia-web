@@ -92,7 +92,8 @@ const Research = () => {
         />
       </Head>
       <Navbar1 />
-      <div className="px-5 md:px-[290px] md:mt-24 mt-[47px] pb-[90px] md:pb-[130px]">
+      <div className="px-5 md:px-[290px]">
+      <div className=" md:mt-24 mt-[47px] pb-[90px] md:pb-[130px] container mx-auto">
         <h2 className="text-4lg  md:text-[46px] leading-[58px] font-bold text-[#002A47]">
           Research
         </h2>
@@ -244,6 +245,7 @@ const Research = () => {
             </a>
           </div>
         </div>
+      </div>
       </div>
       <Footer />
     </div>

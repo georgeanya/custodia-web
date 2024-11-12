@@ -20,7 +20,8 @@ const SustainButton = styled(Button)({
 
 const Section7 = () => {
   return (
-    <div className="px-5 md:px-32 md:pt-28 pt-20 md:pb-28 pb-20 bg-[#EFF2FA] md:flex justify-between">
+    <div className="px-5 md:px-32 bg-[#F0F7FF]">
+      <div className=" md:pt-28 pt-20 md:pb-28 pb-20 container mx-auto md:flex justify-between">
       <div className="flex flex-col justify-center">
         <h2 className="text-2xl leading-9 md:text-start md:text-4xl md:max-w-md font-bold text-[#002A47]">
           Our treatment approach is evidence-based
@@ -41,6 +42,7 @@ const Section7 = () => {
       <div className="flex justify-center flex-col max-w-lg mt-17 md:mt-0">
         <img src={labs.src} alt="Lab" />
       </div>
+    </div>
     </div>
   );
 };

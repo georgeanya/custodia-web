@@ -2,7 +2,6 @@ import React from "react";
 import Button from "@mui/material/Button";
 import { styled } from "@mui/material/styles";
 import nuts from "../public/assets/meeting.png";
-
 import Link from "next/link";
 
 const SustainButton = styled(Button)({
@@ -21,7 +20,8 @@ const SustainButton = styled(Button)({
 
 const Section2 = () => {
   return (
-    <div className="px-5 md:px-32 md:pt-28 pt-20 md:pb-36 pb-24 bg-[#236DAD] flex flex-col md:flex-row md:justify-between">
+    <div className="px-5 md:px-32 bg-[#236DAD]">
+      <div className="md:pt-28 pt-20 md:pb-36 pb-24 container mx-auto flex flex-col md:flex-row md:justify-between">
       <div className="md:max-w-[550px]">
         <h2 className=" pb-[35px] md:pb-[50px] text-2xl leading-9 md:text-start md:text-4xl font-bold text-white pr-3 md:max-w-[535px]">
           Your patients are in safe hands
@@ -58,6 +58,7 @@ const Section2 = () => {
           className="flex align-center md:pt-[146px] pt-[70px]"
         />
       </div>
+    </div>
     </div>
   );
 };

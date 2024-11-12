@@ -32,7 +32,7 @@ const Faq = () => {
       answer:
         "Custodia works by providing personalized health plans that include dietary changes, continuous monitoring, and support from health coaches and doctors. The program focuses on reducing reliance on medications and promoting sustainable lifestyle changes to reverse chronic conditions.",
       open: false,
-    },    
+    },
     {
       question: "How much does Custodia cost?",
       answer:
@@ -68,22 +68,22 @@ const Faq = () => {
   };
 
   return (
-    <div className="px-5 md:px-32 md:pt-28 pt-20 md:pb-36 pb-24">
-      <h2 className="text-2xl leading-9 md:text-start md:text-4xl md:max-w-xl font-bold text-[#002A47] mb-14 pr-8">
-        Frequently asked questions
-      </h2>
-      <div className="max-w-3xl">
-        {faqs.map((faq, index) => (
-          <FAQ3 faq={faq} index={index} key={index} toggleFAQ={toggleFAQ} />
-        ))}
-      </div>
-      <div className="mt-10 md:mt-15">
-        <div>
-          <Link href="/faq">
-            
+    <div className="px-5 md:px-32 ">
+      <div className="md:pt-28 pt-20 md:pb-36 pb-24 container mx-auto">
+        <h2 className="text-2xl leading-9 md:text-start md:text-4xl md:max-w-xl font-bold text-[#002A47] mb-14 pr-8">
+          Frequently asked questions
+        </h2>
+        <div className="max-w-3xl">
+          {faqs.map((faq, index) => (
+            <FAQ3 faq={faq} index={index} key={index} toggleFAQ={toggleFAQ} />
+          ))}
+        </div>
+        <div className="mt-10 md:mt-15">
+          <div>
+            <Link href="/faq">
               <SustainButton>See all FAQs</SustainButton>
-           
-          </Link>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

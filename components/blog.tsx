@@ -183,8 +183,8 @@ const Blog: React.FC = () => {
   const ImgUrl = blog.attributes?.image?.data?.attributes?.url || "";
 
   return (
-    <div>
-      <div className="px-5 md:px-32 md:mb-20 mb-15">
+    <div className="px-5 md:px-32">
+      <div className="container mx-auto md:mb-20 mb-15">
         <p className=" text-sm md:text-[18px] leading-[24px] font-normal mt-[27px] md:mt-12 text-[#002A47]">
           <span className=" font-bold">Blog</span> | The latest stories and
           updates from the team
@@ -228,185 +228,179 @@ const Blog: React.FC = () => {
         </div>
       </div>
 
-      <div>
-        <div className="px-5 md:px-32 md:mb-[130px] mb-[90px]">
-          <div className="overflow-x-auto hide-scrollbar">
-            <ul className="flex flex-nowrap text-sm leading-[17px] font-medium text-center text-gray-500 dark:text-gray-400">
+      <div className="container mx-auto md:mb-[130px] mb-[90px]">
+        <div className="overflow-x-auto hide-scrollbar">
+          <ul className="flex flex-nowrap text-sm leading-[17px] font-medium text-center text-gray-500 dark:text-gray-400">
+            <li className="md:mr-2 cursor-pointer">
+              <button
+                className={
+                  toggleState === "All"
+                    ? "inline-block px-5 py-[14px] text-white bg-[#4F9EEA] rounded-3xl active"
+                    : "inline-block px-6 py-[14px] text-[#476D85]"
+                }
+                onClick={() => toggleTab("All")}
+              >
+                All
+              </button>
+            </li>
+            <Link href="/blog/category/patient-stories">
               <li className="md:mr-2 cursor-pointer">
-                <button
-                  className={
-                    toggleState === "All"
-                      ? "inline-block px-5 py-[14px] text-white bg-[#4F9EEA] rounded-3xl active"
-                      : "inline-block px-6 py-[14px] text-[#476D85]"
-                  }
-                  onClick={() => toggleTab("All")}
-                >
-                  All
-                </button>
+                <p className="block px-6 py-[14px] whitespace-nowrap text-[#476D85]">
+                  Patient stories
+                </p>
               </li>
-              <Link href="/blog/category/patient-stories">
-                <li className="md:mr-2 cursor-pointer">
-                  <p className="block px-6 py-[14px] whitespace-nowrap text-[#476D85]">
-                    Patient stories
-                  </p>
-                </li>
-              </Link>
-              <Link href="/blog/category/health">
-                <li className="md:mr-2 cursor-pointer">
-                  <p className="inline-block px-6 py-[14px] text-[#476D85]">
-                    Health
-                  </p>
-                </li>
-              </Link>
-              <Link href="/blog/category/company">
-                <li className="md:mr-2 cursor-pointer">
-                  <p className="inline-block px-6 py-[14px] text-[#476D85]">
-                    Company
-                  </p>
-                </li>
-              </Link>
-              <Link href="/blog/category/research">
-                <li className="md:mr-2 cursor-pointer">
-                  <p className="inline-block px-6 py-[14px] text-[#476D85]">
-                    Research
-                  </p>
-                </li>
-              </Link>
-              <Link href="/blog/category/nutrition">
-                <li className="cursor-pointer">
-                  <p className="inline-block px-6 py-[14px] text-[#476D85]">
-                    Nutrition
-                  </p>
-                </li>
-              </Link>
-            </ul>
-          </div>
-          <div className="mt-10 grid md:grid-cols-3 md:grid-rows-1 gap-15 md:mb-20 mb-15">
-            {blogsToDisplay.map((blogpost: any) => {
-              const blog = blogpost;
-              const { id, attributes } = blog;
+            </Link>
+            <Link href="/blog/category/health">
+              <li className="md:mr-2 cursor-pointer">
+                <p className="inline-block px-6 py-[14px] text-[#476D85]">
+                  Health
+                </p>
+              </li>
+            </Link>
+            <Link href="/blog/category/company">
+              <li className="md:mr-2 cursor-pointer">
+                <p className="inline-block px-6 py-[14px] text-[#476D85]">
+                  Company
+                </p>
+              </li>
+            </Link>
+            <Link href="/blog/category/research">
+              <li className="md:mr-2 cursor-pointer">
+                <p className="inline-block px-6 py-[14px] text-[#476D85]">
+                  Research
+                </p>
+              </li>
+            </Link>
+            <Link href="/blog/category/nutrition">
+              <li className="cursor-pointer">
+                <p className="inline-block px-6 py-[14px] text-[#476D85]">
+                  Nutrition
+                </p>
+              </li>
+            </Link>
+          </ul>
+        </div>
+        <div className="mt-10 grid md:grid-cols-3 md:grid-rows-1 gap-15 md:mb-20 mb-15">
+          {blogsToDisplay.map((blogpost: any) => {
+            const blog = blogpost;
+            const { id, attributes } = blog;
 
-              return (
-                <div
-                  className="max-w-[357px] flex flex-col justify-between"
-                  key={id}
-                >
-                  <div>
-                    <Link href={`/blog/${attributes.slug}`}>
-                      <img
-                        src={
-                          attributes.image.data.attributes.formats.medium.url
-                        }
-                        alt={attributes.image.data.attributes.name}
-                        className="cursor-pointer w-full md:w-[357px] md:h-[205.55px] rounded-[20px]"
-                      />
-                    </Link>
-                    <p className=" text-sm leading-[17px] text-[#4F9EEA] mt-[24px]">
-                      {attributes.category.data.attributes.name}
-                    </p>
-                    <Link href={`/blog/${attributes.slug}`} key={id}>
-                      <p className="text-[#002A47] font-bold text-[22px] leading-[28px] md:leading-[29px] mt-[12px] cursor-pointer">
-                        {attributes.title}
-                      </p>
-                    </Link>
-                  </div>
-                  <div className="flex mt-3 md:mt-4">
+            return (
+              <div
+                className="max-w-[357px] flex flex-col justify-between"
+                key={id}
+              >
+                <div>
+                  <Link href={`/blog/${attributes.slug}`}>
                     <img
-                      src={image.src}
-                      alt="Avatar"
-                      className="w-12 rounded-[25px]"
+                      src={attributes.image.data.attributes.formats.medium.url}
+                      alt={attributes.image.data.attributes.name}
+                      className="cursor-pointer w-full md:w-[357px] md:h-[205.55px] rounded-[20px]"
                     />
-                    <div className="ml-4 self-center">
-                      <p className="text-[#002A47] text-sm md:text-base leading-5 font-medium">
-                        {blog.attributes.author.data.attributes.name}
-                      </p>
-                      <p className="text-[#476D85] text-xs">
-                        {blog.attributes.author.data.attributes.team}
-                      </p>
-                    </div>
+                  </Link>
+                  <p className=" text-sm leading-[17px] text-[#4F9EEA] mt-[24px]">
+                    {attributes.category.data.attributes.name}
+                  </p>
+                  <Link href={`/blog/${attributes.slug}`} key={id}>
+                    <p className="text-[#002A47] font-bold text-[22px] leading-[28px] md:leading-[29px] mt-[12px] cursor-pointer">
+                      {attributes.title}
+                    </p>
+                  </Link>
+                </div>
+                <div className="flex mt-3 md:mt-4">
+                  <img
+                    src={image.src}
+                    alt="Avatar"
+                    className="w-12 rounded-[25px]"
+                  />
+                  <div className="ml-4 self-center">
+                    <p className="text-[#002A47] text-sm md:text-base leading-5 font-medium">
+                      {blog.attributes.author.data.attributes.name}
+                    </p>
+                    <p className="text-[#476D85] text-xs">
+                      {blog.attributes.author.data.attributes.team}
+                    </p>
                   </div>
                 </div>
-              );
-            })}
-          </div>
-          <div
-            className=" md:py-[70px] px-5 md:px-20 py-10  bg-[#EFF2FA] rounded-[20px]"
-            id="newsletter"
-          >
-            <p className="md:text-[38px] md:leading-[48px] text-[24px] leading-[30px] text-[#4F9EEA] font-bold max-w-[476px]">
-              Stay updated by joining our newsletter
-            </p>
-            <p className="text-base leading-[22px] md:text-xl text-[#002A47] max-w-[574px] mt-4 md:mt-[22px] mb-6 md:mb-8">
-              Subscribe to recieve updates about our blog posts and
-              announcements directly in your mailbox
-            </p>
-            <form action="" method="post" className="flex flex-wrap">
-              <input
-                type="text"
-                placeholder="Enter your email"
-                className="border mb-4 md:mb-0 h-[48px] md:h-[60px] md:max-w-[462px] border-gray-300 text-gray-900 text-sm rounded-2xl  block w-full p-2.5 md:mr-5"
-              />
-              <SustainButton className="md:text-base md:leading-5">
-                Subscribe
-              </SustainButton>
-            </form>
-          </div>
-          <div className="mt-10 md:mt-20 grid md:grid-cols-3 md:grid-rows-1 gap-15 md:mb-20 mb-15">
-            {blogsToDisplay2?.map((blogpost: any) => {
-              const blog = blogpost;
-              const { id, attributes } = blog;
+              </div>
+            );
+          })}
+        </div>
+        <div
+          className=" md:py-[70px] px-5 md:px-20 py-10  bg-[#EFF2FA] rounded-[20px]"
+          id="newsletter"
+        >
+          <p className="md:text-[38px] md:leading-[48px] text-[24px] leading-[30px] text-[#4F9EEA] font-bold max-w-[476px]">
+            Stay updated by joining our newsletter
+          </p>
+          <p className="text-base leading-[22px] md:text-xl text-[#002A47] max-w-[574px] mt-4 md:mt-[22px] mb-6 md:mb-8">
+            Subscribe to recieve updates about our blog posts and announcements
+            directly in your mailbox
+          </p>
+          <form action="" method="post" className="flex flex-wrap">
+            <input
+              type="text"
+              placeholder="Enter your email"
+              className="border mb-4 md:mb-0 h-[48px] md:h-[60px] md:max-w-[462px] border-gray-300 text-gray-900 text-sm rounded-2xl  block w-full p-2.5 md:mr-5"
+            />
+            <SustainButton className="md:text-base md:leading-5">
+              Subscribe
+            </SustainButton>
+          </form>
+        </div>
+        <div className="mt-10 md:mt-20 grid md:grid-cols-3 md:grid-rows-1 gap-15 md:mb-20 mb-15">
+          {blogsToDisplay2?.map((blogpost: any) => {
+            const blog = blogpost;
+            const { id, attributes } = blog;
 
-              return (
-                <div
-                  className="max-w-[357px] flex flex-col justify-between"
-                  key={id}
-                >
-                  <div>
-                    <Link href={`/blog/${attributes.slug}`}>
-                      <img
-                        src={
-                          attributes.image.data.attributes.formats.medium.url
-                        }
-                        alt={attributes.image.data.attributes.name}
-                        className="cursor-pointer w-full md:w-[357px] md:h-[205.55px] rounded-[20px]"
-                      />
-                    </Link>
+            return (
+              <div
+                className="max-w-[357px] flex flex-col justify-between"
+                key={id}
+              >
+                <div>
+                  <Link href={`/blog/${attributes.slug}`}>
+                    <img
+                      src={attributes.image.data.attributes.formats.medium.url}
+                      alt={attributes.image.data.attributes.name}
+                      className="cursor-pointer w-full md:w-[357px] md:h-[205.55px] rounded-[20px]"
+                    />
+                  </Link>
 
-                    <p className=" text-sm leading-[17px] text-[#4F9EEA] mt-[24px]">
-                      {attributes.category.data.attributes.name}
+                  <p className=" text-sm leading-[17px] text-[#4F9EEA] mt-[24px]">
+                    {attributes.category.data.attributes.name}
+                  </p>
+                  <Link href={`/blog/${attributes.slug}`} key={id}>
+                    <p className="text-[#002A47] font-bold text-[22px] leading-[28px] md:leading-[29px] mt-[12px] cursor-pointer">
+                      {attributes.title}
                     </p>
-                    <Link href={`/blog/${attributes.slug}`} key={id}>
-                      <p className="text-[#002A47] font-bold text-[22px] leading-[28px] md:leading-[29px] mt-[12px] cursor-pointer">
-                        {attributes.title}
-                      </p>
-                    </Link>
-                    {/* <p className="text-[#476D85] mt-4 md:mt-5 text-base leading-6 md:leading-7 md:text-lg">
+                  </Link>
+                  {/* <p className="text-[#476D85] mt-4 md:mt-5 text-base leading-6 md:leading-7 md:text-lg">
                         {attributes.description}
                       </p> */}
-                  </div>
-                  <div className="flex mt-3 md:mt-4">
-                    <img
-                      src={image.src}
-                      alt="Avatar"
-                      className="w-12 rounded-[25px]"
-                    />
-                    <div className="ml-4 self-center">
-                      <p className="text-[#002A47] text-sm md:text-base leading-5 font-medium">
-                        {blog.attributes.author.data.attributes.name}
-                      </p>
-                      <p className="text-[#476D85] text-xs">
-                        {blog.attributes.author.data.attributes.team}
-                      </p>
-                    </div>
+                </div>
+                <div className="flex mt-3 md:mt-4">
+                  <img
+                    src={image.src}
+                    alt="Avatar"
+                    className="w-12 rounded-[25px]"
+                  />
+                  <div className="ml-4 self-center">
+                    <p className="text-[#002A47] text-sm md:text-base leading-5 font-medium">
+                      {blog.attributes.author.data.attributes.name}
+                    </p>
+                    <p className="text-[#476D85] text-xs">
+                      {blog.attributes.author.data.attributes.team}
+                    </p>
                   </div>
                 </div>
-              );
-            })}
-          </div>
-          <SustainOutlineButton onClick={loadMorePosts}>
-            Show more posts
-          </SustainOutlineButton>
+              </div>
+            );
+          })}
         </div>
+        <SustainOutlineButton onClick={loadMorePosts}>
+          Show more posts
+        </SustainOutlineButton>
       </div>
     </div>
   );

@@ -8,9 +8,10 @@ import pill from "../public/assets/pill.svg";
 
 const Section3 = () => {
   return (
-    <div className="px-5 md:px-32 md:pt-28 pt-20 md:pb-36 pb-24 " id="benefits">
+    <div className="px-5 md:px-32">
+      <div className=" md:pt-28 pt-20 md:pb-36 pb-24 container mx-auto" id="benefits">
       <h2 className="text-2xl leading-9 md:text-start md:text-4xl md:max-w-xl font-bold text-[#002A47] md:pr-6">
-        Here’s what our program can do for you
+        Here&apos;s what our program can do for you
       </h2>
       <div className="md:mt-6 flex flex-wrap justify-between">
         <div className="mt-17 sm:max-w-s">
@@ -74,6 +75,7 @@ const Section3 = () => {
           </p>
         </div>
       </div>
+    </div>
     </div>
   );
 };

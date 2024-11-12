@@ -95,7 +95,8 @@ const Policy = () => {
         />
       </Head>
       <Navbar1 />
-      <div className="px-5 md:px-72 md:mt-24 mt-16 pb-32">
+      <div className="px-5 md:px-72">
+      <div className=" md:mt-24 mt-16 pb-32 container mx-auto">
         <h1 className="text-4lg md:text-center md:text-start md:text-5xl font-bold text-[#002A47]">
           Privacy policy
         </h1>
@@ -149,6 +150,7 @@ const Policy = () => {
         <p className="mt-5 md:mt-5 text-base md:text-center md:text-start md:text-xlg text-[#476D85]">
           This policy is effective as of 28 January 2021.
         </p>
+      </div>
       </div>
       <Footer />
     </div>

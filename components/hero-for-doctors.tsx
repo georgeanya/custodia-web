@@ -21,8 +21,8 @@ const SustainButton = styled(Button)({
 
 const Hero = () => {
   return (
-    <div className="bg-[#F0F7FF]">
-      <div className="px-5 md:px-32 mx-auto md:pt-18 pb-20 md:pb-36 flex flex-col md:flex-row md:justify-between bg-[#F0F7FF]">
+    <div className="bg-[#F0F7FF] px-5 md:px-32">
+      <div className="container mx-auto md:pt-18 pb-20 md:pb-36 flex flex-col md:flex-row md:justify-between ">
         <div className="md:max-w-lg pt-15 pb-17 md:pb-0 md:pt-18">
           <h1 className="md:pr-14  text-4lg md:text-start md:text-5xl font-bold text-[#002A47]">
             Effective{" "}

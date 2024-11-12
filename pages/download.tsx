@@ -102,30 +102,36 @@ const Download = () => {
         />
       </Head>
       <Navbar1 />
-      <div className="px-5 md:px-32 md:flex md:justify-between">
-        <div className="md:max-w-lg mt-16 md:mt-32">
-          <h1 className="text-4lg  md:text-5xl font-bold text-[#002A47]">
-            Download Custodia Health on iOS and Android
-          </h1>
-          <p className="mt-6 text-base  md:text-2lg text-[#476D85]">
-            The Custodia Health app gives you easy, on-the-go access to
-            tracking, resources, messaging, and more
-          </p>
-          <div className="flex mt-7 md:mt-10">
-            <Link href="https://play.google.com/store/apps/details?id=ng.lifebox.custodia">
-              
+      <div className="px-5 md:px-32">
+        <div className=" md:flex md:justify-between container mx-auto">
+          <div className="md:max-w-lg mt-16 md:mt-32">
+            <h1 className="text-4lg  md:text-5xl font-bold text-[#002A47]">
+              Download Custodia Health on iOS and Android
+            </h1>
+            <p className="mt-6 text-base  md:text-2lg text-[#476D85]">
+              The Custodia Health app gives you easy, on-the-go access to
+              tracking, resources, messaging, and more
+            </p>
+            <div className="flex mt-7 md:mt-10">
+              <Link href="https://play.google.com/store/apps/details?id=ng.lifebox.custodia">
                 <img
                   src={play.src}
-                  className="mr-3 md:mr-4 w-38 md:w-40 md:h-[50px] h-[40px]"
+                  className="mr-3 md:mr-4  md:h-[50px] h-[40px]"
                   alt="Play Store Icon"
                 />
-             
-            </Link>
-            <img src={apple.src} alt="Apple store Icon" className=" w-34 md:w-40 md:h-[50px] h-[40px]" />
+              </Link>
+              <Link href="https://apps.apple.com/ng/app/custodia-health/id6451072988">
+                <img
+                  src={apple.src}
+                  alt="Apple store Icon"
+                  className=" md:h-[50px] h-[40px]"
+                />
+              </Link>
+            </div>
           </div>
-        </div>
-        <div className="my-20 md:w-1/2 md:mt-20 md:mb-36 flex justify-center">
-          <img src={app.src} alt="App Store Icon" />
+          <div className="my-20 md:w-1/2 md:mt-20 md:mb-36 flex justify-center">
+            <img src={app.src} alt="App Store Icon" />
+          </div>
         </div>
       </div>
       <Footer />

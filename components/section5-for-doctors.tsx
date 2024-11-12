@@ -8,10 +8,11 @@ import playicon from "../public/assets/playicon.png";
 
 const Section5 = () => {
   return (
-    <div
-      className="px-5 md:px-32 md:pt-28 pt-20 md:pb-36 pb-24"
-      id="patient_stories"
-    >
+    <div className="px-5 md:px-32">
+      <div
+        className="container mx-auto md:pt-28 pt-20 md:pb-36 pb-24"
+        id="patient_stories"
+      >
       <h2 className="pr-8 text-2xl leading-9 md:text-start md:text-4xl md:max-w-xl font-bold text-[#002A47]">
         Don’t just take our word for it
       </h2>
@@ -104,7 +105,7 @@ const Section5 = () => {
           </p>
         </div>
       </div>
-    </div>
+      </div></div>
   );
 };
 
