@@ -12,22 +12,28 @@ import icon from "../public/assets/icon.svg";
 import { Input } from "@nextui-org/react";
 import { DateInput } from "@nextui-org/react";
 import { DatePicker } from "@nextui-org/react";
-import { DateValue, parseDate, getLocalTimeZone } from "@internationalized/date";
+import {
+  DateValue,
+  parseDate,
+  getLocalTimeZone,
+} from "@internationalized/date";
 import { Select, SelectSection, SelectItem } from "@nextui-org/select";
 import { useDateFormatter } from "@react-aria/i18n";
 
 const SustainButton = styled(Button)({
   background: "#4F9EEA !important",
   fontFamily: "Circular Std",
+  fontSize: "15px",
+  fontWeight: "500",
   color: "#f8f8f8",
   cursor: "pointer",
-  padding: "20px 30px",
+  padding: "16px 30px",
   margin: "0px 0px",
   width: "100%",
   borderRadius: "32px",
   textTransform: "none",
   ["@media (max-width:780px)"]: {
-    padding: "17px 20px",
+    padding: "14px 20px",
   },
 });
 
@@ -134,7 +140,7 @@ const Form = () => {
     const isoDob = getISODateString(state.user.dob);
     console.log("Submitting DOB as ISO string:", isoDob);
     console.log(state);
-    
+
     axios
       .post(
         "https://custodia-health-api-b53b05e2c965.herokuapp.com/v1/patient/auth/complete-profile",
@@ -151,7 +157,7 @@ const Form = () => {
       .then((res) => {
         if (res.data.message === "proceed to payment") {
           console.log(state);
-          
+
           setPageNumber(7);
         } else {
         }
@@ -221,15 +227,15 @@ const Form = () => {
       .then((res) => {
         if (res.data.message === "payment initialized successfully") {
           // Note the nested data.data structure
-          const link = document.createElement('a');
+          const link = document.createElement("a");
           link.href = res.data.data.data.authorization_url;
-          link.target = '_blank';
-          link.rel = 'noopener noreferrer';
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link);
         } else {
-          throw new Error(res.data.message || 'Payment initialization failed');
+          throw new Error(res.data.message || "Payment initialization failed");
         }
       })
       .catch((error) => {
@@ -238,7 +244,7 @@ const Form = () => {
       .finally(() => setIsLoading(false));
   };
 
-  const formatter = useDateFormatter({ dateStyle: "full" });
+ 
 
   // Handle date change
   const handleDateChange = (date: DateValue | null) => {
@@ -256,14 +262,17 @@ const Form = () => {
     if (!date) return "";
     return date.toDate(getLocalTimeZone()).toISOString();
   };
-
+  const progress = (pageNumber / 6) * 100;
 
   return (
     <div className="max-w-m mx-5 md:mx-auto mt-[32px] md:mt-[40px]">
       {pageNumber === 1 && (
         <div id="page1">
-          <div className="flex">
-            <img src={white.src} alt="" />
+          <div className="w-full bg-[#E6E6E6] h-[6px]">
+            <div
+              className="bg-[#4F9EEA] h-[6px] transition-all duration-300 ease-in-out"
+              style={{ width: `${progress}%` }}
+            />
           </div>
           <h1 className="mt-[32px] md:mt-[40px] leading-7  md:text-[24px] md:leading-[30px] mb-8 text-1lg font-bold text-[#002A47]">
             What is your email?
@@ -277,7 +286,12 @@ const Form = () => {
                 label="Email"
                 value={state.user.email}
                 onChange={handleChange}
-                className="h-12  text-sm rounded-lg bg-[#FFFFFF]  block w-full"
+                classNames={{
+                  label: "text-[#476D85]",
+                  input: "text-[#002A47]",
+                  inputWrapper:
+                    "border-1 group-data-[focus=true]:border-[#002A47]",
+                }}
                 placeholder=""
                 variant="bordered"
                 required
@@ -316,8 +330,11 @@ const Form = () => {
 
       {pageNumber === 2 && (
         <div id="page2">
-          <div className="flex">
-            <img src={white.src} alt="" />
+          <div className="w-full bg-[#E6E6E6] h-[6px]">
+            <div
+              className="bg-[#4F9EEA] h-[6px] transition-all duration-300 ease-in-out"
+              style={{ width: `${progress}%` }}
+            />
           </div>
           <h1 className="mt-[32px] md:mt-[40px] leading-7  md:text-[24px] md:leading-[30px] mb-3 text-1lg font-bold text-[#002A47]">
             Whats is your name?
@@ -336,7 +353,12 @@ const Form = () => {
                 value={state.user.first_name}
                 onChange={handleChange}
                 size="md"
-                className="h-12 text-sm rounded-lg bg-[#FFFFFF]  block w-full"
+                classNames={{
+                  label: "text-[#476D85]",
+                  input: "text-[#002A47]",
+                  inputWrapper:
+                    "border-1 group-data-[focus=true]:border-[#002A47]",
+                }}
                 placeholder=""
                 required
               />
@@ -350,7 +372,12 @@ const Form = () => {
                 variant="bordered"
                 value={state.user.last_name}
                 onChange={handleChange}
-                className="h-12  text-sm rounded-lg bg-[#FFFFFF]  block w-full"
+                classNames={{
+                  label: "text-[#476D85]",
+                  input: "text-[#002A47]",
+                  inputWrapper:
+                    "border-1 group-data-[focus=true]:border-[#002A47]",
+                }}
                 placeholder=""
                 required
               />
@@ -371,8 +398,11 @@ const Form = () => {
 
       {pageNumber === 3 && (
         <div id="page2">
-          <div className="flex">
-            <img src={white.src} alt="" />
+          <div className="w-full bg-[#E6E6E6] h-[6px]">
+            <div
+              className="bg-[#4F9EEA] h-[6px] transition-all duration-300 ease-in-out"
+              style={{ width: `${progress}%` }}
+            />
           </div>
           <h1 className="mt-[32px] md:mt-[40px] leading-7  md:text-[24px] md:leading-[30px] mb-3 text-1lg font-bold text-[#002A47]">
             What is your phone number?
@@ -390,7 +420,12 @@ const Form = () => {
                 variant="bordered"
                 value={state.user.phone_number}
                 onChange={handleChange}
-                className="h-12  text-sm rounded-lg bg-[#FFFFFF]  block w-full"
+                classNames={{
+                  label: "text-[#476D85]",
+                  input: "text-[#002A47]",
+                  inputWrapper:
+                    "border-1 group-data-[focus=true]:border-[#002A47]",
+                }}
                 placeholder=""
                 required
               />
@@ -414,8 +449,11 @@ const Form = () => {
 
       {pageNumber === 4 && (
         <div id="page2">
-          <div className="flex">
-            <img src={white.src} alt="" />
+          <div className="w-full bg-[#E6E6E6] h-[6px]">
+            <div
+              className="bg-[#4F9EEA] h-[6px] transition-all duration-300 ease-in-out"
+              style={{ width: `${progress}%` }}
+            />
           </div>
           <h1 className="mt-[32px] md:mt-[40px] leading-7  md:text-[24px] md:leading-[30px] mb-8 text-1lg font-bold text-[#002A47]">
             What is your gender?
@@ -423,7 +461,13 @@ const Form = () => {
 
           <form>
             <div className="mb-[40px]">
-              <Select label="Select your gender" className="">
+              <Select
+                label="Select your gender"
+                classNames={{
+                  label: "text-[#476D85]",
+                  trigger: "border-1 group-data-[focus=true]:border-[#002A47]",
+                }}
+              >
                 <SelectItem key="male">Male</SelectItem>
                 <SelectItem key="female">Female</SelectItem>
               </Select>
@@ -443,8 +487,11 @@ const Form = () => {
       )}
       {pageNumber === 5 && (
         <div id="page2">
-          <div className="flex">
-            <img src={white.src} alt="" />
+          <div className="w-full bg-[#E6E6E6] h-[6px]">
+            <div
+              className="bg-[#4F9EEA] h-[6px] transition-all duration-300 ease-in-out"
+              style={{ width: `${progress}%` }}
+            />
           </div>
           <h1 className="mt-[32px] md:mt-[40px] leading-7  md:text-[24px] md:leading-[30px] mb-8 text-1lg font-bold text-[#002A47]">
             What is your date of birth?
@@ -456,6 +503,12 @@ const Form = () => {
                 label="Birth date"
                 value={state.user.dob}
                 onChange={handleDateChange}
+                classNames={{
+                  label: "text-[#476D85]",
+                  input: "text-[#002A47]",
+                  inputWrapper:
+                    "border-1 group-data-[focus=true]:border-[#002A47]",
+                }}
               />
             </div>
 
@@ -472,8 +525,11 @@ const Form = () => {
       )}
       {pageNumber === 6 && (
         <div id="page2">
-          <div className="flex">
-            <img src={white.src} alt="" />
+          <div className="w-full bg-[#E6E6E6] h-[6px]">
+            <div
+              className="bg-[#4F9EEA] h-[6px] transition-all duration-300 ease-in-out"
+              style={{ width: `${progress}%` }}
+            />
           </div>
           <h1 className="mt-[32px] md:mt-[40px] leading-7  md:text-[24px] md:leading-[30px] mb-8 text-1lg font-bold text-[#002A47]">
             How did you hear about us?
@@ -481,7 +537,13 @@ const Form = () => {
 
           <form onSubmit={completeProfile}>
             <div className="mb-[40px]">
-              <Select label="Select" className="">
+              <Select
+                label="Select"
+                classNames={{
+                  label: "text-[#476D85]",
+                  trigger: "border-1 group-data-[focus=true]:border-[#002A47]",
+                }}
+              >
                 <SelectItem key="friend">Friend</SelectItem>
                 <SelectItem key="advert">Advert</SelectItem>
                 <SelectItem key="social_media">Social Media</SelectItem>

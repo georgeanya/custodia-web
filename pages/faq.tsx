@@ -66,7 +66,8 @@ const Faq = () => {
       answer:
         "Type 2 diabetes reversal is officially in remission when HbA1c levels drop to below 6.5% (48mmol/mol) and stay there for 3 months without the help of medication.",
       open: false,
-    }, {
+    },
+    {
       question: "How long does the Custodia program last?",
       answer:
         "The duration of the Custodia program can vary based on individual needs and goals, but it is generally designed for ongoing, long-term support until the desired health outcomes are achieved.",
@@ -211,18 +212,20 @@ const Faq = () => {
         />
       </Head>
       <Navbar1 />
-      <div className="px-5 md:pl-[290px] md:pr-[380px] md:mt-24 mt-16 md:pb-36 pb-24">
-        <h1 className="text-4lg  md:text-5xl font-bold text-[#002A47]">
-          Frequently Asked Questions
-        </h1>
-        <p className="mt-5 md:mt-6 text-base md:text-start mb-7 md:mb-14 md:text-2lg leading-[22px] text-[#476D85]">
-          Find answers to commonly asked questions about our treatment,
-          enrollment process, and pricing
-        </p>
-        <div className="max-w-3xl mt-17 md:mt-18">
-          {faqs.map((faq, index) => (
-            <FAQ faq={faq} index={index} key={index} toggleFAQ={toggleFAQ} />
-          ))}
+      <div className="px-5 md:pl-[290px] md:pr-[380px]">
+        <div className="container mx-auto md:mt-24 mt-16 md:pb-36 pb-24">
+          <h1 className="text-4lg  md:text-5xl font-bold text-[#002A47]">
+            Frequently Asked Questions
+          </h1>
+          <p className="mt-5 md:mt-6 text-base md:text-start mb-7 md:mb-14 md:text-2lg leading-[22px] text-[#476D85]">
+            Find answers to commonly asked questions about our treatment,
+            enrollment process, and pricing
+          </p>
+          <div className="max-w-3xl mt-17 md:mt-18">
+            {faqs.map((faq, index) => (
+              <FAQ faq={faq} index={index} key={index} toggleFAQ={toggleFAQ} />
+            ))}
+          </div>
         </div>
       </div>
       <Footer />

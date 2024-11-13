@@ -2,7 +2,7 @@ import { nextui } from "@nextui-org/theme";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: false, 
+  darkMode: false,
   content: [
     "./layouts/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -993,5 +993,16 @@ module.exports = {
     "active",
     "disabled",
   ],
-  plugins: [nextui()],
+  plugins: [
+    nextui({
+      themes: {
+        light: {
+          colors: {
+            focus: "#002A47",
+          },
+        },
+        
+      },
+    }),
+  ],
 };

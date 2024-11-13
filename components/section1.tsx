@@ -55,7 +55,7 @@ const Section1 = () => {
         <div className="flex md:w-[275px] bg-[#005A61] py-[16px] md:py-5 px-5 md:px-[30px] rounded-[20px]">
           <img src={dysli.src} alt="Icon" className="md:w-[50px] w-11" />
           <p className="ml-5 text-base md:text-xl leading-8 font-medium text-white flex justify-center self-center">
-          Gestational diabetes
+          Fatty liver
           </p>
         </div>
       </div>
