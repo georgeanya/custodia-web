@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo, useEffect, useRef } from "react";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import axios from "axios";
@@ -51,7 +51,7 @@ const Newsletter: React.FC<NewsletterProps> = ({ isOpen, onClose }) => {
   });
 
   const [isSuccess, setIsSuccess] = useState(false);
-
+  const modalRef = useRef<HTMLDivElement>(null);
   const [isError, setIsError] = useState(false);
 
   useEffect(() => {
@@ -66,6 +66,22 @@ const Newsletter: React.FC<NewsletterProps> = ({ isOpen, onClose }) => {
       document.body.removeChild(script);
     };
   }, []);
+
+  useEffect(() => {
+    if (isOpen) {
+      // Lock body scroll when modal is open
+      document.body.style.overflow = "hidden";
+      // Focus the modal when it opens
+      modalRef.current?.focus();
+    } else {
+      // Restore body scroll when modal closes
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): any => {
     setState({
@@ -124,6 +140,8 @@ const Newsletter: React.FC<NewsletterProps> = ({ isOpen, onClose }) => {
     <div
       className="fixed inset-0 bg-black/30 backdrop-blur-sm"
       onClick={onClose}
+      role="button"
+      aria-modal="true"
     >
       <div
         id="crud-modal"
@@ -136,7 +154,9 @@ const Newsletter: React.FC<NewsletterProps> = ({ isOpen, onClose }) => {
           id="form"
         >
           <div
+            ref={modalRef}
             className="relative bg-white rounded-lg shadow dark:bg-gray-700 px-8 py-[42px]"
+            tabIndex={-1}
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex justify-between">
