@@ -140,8 +140,7 @@ const Newsletter: React.FC<NewsletterProps> = ({ isOpen, onClose }) => {
     <button
       className="fixed inset-0 bg-black/30 backdrop-blur-sm"
       onClick={onClose}
-      role="button"
-      
+      type="button"
     >
       <div
         id="crud-modal"
