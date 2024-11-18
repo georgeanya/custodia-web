@@ -139,9 +139,15 @@ const Newsletter: React.FC<NewsletterProps> = ({ isOpen, onClose }) => {
   return (
     <div
       className="fixed inset-0 bg-black/30 backdrop-blur-sm"
-      onClick={onClose}
       role="button"
-      aria-modal="true"
+      tabIndex={0}
+      onClick={onClose}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          onClose();
+        }
+      }}
+      aria-label="Close modal"
     >
       <div
         id="crud-modal"
