@@ -4,33 +4,42 @@ import Button from "@mui/material/Button";
 import axios from "axios";
 import Link from "next/link";
 import image from "../public/assets/user.svg";
+import Newsletter from "./newsletter";
 
 const SustainOutlineButton = styled(Button)({
-  background: "white!important",
+  background: "white !important",
   fontFamily: "Circular Std",
   color: "#4F9EEA",
   cursor: "pointer",
-  padding: "20px 38px",
+  padding: "18.5px 30px",
+
   margin: "0",
   border: "1px solid #4F9EEA",
   borderRadius: "32px",
   textTransform: "none",
+  fontWeight: 500,
   "@media (max-width:780px)": {
-    padding: "16px 32px",
+    padding: "16px 30px",
+    fontSize: "14px",
+    lineHeight: "17.71",
   },
 });
 
 const SustainButton = styled(Button)({
   background: "#4F9EEA !important",
   fontFamily: "Circular Std",
+  fontSize: "15px",
+  lineHeight: "18.97",
   color: "#f8f8f8",
   cursor: "pointer",
-  padding: "20px 38px",
-  margin: "0",
+  padding: "18.5px 30px",
   borderRadius: "32px",
   textTransform: "none",
-  "@media (max-width:780px)": {
-    padding: "16px 32px",
+  fontWeight: 500,
+  ["@media (max-width:780px)"]: {
+    padding: "16px 30px",
+    fontSize: "14px",
+    lineHeight: "17.71",
   },
 });
 
@@ -86,6 +95,17 @@ const Blog: React.FC = () => {
   const [blogs, setBlogs] = useState<BlogResponse | null>(null);
   const [toggleState, setToggleState] = useState<BlogCategory>("All");
   const [page, setPage] = useState(1);
+  const [isNewsletterOpen, setIsNewsletterOpen] = useState(false);
+
+  // Function to open modal
+  const openNewsletter = () => {
+    setIsNewsletterOpen(true);
+  };
+
+  // Function to close modal
+  const closeNewsletter = () => {
+    setIsNewsletterOpen(false);
+  };
 
   const loadMorePosts = () => {
     setPage((page) => page + 1);
@@ -337,17 +357,14 @@ const Blog: React.FC = () => {
             Subscribe to recieve updates about our blog posts and announcements
             directly in your mailbox
           </p>
-          <form action="" method="post" className="flex flex-wrap">
-            <input
-              type="text"
-              placeholder="Enter your email"
-              className="border mb-4 md:mb-0 h-[48px] md:h-[60px] md:max-w-[462px] border-gray-300 text-gray-900 text-sm rounded-2xl  block w-full p-2.5 md:mr-5"
-            />
-            <SustainButton className="md:text-base md:leading-5">
-              Subscribe
-            </SustainButton>
-          </form>
+          <SustainButton
+            className="md:text-base md:leading-5"
+            onClick={openNewsletter}
+          >
+            Subscribe
+          </SustainButton>
         </div>
+        <Newsletter isOpen={isNewsletterOpen} onClose={closeNewsletter} />
         <div className="mt-10 md:mt-20 grid md:grid-cols-3 md:grid-rows-1 gap-15 md:mb-20 mb-15">
           {blogsToDisplay2?.map((blogpost: any) => {
             const blog = blogpost;

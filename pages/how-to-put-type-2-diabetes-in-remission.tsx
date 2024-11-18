@@ -265,7 +265,7 @@ const Webinar = () => {
                       onChange={handleChange}
                       size="md"
                       classNames={{
-                        label: "text-[#476D85]",
+                        label: "text-[#476D85] group-data-[filled=true]:text-[#476D85]",
                         input: "text-[#002A47]",
                         inputWrapper:
                           "border-1 group-data-[focus=true]:border-[#002A47]",
@@ -283,7 +283,7 @@ const Webinar = () => {
                       value={state.user.last_name}
                       onChange={handleChange}
                       classNames={{
-                        label: "text-[#476D85]",
+                        label: "text-[#476D85] group-data-[filled=true]:text-[#476D85]",
                         input: "text-[#002A47]",
                         inputWrapper:
                           "border-1 group-data-[focus=true]:border-[#002A47]",
@@ -307,7 +307,7 @@ const Webinar = () => {
                     value={state.user.email}
                     onChange={handleChange}
                     classNames={{
-                      label: "text-[#476D85]",
+                      label: "text-[#476D85] group-data-[filled=true]:text-[#476D85]",
                       input: "text-[#002A47]",
                       inputWrapper:
                         "border-1 group-data-[focus=true]:border-[#002A47]",
@@ -327,7 +327,7 @@ const Webinar = () => {
                     value={state.user.phone_number}
                     onChange={handleChange}
                     classNames={{
-                      label: "text-[#476D85]",
+                      label: "text-[#476D85] group-data-[filled=true]:text-[#476D85]",
                       input: "text-[#002A47]",
                       inputWrapper:
                         "border-1 group-data-[focus=true]:border-[#002A47]",

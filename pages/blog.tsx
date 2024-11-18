@@ -11,13 +11,9 @@ import metaCard from "../public/assets/custodia-metacard.png";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import Blog from "../components/blog";
-
-
-
-
+import Newsletter from "@/components/newsletter";
 
 const BlogHome = () => {
-  
   return (
     <div>
       <Head>
@@ -100,7 +96,7 @@ const BlogHome = () => {
         />
       </Head>
       <Navbar1 />
-      <Blog/>
+      <Blog />
       <Footer />
     </div>
   );
