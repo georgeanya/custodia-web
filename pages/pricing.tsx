@@ -123,202 +123,98 @@ const Pricing = (props: any) => {
             Choose the perfect plan for you
           </h1>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
-          <div className="flex flex-col justify-between md:max-w-md rounded-2xl bg-white py-10 md:py-[45px]">
-            <div>
-              <div className="px-5 md:px-[30px] ">
-                <p className="text-xs font-medium md:text-sm leading-4 text-[#4F9EEA]">
-                  BASIC
-                </p>
-                <p className="mt-2 text-1xxl md:text-4lg font-medium text-[#002A47] ">
-                  ₦40,000
-                  <span className="md:text-lg md:leading-[22px] text-base">
-                    /quarterly
-                  </span>
-                </p>
-                <p className="mt-3  mb-5 md:text-[18px] text-[16px] leading-[22px] text-[#002A47]">
-                  Get the tools and support you need to reverse your condition
-                  with a{" "}
-                  <a
-                    href="https://lifebox-labs.notion.site/Custodia-6-month-money-back-guarantee-9109266d94834c57b47a869a6bed308d"
-                    className="text-[#4F9EEA] font-bold"
-                  >
-                    6-month money-back guarantee
-                  </a>
-                </p>
-                <Link href="/start">
-                 
-                    <SustainButton>Choose this plan</SustainButton>
-                  
-                </Link>
-              </div>
-              <hr className="mt-[24px] mb-[42px] mx-5 md:mx-[30px]" />
-              <div className="md:px-[30px] px-5">
-                <div className="flex">
-                  <img
-                    src={icon.src}
-                    className="self-center w-2.5 md:w-3"
-                    alt="Icon"
-                  />
-                  <span className="ml-3 md:ml-4 flex self-center text-base leading-5 md:text-lg md:leading-[22px] text-[#002A47]">
-                    Personal lifestyle and diet coaching
-                  </span>
-                </div>
-                <div className="flex mt-5">
-                  <img
-                    src={icon.src}
-                    className="self-center w-2.5 md:w-3"
-                    alt="Icon"
-                  />
-                  <span className="ml-3 md:ml-4 flex self-center text-base leading-5 md:text-lg md:leading-[22px] text-[#002A47]">
-                    Medical supervision
-                  </span>
-                </div>
-                <div className="flex mt-5">
-                  <img
-                    src={icon.src}
-                    className="self-center w-2.5 md:w-3"
-                    alt="Icon"
-                  />
-                  <span className="ml-3 md:ml-4 flex self-center text-base leading-5 md:text-lg md:leading-[22px] text-[#002A47]">
-                    Meal plans, lessons, and resources
-                  </span>
-                </div>
-                <div className="flex mt-5">
-                  <img
-                    src={icon.src}
-                    className="md:self-center self-start w-2.5 md:w-3 mt-1 md:mt-0"
-                    alt="Icon"
-                  />
-                  <span className="ml-3 md:ml-4 flex self-center text-base leading-5 md:text-lg md:leading-[22px] text-[#002A47]">
-                    Personalized care plan
-                  </span>
-                </div>
-                <div className="flex mt-5">
-                  <img
-                    src={icon.src}
-                    className="self-center w-2.5 md:w-3"
-                    alt="Icon"
-                  />
-                  <span className="ml-3 md:ml-4 flex self-center text-base leading-5 md:text-lg md:leading-[22px] text-[#002A47]">
-                    Discounts on lab tests
-                  </span>
-                </div>
+        <div>
+          <div className="border rounded-2xl py-9 md:grid grid-cols-2 md:py-10 bg-white">
+            <div className="px-5 md:px-[30px] md:border-r md:max-w-md">
+              <p className="text-xs font-medium  leading-4 text-[#4F9EEA]">
+                BASIC
+              </p>
+              <p className="mt-2 text-1xxl md:text-[30px] leading-[38px] font-medium text-[#002A47] ">
+                ₦50,000
+                <span className=" text-base">/quarterly</span>
+              </p>
+              <p className="mt-3  mb-5 md:text-[16px] text-[16px] leading-[22px] text-[#002A47] md:max-w-[320px]">
+                Get the tools and support you need to reverse your condition
+                with a{" "}
+                <a
+                  href="https://lifebox-labs.notion.site/Custodia-6-month-money-back-guarantee-9109266d94834c57b47a869a6bed308d"
+                  className="text-[#4F9EEA] font-bold"
+                >
+                  6-month money-back guarantee
+                </a>
+              </p>
+              <div className="mb-[24xp] md:mb-0">
+                <SustainButton
+                  className="self-center text-sm md:text-base font-medium"
+                  type="submit"
+                >
+                  <p>Choose this plan</p>
+                </SustainButton>
               </div>
             </div>
-            {/* <div>
-              <div className="mt-10 md:mt-12 flex justify-center">
-                <Link href="/start">
-                  <SustainButton className="text-sm  md:text-base font-medium">
-                    Get started
-                  </SustainButton>
-                </Link>
+            <hr className="mt-[24px] mb-[30px] md:mb-8 mx-5 md:mx-[30px] md:hidden" />
+            <div className="md:px-[30px] px-5">
+              <div className="flex">
+                <img
+                  src={icon.src}
+                  className="self-center w-2.5 md:w-3"
+                  alt="Icon"
+                />
+                <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
+                  Personal lifestyle and diet coaching
+                </span>
               </div>
-            </div> */}
-          </div>
-          <div className="flex justify-between flex-col md:max-w-md rounded-2xl bg-white py-10 md:py-[45px]">
-            <div>
-              <div className="px-5 md:px-[30px] ">
-                <p className="text-xs font-medium md:text-sm leading-4 text-[#4F9EEA]">
-                  COMPREHENSIVE
-                </p>
-                <p className="mt-2 text-1xxl md:text-4lg font-medium text-[#002A47] ">
-                  ₦180,000
-                  <span className="md:text-lg md:leading-[22px] text-base">
-                    /6 months
-                  </span>
-                </p>
-                <p className="mt-3  mb-5 md:text-[18px] text-[16px] leading-[22px] text-[#002A47]">
-                  Get the tools and support you need to reverse your condition
-                  with a{" "}
-                  <a
-                    href="https://lifebox-labs.notion.site/Custodia-6-month-money-back-guarantee-9109266d94834c57b47a869a6bed308d"
-                    className="text-[#4F9EEA] font-bold"
-                  >
-                    6-month money-back guarantee
-                  </a>
-                </p>
-
-                <Link href="/start">
-               
-                    <SustainButton>Choose this plan</SustainButton>
-                 
-                </Link>
+              <div className="flex mt-[18px] md:mt-5">
+                <img
+                  src={icon.src}
+                  className="self-center w-2.5 md:w-3"
+                  alt="Icon"
+                />
+                <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
+                  Medical supervision
+                </span>
               </div>
-              <hr className="mt-[24px] mb-[42px] mx-5 md:mx-[30px]" />
-
-              <div className="px-5 md:px-[30px]">
-                <div className="flex">
-                  <img
-                    src={icon.src}
-                    className="self-center w-2.5 md:w-3"
-                    alt="Icon"
-                  />
-                  <span className="ml-3 md:ml-4 flex self-center text-base leading-5 md:text-lg md:leading-[22px] text-[#002A47]">
-                    Personal lifestyle and diet coaching
-                  </span>
-                </div>
-                <div className="flex mt-5">
-                  <img
-                    src={icon.src}
-                    className="self-center w-2.5 md:w-3"
-                    alt="Icon"
-                  />
-                  <span className="ml-3 md:ml-4 flex self-center text-base leading-5 md:text-lg md:leading-[22px] text-[#002A47]">
-                    Medical supervision
-                  </span>
-                </div>
-                <div className="flex mt-5">
-                  <img
-                    src={icon.src}
-                    className="self-center w-2.5 md:w-3"
-                    alt="Icon"
-                  />
-                  <span className="ml-3 md:ml-4 flex self-center text-base leading-5 md:text-lg md:leading-[22px] text-[#002A47]">
-                    Meal plans, lessons, and resources
-                  </span>
-                </div>
-                <div className="flex mt-5">
-                  <img
-                    src={icon.src}
-                    className="md:self-center self-start w-2.5 md:w-3 mt-1 md:mt-0"
-                    alt="Icon"
-                  />
-                  <span className="ml-3 md:ml-4 flex self-center text-base leading-5 md:text-lg md:leading-[22px] text-[#002A47]">
-                    Personalized care plan
-                  </span>
-                </div>
-                <div className="flex mt-5">
-                  <img
-                    src={icon.src}
-                    className="self-center w-2.5 md:w-3"
-                    alt="Icon"
-                  />
-                  <span className="ml-3 md:ml-4 flex self-center text-base leading-5 md:text-lg md:leading-[22px] text-[#002A47]">
-                    Routine lab tests
-                  </span>
-                </div>
-                <div className="flex mt-5">
-                  <img
-                    src={icon.src}
-                    className="self-center w-2.5 md:w-3"
-                    alt="Icon"
-                  />
-                  <span className="ml-3 md:ml-4 flex self-center text-base leading-5 md:text-lg md:leading-[22px] text-[#002A47]">
-                    Glucometer and strips
-                  </span>
-                </div>
+              <div className="flex mt-[18px] md:mt-5">
+                <img
+                  src={icon.src}
+                  className="self-center w-2.5 md:w-3"
+                  alt="Icon"
+                />
+                <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
+                  Meal plans, lessons, and resources
+                </span>
+              </div>
+              <div className="flex mt-[18px] md:mt-5">
+                <img
+                  src={icon.src}
+                  className="md:self-center self-start w-2.5 md:w-3 mt-1 md:mt-0"
+                  alt="Icon"
+                />
+                <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
+                  Personalized care plan
+                </span>
+              </div>
+              <div className="flex mt-[18px] md:mt-5">
+                <img
+                  src={icon.src}
+                  className="md:self-center self-start w-2.5 md:w-3 mt-1 md:mt-0"
+                  alt="Icon"
+                />
+                <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
+                  Private member community
+                </span>
+              </div>
+              <div className="flex mt-[18px] md:mt-5">
+                <img
+                  src={icon.src}
+                  className="self-center w-2.5 md:w-3"
+                  alt="Icon"
+                />
+                <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
+                  Discounts on lab tests
+                </span>
               </div>
             </div>
-            {/* <div className="justify-end">
-              <div className="mt-10 md:mt-12 flex justify-center">
-                <Link href="/start">
-                  <SustainButton className="text-sm  md:text-base font-medium">
-                    Get started
-                  </SustainButton>
-                </Link>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>
