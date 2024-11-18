@@ -140,13 +140,12 @@ const Newsletter: React.FC<NewsletterProps> = ({ isOpen, onClose }) => {
     <div
       className="fixed inset-0 bg-black/30 backdrop-blur-sm"
       
-      tabIndex={0}
+      
       
     >
       <div
         id="crud-modal"
-        tabIndex={-1}
-        aria-hidden="true"
+        
         className=" overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0  max-h-full"
       >
         <div

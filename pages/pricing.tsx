@@ -124,7 +124,7 @@ const Pricing = (props: any) => {
           </h1>
         </div>
         <div>
-          <div className="border rounded-2xl py-9 md:grid grid-cols-2 md:py-10 bg-white">
+          <div className="border rounded-2xl py-9 md:grid grid-cols-2 gap-0 md:py-10 bg-white">
             <div className="px-5 md:px-[30px] md:border-r md:max-w-md">
               <p className="text-xs font-medium  leading-4 text-[#4F9EEA]">
                 BASIC
