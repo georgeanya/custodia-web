@@ -137,11 +137,17 @@ const Newsletter: React.FC<NewsletterProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <button
-      className="fixed inset-0 bg-black/30 backdrop-blur-sm"
-      onClick={onClose}
-      type="button"
-    >
+    <div
+  className="fixed inset-0 bg-black/30 backdrop-blur-sm"
+  role="button"
+  tabIndex={0}
+  onClick={onClose}
+  onKeyDown={(e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      onClose();
+    }
+  }}
+>
       <div
         id="crud-modal"
         tabIndex={-1}
@@ -156,6 +162,7 @@ const Newsletter: React.FC<NewsletterProps> = ({ isOpen, onClose }) => {
             ref={modalRef}
             className="relative bg-white rounded-lg shadow dark:bg-gray-700 px-8 py-[42px]"
             tabIndex={-1}
+            aria-modal="true"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex justify-between">
@@ -239,7 +246,7 @@ const Newsletter: React.FC<NewsletterProps> = ({ isOpen, onClose }) => {
           </div>
         </div>
       </div>
-    </button>
+    </div>
   );
 };
 
