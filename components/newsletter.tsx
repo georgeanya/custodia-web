@@ -137,17 +137,11 @@ const Newsletter: React.FC<NewsletterProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div
+    <button
       className="fixed inset-0 bg-black/30 backdrop-blur-sm"
-      role="button"
-      tabIndex={0}
       onClick={onClose}
-      onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          onClose();
-        }
-      }}
-      aria-label="Close modal"
+      role="button"
+      
     >
       <div
         id="crud-modal"
@@ -173,7 +167,7 @@ const Newsletter: React.FC<NewsletterProps> = ({ isOpen, onClose }) => {
                 <img src={cancel.src} alt="" />
               </button>
             </div>
-            <p className="text-[14px] leading-[19px] md:text-[16px] mt-3 md:leading-[21px] text-[#002A47]">
+            <p className="text-[14px] leading-[19px] md:text-[16px] mt-3 md:leading-[21px] text-startc text-[#002A47]">
               Enter your details to receive updates and announcements directly
               in your mailbox
             </p>
@@ -246,7 +240,7 @@ const Newsletter: React.FC<NewsletterProps> = ({ isOpen, onClose }) => {
           </div>
         </div>
       </div>
-    </div>
+    </button>
   );
 };
 
