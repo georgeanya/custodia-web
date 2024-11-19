@@ -93,7 +93,7 @@ const Section4 = () => {
                 />
               ))}
               <div className="mt-10 md:mt-15 ">
-                <Link href="/pricing">
+                <Link href="/sign-up">
                   <SustainButton className="text-xs md:text-base font-medium">
                     Get started now
                   </SustainButton>

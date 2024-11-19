@@ -140,16 +140,15 @@ const Pricing = (props: any) => {
                   href="https://lifebox-labs.notion.site/Custodia-6-month-money-back-guarantee-9109266d94834c57b47a869a6bed308d"
                   className="text-[#4F9EEA] font-bold"
                 >
-                  6-month money-back guarantee
+                  3-month money-back guarantee
                 </a>
               </p>
               <div className="mb-[24xp] md:mb-0">
-                <SustainButton
-                  className="self-center text-sm md:text-base font-medium"
-                  type="submit"
-                >
-                  <p>Choose this plan</p>
-                </SustainButton>
+                <Link href="/sign-up">
+                  <SustainButton className="self-center text-sm md:text-base font-medium">
+                    <p>Choose this plan</p>
+                  </SustainButton>
+                </Link>
               </div>
             </div>
             <hr className="mt-[24px] mb-[30px] md:mb-8 mx-5 md:mx-[30px] md:hidden" />

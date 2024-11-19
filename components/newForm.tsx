@@ -95,16 +95,8 @@ const Form = () => {
   const [discountPrice, setDiscountPrice] = useState(0);
   const [pageNumber, setPageNumber] = useState(1);
   const [isLoading, setIsLoading] = useState(true);
-  const router = useRouter();
+  
 
-  useEffect(() => {
-    
-    const { reference } = router.query;
-
-    if (reference && typeof reference === 'string') {
-      verifyPayment(reference);
-    }
-  }, [router.query]);
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): any => {
     setState({
       ...state,
@@ -119,6 +111,10 @@ const Form = () => {
   const prevPage = () =>
     setPageNumber((prevPage) => (prevPage > 1 ? prevPage - 1 : 1));
 
+  const handleError = () => {
+    setPageNumber(1)
+  }
+
   const signUp = (event: React.FormEvent<HTMLFormElement>): any => {
     event.preventDefault();
     setIsLoading(false);
@@ -130,15 +126,16 @@ const Form = () => {
         }
       )
       .then((res) => {
-        if (res.data.message === "patient created") {
+        if (res.data.data.status === "profile incomplete") {
           setPageNumber(2);
-        } else if (res.data.message === "patient already exists") {
+        } else if (res.data.data.status === "profile completed") {
+          fetchPlanData()
           setPageNumber(7);
         } else {
         }
       })
       .catch((error) => {
-        console.log(error);
+        setPageNumber(9);
       })
       .finally(() => setIsLoading(true));
   };
@@ -172,7 +169,7 @@ const Form = () => {
         }
       })
       .catch((error) => {
-        console.log(error);
+        setPageNumber(9);
       })
       .finally(() => setIsLoading(true));
   };
@@ -194,14 +191,13 @@ const Form = () => {
         },
       });
     } catch (error) {
-      console.error("Error fetching data:", error);
-      throw error;
+      setPageNumber(9);
     }
   };
 
   const discountCode = (event: React.FormEvent<HTMLFormElement>): any => {
     event.preventDefault();
-    setIsLoading(true);
+    // setIsLoading(true);
     axios
       .post(
         "https://custodia-health-api-b53b05e2c965.herokuapp.com/v1/patient/payment/discount",
@@ -216,9 +212,8 @@ const Form = () => {
         }
       })
       .catch((error) => {
-        console.log(error);
       })
-      .finally(() => setIsLoading(false));
+      
   };
 
   const initializePayment = (event: React.FormEvent<HTMLFormElement>): any => {
@@ -248,30 +243,7 @@ const Form = () => {
         }
       })
       .catch((error) => {
-        console.log(error);
-      })
-      .finally(() => setIsLoading(false));
-  };
-
-  const verifyPayment = (reference: string) => {
-    setIsLoading(true);
-    axios
-      .post(
-        "https://custodia-health-api-b53b05e2c965.herokuapp.com/v1/patient/payment/verify",
-        {
-          reference: reference,
-        }
-      )
-      .then((res) => {
-        if (res.data.message === "payment verified") {
-          setPageNumber(9);
-          window.history.replaceState({}, "", window.location.pathname);
-        } else {
-          console.error("Payment verification failed");
-        }
-      })
-      .catch((error) => {
-        console.log(error);
+        setPageNumber(9);
       })
       .finally(() => setIsLoading(false));
   };
@@ -332,14 +304,14 @@ const Form = () => {
                 By filling out this form, you agree to Custodia Health’s{" "}
                 <a
                   className="text-[#4F9EEA] underline font-medium"
-                  href="https://priv-health.notion.site/Terms-of-use-254e525466a3493687d94fd671d93ad8"
+                  href="/terms-of-use"
                 >
                   Terms of Use
                 </a>{" "}
                 and{" "}
                 <a
                   className="text-[#4F9EEA] underline font-medium"
-                  href="https://priv-health.notion.site/Privacy-policy-2f70cbb81ab843ca920e87d2b32caa37"
+                  href="/privacy-policy"
                 >
                   Privacy Policy
                 </a>
@@ -667,7 +639,7 @@ const Form = () => {
                   href="https://lifebox-labs.notion.site/Custodia-6-month-money-back-guarantee-9109266d94834c57b47a869a6bed308d"
                   className="text-[#4F9EEA] font-bold"
                 >
-                  6-month money-back guarantee
+                  3-month money-back guarantee
                 </a>
               </p>
             </div>
@@ -852,17 +824,16 @@ const Form = () => {
             <img src={circle.src} alt="" className="w-20" />
           </div>
           <p className="text-[22px] leading-[28px] md:text-[28px] md:leading-[35px] font-medium mt-4 mb-3 md:mt-[24px] md:mb-4 text-center">
-            Payment successful
+          An error occurred
           </p>
           <p className="text-[#476D85] text-[16px] leading-[22px] md:text-[18px] md:leading-[24px] text-center mb-7 md:mb-8">
-            Thank you for joining Custodia. Our enrollment advisor will contact
-            you in 24 hours to complete your enrollment
+          Please make sure you entered a valid details and try again
           </p>
-          <Link href="https://chat.whatsapp.com/FRbf5Bs3IgE77YDfbZUV1U">
-            <SustainButton className="self-center text-sm md:text-base font-medium">
-              Join our WhatsApp community
+          
+            <SustainButton className="self-center text-sm md:text-base font-medium" onClick={handleError}>
+              Try Again
             </SustainButton>
-          </Link>
+          
         </div>
       )}
     </div>

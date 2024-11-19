@@ -30,7 +30,7 @@ const Start = () => {
         <meta content="598084287257839" property="fb:profile_id" />
         <meta content="en_US" property="og:locale" />
         <meta content="website" property="og:type" />
-        <meta content="https://custodiahealth.com/start" property="og:url" />
+        <meta content="https://custodiahealth.com/sign-up" property="og:url" />
         <meta
           content="Book a consultation - Custodia Health"
           property="og:title"
@@ -84,8 +84,8 @@ const Start = () => {
           content="An image of the Custodia Health logo"
         />
         <link rel="me" href="https://twitter.com/custodiahealth" />
-        <link href="https://custodiahealth.com/start" rel="canonical" />
-        <link href="https://custodiahealth.com/start" rel="home" />
+        <link href="https://custodiahealth.com/sign-up" rel="canonical" />
+        <link href="https://custodiahealth.com/sign-up" rel="home" />
         <link href="/humans.txt" rel="author" type="text/plain" />
         <link
           href="https://custodiahealth.com/"

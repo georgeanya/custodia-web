@@ -34,7 +34,7 @@ const Download = () => {
         <meta content="598084287257839" property="fb:profile_id" />
         <meta content="en_US" property="og:locale" />
         <meta content="website" property="og:type" />
-        <meta content="https://custodiahealth.com/start" property="og:url" />
+        <meta content="https://custodiahealth.com/sign-up" property="og:url" />
         <meta
           content="Download our App - Custodia Health"
           property="og:title"

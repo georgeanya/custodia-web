@@ -222,7 +222,7 @@ const BlogPost = ({ blog }: { blog: Blog }) => {
                 </p>
               </div>
               <div className="self-center">
-                <Link href="/pricing">
+                <Link href="/sign-up">
                  
                     <SustainButton>Get started now</SustainButton>
                  

@@ -35,7 +35,7 @@ const Footer = () => {
           <p className="md:text-5lg text-3xl font-bold mb-11 md:mb-0 md:max-w-2xl">
             Are you ready to start that journey? Join Custodia today!
           </p>
-          <Link href="/pricing">
+          <Link href="/sign-up">
             <SustainButton className="self-start text-xs md:text-base font-medium">
               Get started now
             </SustainButton>

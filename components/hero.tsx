@@ -51,7 +51,7 @@ const Hero = () => {
             sustainably reverse chronic metabolic using simple lifestyle changes
           </p>
           <div className="mt-8 ">
-            <Link href="/pricing">
+            <Link href="/sign-up">
               <SustainButton className="text-xs lg:text-base font-medium">
                 Get started now
               </SustainButton>

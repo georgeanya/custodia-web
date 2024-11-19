@@ -52,13 +52,11 @@ const Navbar = () => {
         <nav>
           <div className="container flex flex-wrap justify-between items-center mx-auto">
             <Link href="/">
-             
-                <img
-                  src={custodia.src}
-                  className="mr-3 cursor-pointer self-center"
-                  alt="Custodia Logo"
-                />
-             
+              <img
+                src={custodia.src}
+                className="mr-3 cursor-pointer self-center"
+                alt="Custodia Logo"
+              />
             </Link>
 
             <button
@@ -149,12 +147,10 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li className="ml-5">
-                  <Link href="/pricing">
-                    
-                      <SustainButton className="text-sm">
-                        Get started
-                      </SustainButton>
-                    
+                  <Link href="/sign-up">
+                    <SustainButton className="text-sm">
+                      Get started
+                    </SustainButton>
                   </Link>
                 </li>
               </ul>

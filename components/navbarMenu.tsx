@@ -55,7 +55,6 @@ const NavbarMenu = ({ handleToggle }: any) => {
         </button>
       </div>
       <ul className="pt-11">
-        
         <li className="mb-7">
           <Link
             href="/healthcare-providers"
@@ -80,10 +79,8 @@ const NavbarMenu = ({ handleToggle }: any) => {
           </Link>
         </li>
         <li>
-          <Link href="/pricing">
-            
-              <SustainButton className="text-sm">Get started</SustainButton>
-            
+          <Link href="/sign-up">
+            <SustainButton className="text-sm">Get started</SustainButton>
           </Link>
         </li>
       </ul>

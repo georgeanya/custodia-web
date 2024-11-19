@@ -1,32 +1,36 @@
 import React from "react";
+import Head from "next/head";
+import circle from "../public/assets/circle.png";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
-import Navbar1 from "../components/navbar1";
-import Footer from "../components/footer";
+import Link from "next/link";
 import favicon from "../public/assets/favicon.png";
 import metaCard from "../public/assets/custodia-metacard.png";
-import Head from "next/head";
+import Navbar3 from "../components/navbar3";
 
 const SustainButton = styled(Button)({
   background: "#4F9EEA !important",
   fontFamily: "Circular Std",
+  fontSize: "15px",
+  fontWeight: "500",
   color: "#f8f8f8",
   cursor: "pointer",
-  padding: "20px 30px",
+  padding: "16px 30px",
   margin: "0px 0px",
+  width: "100%",
   borderRadius: "32px",
   textTransform: "none",
   ["@media (max-width:780px)"]: {
-    padding: "16px 30px",
+    padding: "14px 20px",
   },
 });
 
-const ErrorPage = () => {
+const PaymentSuccesful = () => {
   return (
-    <div>
+    <>
       <Head>
         <meta charSet="UTF-8" />
-        <title>404 - Custodia Health</title>
+        <title>Payment Successful - Custodia Health</title>
         <meta name="generator" content="SEOmatic" />
         <link href={favicon.src} rel="shortcut icon" type="image/png" />
         <meta
@@ -37,15 +41,24 @@ const ErrorPage = () => {
           name="keywords"
           content="diabetes, custodia health, prediabetes, diabetes reversal, reverse diabetes, high cholesterol, lifebox labs, hypertension"
         />
-        <meta name="description" content="Custodia Health's 404" />
+        <meta
+          name="description"
+          content="Fill this form to book a consultation at Custodia Health"
+        />
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta name="robots" content="all" />
         <meta content="598084287257839" property="fb:profile_id" />
         <meta content="en_US" property="og:locale" />
         <meta content="website" property="og:type" />
-        <meta content="https://custodiahealth.com/404" property="og:url" />
-        <meta content="404 - Custodia Health" property="og:title" />
-        <meta content="Custodia Health's 404" property="og:description" />
+        <meta content="https://custodiahealth.com/sign-up" property="og:url" />
+        <meta
+          content="Book a consultation - Custodia Health"
+          property="og:title"
+        />
+        <meta
+          content="Fill this form to book a consultation at Custodia Health"
+          property="og:description"
+        />
         <meta content={metaCard.src} property="og:image" />
         <meta content="1024" property="og:image:width" />
         <meta content="512" property="og:image:height" />
@@ -72,8 +85,14 @@ const ErrorPage = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@custodiahealth" />
         <meta name="twitter:creator" content="@custodiahealth" />
-        <meta name="twitter:title" content="404 - Custodia Health" />
-        <meta name="twitter:description" content="Custodia Health's 404" />
+        <meta
+          name="twitter:title"
+          content="Book a consultation - Custodia Health"
+        />
+        <meta
+          name="twitter:description"
+          content="Fill this form to book a consultation at Custodia Health"
+        />
         <meta
           name="twitter:image"
           content="https://custodiahealth.com/_next/static/media/custodia-metacard.9e18efee.png"
@@ -85,8 +104,8 @@ const ErrorPage = () => {
           content="An image of the Custodia Health logo"
         />
         <link rel="me" href="https://twitter.com/custodiahealth" />
-        <link href="https://custodiahealth.com/404" rel="canonical" />
-        <link href="https://custodiahealth.com/" rel="home" />
+        <link href="https://custodiahealth.com/sign-up" rel="canonical" />
+        <link href="https://custodiahealth.com/sign-up" rel="home" />
         <link href="/humans.txt" rel="author" type="text/plain" />
         <link
           href="https://custodiahealth.com/"
@@ -98,29 +117,26 @@ const ErrorPage = () => {
           content="nkzhwppp6o24gs2ndw0p0pjyfvijts"
         />
       </Head>
-      <Navbar1 />
-      <div className="px-5 md:px-32">
-        <div className="container mx-auto  pt-12 md:pt-32 pb-24 md:pb-36">
-          <h1 className="text-4lg md:text-start md:text-5xl font-bold text-[#002A47] md:max-w-3xl">
-            Whoops... This page is not available
-          </h1>
-          <p className="mt-5 md:mt-6 text-base md:text-start md:text-2lg text-[#476D85] md:max-w-3xl">
-            Unfortunaltely, we couldn&apos;t find the page you are looking for.
-            We suggest you go back to our homepage
-          </p>
-          <div className="mt-8 md:mt-14 ">
-            <SustainButton
-              className="text-xs md:text-base font-medium"
-              href="/"
-            >
-              Go back home
-            </SustainButton>
-          </div>
+      <Navbar3 />
+      <div className="max-w-m mx-5 md:mx-auto mt-[32px] md:mt-[40px]">
+        <div className="flex justify-center mt-24">
+          <img src={circle.src} alt="" className="w-20" />
         </div>
+        <p className="text-[22px] leading-[28px] md:text-[28px] md:leading-[35px] font-medium mt-4 mb-3 md:mt-[24px] md:mb-4 text-center">
+          Payment successful
+        </p>
+        <p className="text-[#476D85] text-[16px] leading-[22px] md:text-[18px] md:leading-[24px] text-center mb-7 md:mb-8">
+          Thank you for joining Custodia. Our enrollment advisor will contact
+          you in 24 hours to complete your enrollment
+        </p>
+        <Link href="https://chat.whatsapp.com/FRbf5Bs3IgE77YDfbZUV1U">
+          <SustainButton className="self-center text-sm md:text-base font-medium">
+            Join our WhatsApp community
+          </SustainButton>
+        </Link>
       </div>
-      <Footer />
-    </div>
+    </>
   );
 };
 
-export default ErrorPage;
+export default PaymentSuccesful;
