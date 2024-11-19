@@ -231,13 +231,14 @@ const Form = () => {
       .then((res) => {
         if (res.data.message === "payment initialized successfully") {
           // Note the nested data.data structure
-          const link = document.createElement("a");
-          link.href = res.data.data.data.authorization_url;
-          link.target = "_blank";
-          link.rel = "noopener noreferrer";
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
+          // const link = document.createElement("a");
+          // link.href = res.data.data.data.authorization_url;
+          // link.target = "_blank";
+          // link.rel = "noopener noreferrer";
+          // document.body.appendChild(link);
+          // link.click();
+          // document.body.removeChild(link);
+          window.location.href = res.data.data.data.authorization_url;
         } else {
           throw new Error(res.data.message || "Payment initialization failed");
         }
@@ -743,7 +744,7 @@ const Form = () => {
               <hr className="mt-[22px] mb-[22px] " />
               <form className="flex " onSubmit={discountCode}>
                 <input
-                  type="tel"
+                  type="text"
                   name="discount_code"
                   value={state.user.discount_code}
                   onChange={handleChange}
