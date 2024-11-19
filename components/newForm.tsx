@@ -112,6 +112,7 @@ const Form = () => {
     setPageNumber((prevPage) => (prevPage > 1 ? prevPage - 1 : 1));
 
   const handleError = () => {
+    setIsLoading(true)
     setPageNumber(1)
   }
 
@@ -218,7 +219,7 @@ const Form = () => {
 
   const initializePayment = (event: React.FormEvent<HTMLFormElement>): any => {
     event.preventDefault();
-    setIsLoading(true);
+    setIsLoading(false);
     axios
       .post(
         "https://custodia-health-api-b53b05e2c965.herokuapp.com/v1/patient/payment/initialize",
