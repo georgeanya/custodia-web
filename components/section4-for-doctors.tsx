@@ -1,26 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import Button from "@mui/material/Button";
-import { styled } from "@mui/material/styles";
-import minus from "../public/assets/minus.png";
-import plus from "../public/assets/plus.png";
 import support from "../public/assets/support.svg";
 import FAQ2 from "./faq2";
-import Link from "next/link";
-
-const SustainButton = styled(Button)({
-  background: "#4F9EEA !important",
-  fontFamily: "Circular Std",
-  color: "#f8f8f8",
-  cursor: "pointer",
-  padding: "20px 30px",
-  margin: "0px 0px",
-  borderRadius: "32px",
-  textTransform: "none",
-  ["@media (max-width:780px)"]: {
-    padding: "16px 30px",
-  },
-});
+import CustomButton from "./mainButton";
 
 const Section4 = () => {
   const [faqs, setFaqs] = useState([
@@ -92,11 +74,10 @@ const Section4 = () => {
                 />
               ))}
               <div className="mt-10 md:mt-15 ">
-                <Link href="https://forms.gle/RZ3DwhQ4wpSX3GAw5">
-                  <SustainButton className="text-xs md:text-base font-medium">
-                    Refer patients here
-                  </SustainButton>
-                </Link>
+                <CustomButton
+                  href="https://forms.gle/RZ3DwhQ4wpSX3GAw5"
+                  title="Refer patients here"
+                />
               </div>
             </div>
           </div>

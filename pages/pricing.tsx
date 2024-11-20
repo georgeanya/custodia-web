@@ -1,31 +1,12 @@
 import React from "react";
-import { useState } from "react";
 import icon from "../public/assets/icon.svg";
 import Faq from "../components/faq";
 import Navbar from "../components/navbar4";
 import Footer from "../components/footer";
-import Link from "next/link";
 import favicon from "../public/assets/favicon.png";
 import metaCard from "../public/assets/custodia-metacard.png";
 import Head from "next/head";
-import { styled } from "@mui/material/styles";
-import Button from "@mui/material/Button";
-
-const SustainButton = styled(Button)({
-  background: "#4F9EEA !important",
-  fontFamily: "Circular Std",
-  color: "#f8f8f8",
-  cursor: "pointer",
-  padding: "14px 41px",
-  margin: "0px 0px",
-  // width: "calc(100% - 100px)",
-  borderRadius: "32px",
-  textTransform: "none",
-  ["@media (max-width:780px)"]: {
-    padding: "16px 30px",
-    // width: "calc(100% - 40px)",
-  },
-});
+import CustomButton from "@/components/mainButton";
 
 const Pricing = (props: any) => {
   return (
@@ -144,11 +125,7 @@ const Pricing = (props: any) => {
                 </a>
               </p>
               <div className="mb-[24xp] md:mb-0">
-                <Link href="/sign-up">
-                  <SustainButton className="self-center text-sm md:text-base font-medium">
-                    <p>Choose this plan</p>
-                  </SustainButton>
-                </Link>
+                <CustomButton href="/sign-up" title="Choose this plan" />
               </div>
             </div>
             <hr className="mt-[24px] mb-[30px] md:mb-8 mx-5 md:mx-[30px] md:hidden" />

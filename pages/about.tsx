@@ -1,24 +1,10 @@
 import React from "react";
 import Navbar1 from "../components/navbar1";
-import { styled } from "@mui/material/styles";
-import Button from "@mui/material/Button";
+
 import teamImage from "../public/assets/teamImage.svg";
 import Footer from "../components/footer";
-import Link from "next/link";
 
-const SustainButton = styled(Button)({
-  background: "#4F9EEA !important",
-  fontFamily: "Circular Std",
-  color: "#f8f8f8",
-  cursor: "pointer",
-  padding: "20px 30px",
-  margin: "0px 0px",
-  borderRadius: "32px",
-  textTransform: "none",
-  ["@media (max-width:780px)"]: {
-    padding: "16px 30px",
-  },
-});
+import CustomButton from "@/components/mainButton";
 
 const About = () => {
   return (
@@ -152,13 +138,7 @@ const About = () => {
             chronic metabolic disease care. If this is you, please join us.
           </p>
           <div className="mt-8 md:mt-12">
-            <Link href="/404">
-              
-                <SustainButton className="text-sm md:text-base font-medium">
-                  See current openings
-                </SustainButton>
-              
-            </Link>
+            <CustomButton href="/404" title="See current openings" />
           </div>
         </div>
       </div>

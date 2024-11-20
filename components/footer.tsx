@@ -1,25 +1,10 @@
 import React from "react";
-import { styled } from "@mui/material/styles";
-import Button from "@mui/material/Button";
 import twitter from "../public/assets/tw.svg";
 import sustain from "../public/assets/custodiaw.svg";
 import fbook from "../public/assets/fbook.svg";
 import insta from "../public/assets/insta.svg";
 import Link from "next/link";
-
-const SustainButton = styled(Button)({
-  background: "#4F9EEA !important",
-  fontFamily: "Circular Std",
-  color: "#f8f8f8",
-  cursor: "pointer",
-  padding: "20px 30px",
-  margin: "0px 0px",
-  borderRadius: "32px",
-  textTransform: "none",
-  ["@media (max-width:780px)"]: {
-    padding: "16px 36px",
-  },
-});
+import CustomButton from "./mainButton";
 
 const Footer = () => {
   const currentDate = new Date();
@@ -36,9 +21,7 @@ const Footer = () => {
             Are you ready to start that journey? Join Custodia today!
           </p>
           <Link href="/sign-up">
-            <SustainButton className="self-start text-xs md:text-base font-medium">
-              Get started now
-            </SustainButton>
+            <CustomButton href="/sign-up" title="Get Started now" />
           </Link>
         </div>
         <hr className="h-[0.5px] border-t-[0.5px] md:mt-[150px] mt-[109px] md:mb-[90px] mb-[70px] text-[#C7CBD1]" />

@@ -3,23 +3,6 @@ import type2 from "../public/assets/type2.svg";
 import hyper from "../public/assets/hyper.svg";
 import pret2 from "../public/assets/pret2.svg";
 import dysli from "../public/assets/dysli.svg";
-import Button from "@mui/material/Button";
-import { styled } from "@mui/material/styles";
-import Link from "next/link";
-
-const SustainButton = styled(Button)({
-  background: "#4F9EEA !important",
-  fontFamily: "Circular Std",
-  color: "#f8f8f8",
-  cursor: "pointer",
-  padding: "20px 30px",
-  margin: "0px 0px",
-  borderRadius: "32px",
-  textTransform: "none",
-  ["@media (max-width:780px)"]: {
-    padding: "16px 30px",
-  },
-});
 
 const Section1 = () => {
   return (

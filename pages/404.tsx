@@ -6,6 +6,7 @@ import Footer from "../components/footer";
 import favicon from "../public/assets/favicon.png";
 import metaCard from "../public/assets/custodia-metacard.png";
 import Head from "next/head";
+import CustomButton from "@/components/mainButton";
 
 const SustainButton = styled(Button)({
   background: "#4F9EEA !important",
@@ -109,12 +110,7 @@ const ErrorPage = () => {
             We suggest you go back to our homepage
           </p>
           <div className="mt-8 md:mt-14 ">
-            <SustainButton
-              className="text-xs md:text-base font-medium"
-              href="/"
-            >
-              Go back home
-            </SustainButton>
+            <CustomButton href="/" title="Go back home" />
           </div>
         </div>
       </div>

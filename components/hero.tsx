@@ -1,23 +1,7 @@
 import React from "react";
 import { useState, useCallback, useEffect } from "react";
-import { styled } from "@mui/material/styles";
-import Button from "@mui/material/Button";
 import hero from "../public/assets/hero.svg";
-import Link from "next/link";
-
-const SustainButton = styled(Button)({
-  background: "#4F9EEA !important",
-  fontFamily: "Circular Std",
-  color: "#f8f8f8",
-  cursor: "pointer",
-  padding: "20px 30px",
-  margin: "0px 0px",
-  borderRadius: "32px",
-  textTransform: "none",
-  ["@media (max-width:780px)"]: {
-    padding: "16px 30px",
-  },
-});
+import CustomButton from "./mainButton";
 
 const Hero = () => {
   const names = [
@@ -51,11 +35,7 @@ const Hero = () => {
             sustainably reverse chronic metabolic using simple lifestyle changes
           </p>
           <div className="mt-8 ">
-            <Link href="/sign-up">
-              <SustainButton className="text-xs lg:text-base font-medium">
-                Get started now
-              </SustainButton>
-            </Link>
+            <CustomButton href="/sign-up" title="Get Started" />
           </div>
         </div>
         <div className="lg:w-2/4 flex lg:p-10 justify-center">

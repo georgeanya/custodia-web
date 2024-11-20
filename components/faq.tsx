@@ -1,23 +1,7 @@
 import React from "react";
-import Button from "@mui/material/Button";
-import { styled } from "@mui/material/styles";
 import { useState } from "react";
 import FAQ3 from "../components/faq3";
-import Link from "next/link";
-
-const SustainButton = styled(Button)({
-  background: "#4F9EEA !important",
-  fontFamily: "Circular Std",
-  color: "#f8f8f8",
-  cursor: "pointer",
-  padding: "20px 30px",
-  margin: "0px 0px",
-  borderRadius: "32px",
-  textTransform: "none",
-  ["@media (max-width:780px)"]: {
-    padding: "16px 30px",
-  },
-});
+import CustomButton from "./mainButton";
 
 const Faq = () => {
   const [faqs, setFaqs] = useState([
@@ -32,7 +16,7 @@ const Faq = () => {
       answer:
         "Custodia works by providing personalized health plans that include dietary changes, continuous monitoring, and support from health coaches and doctors. The program focuses on reducing reliance on medications and promoting sustainable lifestyle changes to reverse chronic conditions.",
       open: false,
-    },    
+    },
     {
       question: "Are medications included in the program?",
       answer:
@@ -40,7 +24,8 @@ const Faq = () => {
       open: false,
     },
     {
-      question: "Are there any additional costs for lab tests or medical devices?",
+      question:
+        "Are there any additional costs for lab tests or medical devices?",
       answer:
         "For those on the Comprehensive plan, routine lab tests and health supplies are included. However, the Basic plan does not cover these, so there may be additional costs depending on your needs.",
       open: false,
@@ -78,13 +63,7 @@ const Faq = () => {
         ))}
       </div>
       <div className="mt-10 md:mt-15">
-        <div>
-          <Link href="/faq">
-            
-              <SustainButton>See all FAQs</SustainButton>
-            
-          </Link>
-        </div>
+        <CustomButton title="See all FAQs" href="/faq" />
       </div>
     </div>
   );

@@ -1,28 +1,8 @@
 import { useState } from "react";
 import custodia from "../public/assets/custodia.svg";
-import { styled } from "@mui/material/styles";
-import Button from "@mui/material/Button";
 import Link from "next/link";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import NavbarMenu from "./navbarMenu";
-
-const SustainButton = styled(Button)({
-  background: "#4F9EEA !important",
-  fontFamily: "Circular Std",
-  color: "#f8f8f8",
-  cursor: "pointer",
-  padding: "14px 30px",
-  margin: "0px 0px",
-  borderRadius: "32px",
-  textTransform: "none",
-});
-
-const ArrowIcon = styled(ArrowForwardIcon)({
-  color: "#f8f8f8",
-  padding: "1.5px",
-  marginTop: "-2px",
-  width: "21px",
-});
+import NavbarButton from "./navButton";
 
 const Navbar = () => {
   const [isToggled, setIsToggled] = useState(true);
@@ -142,11 +122,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li className="ml-5">
-                  <Link href="/sign-up">
-                    <SustainButton className="text-sm">
-                      Get started
-                    </SustainButton>
-                  </Link>
+                  <NavbarButton href="/sign-up" title="Get started" />
                 </li>
               </ul>
             </div>

@@ -4,6 +4,7 @@ import { styled } from "@mui/material/styles";
 import { useState } from "react";
 import FAQ3 from "./faq3";
 import Link from "next/link";
+import CustomButton from "./mainButton";
 
 const SustainButton = styled(Button)({
   background: "#4F9EEA !important",
@@ -79,11 +80,7 @@ const Faq = () => {
           ))}
         </div>
         <div className="mt-10 md:mt-15">
-          <div>
-            <Link href="/faq">
-              <SustainButton>See all FAQs</SustainButton>
-            </Link>
-          </div>
+          <CustomButton title="See all FAQs" href="/faq" />
         </div>
       </div>
     </div>

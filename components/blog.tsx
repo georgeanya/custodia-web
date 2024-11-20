@@ -5,6 +5,7 @@ import axios from "axios";
 import Link from "next/link";
 import image from "../public/assets/user.svg";
 import Newsletter from "./newsletter";
+import CustomButton from "./mainButton";
 
 const SustainOutlineButton = styled(Button)({
   background: "white !important",
@@ -12,7 +13,7 @@ const SustainOutlineButton = styled(Button)({
   color: "#4F9EEA",
   cursor: "pointer",
   padding: "18.5px 30px",
-
+  height: "56px",
   margin: "0",
   border: "1px solid #4F9EEA",
   borderRadius: "32px",
@@ -24,21 +25,6 @@ const SustainOutlineButton = styled(Button)({
     lineHeight: "17.71",
   },
 });
-
-const SustainButton = styled(Button)({
-  background: "#4F9EEA !important",
-  fontFamily: "Circular Std",
-  color: "#f8f8f8",
-  cursor: "pointer",
-  padding: "18.5px 30px",
-  margin: "0px 0px",
-  borderRadius: "32px",
-  textTransform: "none",
-  ["@media (max-width:780px)"]: {
-    padding: "16px 30px",
-  },
-});
-
 
 interface BlogAttributes {
   title: string;
@@ -93,11 +79,9 @@ const Blog: React.FC = () => {
   const [page, setPage] = useState(1);
   const [isNewsletterOpen, setIsNewsletterOpen] = useState(false);
 
- 
   const openNewsletter = () => {
     setIsNewsletterOpen(true);
   };
-
 
   const closeNewsletter = () => {
     setIsNewsletterOpen(false);
@@ -353,12 +337,8 @@ const Blog: React.FC = () => {
             Subscribe to recieve updates about our blog posts and announcements
             directly in your mailbox
           </p>
-          <SustainButton
-            className="md:text-base md:leading-5"
-            onClick={openNewsletter}
-          >
-            Subscribe
-          </SustainButton>
+
+          <CustomButton title="Subscribe" onClick={openNewsletter} />
         </div>
         <Newsletter isOpen={isNewsletterOpen} onClose={closeNewsletter} />
         <div className="mt-10 md:mt-20 grid md:grid-cols-3 md:grid-rows-1 gap-15 md:mb-20 mb-15">

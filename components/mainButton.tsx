@@ -4,14 +4,16 @@ import Button from "@mui/material/Button";
 import Link from "next/link";
 
 interface CustomButtonProps {
-  href: string;
+  href?: string; // Optional href
   title: string;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void; // Optional onClick
 }
 
 const StyledButton = styled(Button)({
   background: "#4F9EEA !important",
   fontFamily: "Circular Std",
   fontSize: "15px",
+  height: "56px",
   lineHeight: "18.97",
   color: "#f8f8f8",
   cursor: "pointer",
@@ -26,12 +28,20 @@ const StyledButton = styled(Button)({
   },
 });
 
-const CustomButton: React.FC<CustomButtonProps> = ({ href, title }) => {
+const CustomButton: React.FC<CustomButtonProps> = ({
+  href,
+  title,
+  onClick,
+}) => {
   return (
     <div>
-      <Link href={href}>
-        <StyledButton>{title}</StyledButton>
-      </Link>
+      {href ? (
+        <Link href={href} passHref>
+          <StyledButton onClick={onClick}>{title}</StyledButton>
+        </Link>
+      ) : (
+        <StyledButton onClick={onClick}>{title}</StyledButton>
+      )}
     </div>
   );
 };

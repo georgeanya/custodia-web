@@ -1,20 +1,9 @@
 import { useState } from "react";
 import custodia from "../public/assets/custodia.svg";
-import { styled } from "@mui/material/styles";
-import Button from "@mui/material/Button";
 import Link from "next/link";
 import NavbarMenu from "./navbarMenu";
+import NavbarButton from "./navButton";
 
-const SustainButton = styled(Button)({
-  background: "#4F9EEA !important",
-  fontFamily: "Circular Std",
-  fontSize: "12px",
-  color: "#f8f8f8",
-  padding: "14px 30px",
-  margin: "0px 0px",
-  borderRadius: "32px",
-  textTransform: "none",
-});
 
 const Navbar1 = () => {
   const [isToggled, setIsToggled] = useState(true);
@@ -116,11 +105,7 @@ const Navbar1 = () => {
                   </Link>
                 </li>
                 <li className="ml-5">
-                  <Link href="/sign-up">
-                    <SustainButton className="text-sm">
-                      Get started
-                    </SustainButton>
-                  </Link>
+                <NavbarButton href="/sign-up" title="Get started"/>
                 </li>
               </ul>
             </div>

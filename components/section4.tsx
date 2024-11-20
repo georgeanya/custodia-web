@@ -7,6 +7,7 @@ import plus from "../public/assets/plus.png";
 import support from "../public/assets/support.svg";
 import FAQ2 from "./faq2";
 import Link from "next/link";
+import CustomButton from "./mainButton";
 
 const SustainButton = styled(Button)({
   background: "#4F9EEA !important",
@@ -93,11 +94,7 @@ const Section4 = () => {
                 />
               ))}
               <div className="mt-10 md:mt-15 ">
-                <Link href="/sign-up">
-                  <SustainButton className="text-xs md:text-base font-medium">
-                    Get started now
-                  </SustainButton>
-                </Link>
+                <CustomButton href="/sign-up" title="Get Started now" />
               </div>
             </div>
           </div>

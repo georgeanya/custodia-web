@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import image from "../public/assets/user.svg";
 import facebook from "../public/assets/facebook.svg";
 import twitter from "../public/assets/twitter.svg";
-import { styled } from "@mui/material/styles";
-import Button from "@mui/material/Button";
 import axios from "axios";
 import { GetServerSideProps } from "next";
 import { ParsedUrlQuery } from "querystring";
@@ -12,22 +10,7 @@ import remarkGfm from "remark-gfm";
 import Moment from "react-moment";
 import style from "../pages/blog/markdown-styles.module.css";
 import { FacebookShareButton, TwitterShareButton } from "react-share";
-import Link from "next/link";
-
-const SustainButton = styled(Button)({
-  background: "#4F9EEA !important",
-  fontFamily: "Circular Std",
-  color: "#f8f8f8",
-  cursor: "pointer",
-  padding: "20px 30px",
-  margin: "0px 0px",
-  borderRadius: "32px",
-  textTransform: "none",
-  lineHeight: "20px",
-  ["@media (max-width:780px)"]: {
-    padding: "16px 30px",
-  },
-});
+import CustomButton from "./mainButton";
 
 interface Params extends ParsedUrlQuery {
   slug: string;
@@ -100,8 +83,6 @@ interface Blog {
     };
   };
 }
-
-
 
 interface ArticlesResponse {
   data: Blog[];
@@ -222,11 +203,7 @@ const BlogPost = ({ blog }: { blog: Blog }) => {
                 </p>
               </div>
               <div className="self-center">
-                <Link href="/sign-up">
-                 
-                    <SustainButton>Get started now</SustainButton>
-                 
-                </Link>
+                <CustomButton title="Get started now" href="/sign-up" />
               </div>
             </div>
           </div>

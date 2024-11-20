@@ -1,22 +1,6 @@
 import React from "react";
-import Button from "@mui/material/Button";
-import { styled } from "@mui/material/styles";
 import nuts from "../public/assets/nuts.png";
-import Link from "next/link";
-
-const SustainButton = styled(Button)({
-  background: "#4F9EEA !important",
-  fontFamily: "Circular Std",
-  color: "#f8f8f8",
-  cursor: "pointer",
-  padding: "20px 30px",
-  margin: "0px 0px",
-  borderRadius: "32px",
-  textTransform: "none",
-  ["@media (max-width:780px)"]: {
-    padding: "16px 30px",
-  },
-});
+import CustomButton from "./mainButton";
 
 const Section2 = () => {
   return (
@@ -41,11 +25,10 @@ const Section2 = () => {
             to help you go off medications safely and sustain your success
           </p>
           <div className="mt-10 md:mt-15 ">
-            <Link href="/research">
-              <SustainButton className="text-xs md:text-base font-medium">
-                Research behind our treatment
-              </SustainButton>
-            </Link>
+            <CustomButton
+              href="/research"
+              title="Research behind our treatment"
+            />
           </div>
         </div>
         <div className="md:max-w-lg  ">
