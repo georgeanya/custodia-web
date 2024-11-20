@@ -32,7 +32,7 @@ const Start = () => {
         <meta content="website" property="og:type" />
         <meta content="https://custodiahealth.com/sign-up" property="og:url" />
         <meta
-          content="Book a consultation - Custodia Health"
+          content="Get started - Custodia Health"
           property="og:title"
         />
         <meta
@@ -67,7 +67,7 @@ const Start = () => {
         <meta name="twitter:creator" content="@custodiahealth" />
         <meta
           name="twitter:title"
-          content="Book a consultation - Custodia Health"
+          content="Get started - Custodia Health"
         />
         <meta
           name="twitter:description"

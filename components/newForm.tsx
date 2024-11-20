@@ -93,9 +93,8 @@ const Form = () => {
   });
 
   const [discountPrice, setDiscountPrice] = useState(0);
-  const [pageNumber, setPageNumber] = useState(1);
+  const [pageNumber, setPageNumber] = useState(7);
   const [isLoading, setIsLoading] = useState(true);
-  
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): any => {
     setState({
@@ -112,9 +111,9 @@ const Form = () => {
     setPageNumber((prevPage) => (prevPage > 1 ? prevPage - 1 : 1));
 
   const handleError = () => {
-    setIsLoading(true)
-    setPageNumber(1)
-  }
+    setIsLoading(true);
+    setPageNumber(1);
+  };
 
   const signUp = (event: React.FormEvent<HTMLFormElement>): any => {
     event.preventDefault();
@@ -130,7 +129,7 @@ const Form = () => {
         if (res.data.data.status === "profile incomplete") {
           setPageNumber(2);
         } else if (res.data.data.status === "profile completed") {
-          fetchPlanData()
+          fetchPlanData();
           setPageNumber(7);
         } else {
         }
@@ -212,9 +211,7 @@ const Form = () => {
         } else {
         }
       })
-      .catch((error) => {
-      })
-      
+      .catch((error) => {});
   };
 
   const initializePayment = (event: React.FormEvent<HTMLFormElement>): any => {
@@ -270,9 +267,9 @@ const Form = () => {
     <div className="max-w-m mx-5 md:mx-auto mt-[32px] md:mt-[40px]">
       {pageNumber === 1 && (
         <div id="page1">
-          <div className="w-full bg-[#E6E6E6] h-[6px]">
+          <div className="w-full bg-[#E6E6E6] h-[6px] rounded-[5px]">
             <div
-              className="bg-[#4F9EEA] h-[6px] transition-all duration-300 ease-in-out"
+              className="bg-[#4F9EEA] h-[6px] rounded-[5px] transition-all duration-300 ease-in-out"
               style={{ width: `${progress}%` }}
             />
           </div>
@@ -293,7 +290,7 @@ const Form = () => {
                     "text-[#476D85] group-data-[filled=true]:text-[#476D85]",
                   input: "text-[#002A47]",
                   inputWrapper:
-                    "border-1 group-data-[focus=true]:border-[#002A47]",
+                    "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#002A47]",
                 }}
                 placeholder=""
                 variant="bordered"
@@ -357,9 +354,9 @@ const Form = () => {
 
       {pageNumber === 2 && (
         <div id="page2">
-          <div className="w-full bg-[#E6E6E6] h-[6px]">
+          <div className="w-full bg-[#E6E6E6] h-[6px] rounded-[5px]">
             <div
-              className="bg-[#4F9EEA] h-[6px] transition-all duration-300 ease-in-out"
+              className="bg-[#4F9EEA] h-[6px] rounded-[5px] transition-all duration-300 ease-in-out"
               style={{ width: `${progress}%` }}
             />
           </div>
@@ -385,7 +382,7 @@ const Form = () => {
                     "text-[#476D85] group-data-[filled=true]:text-[#476D85]",
                   input: "text-[#002A47]",
                   inputWrapper:
-                    "border-1 group-data-[focus=true]:border-[#002A47]",
+                    "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#002A47]",
                 }}
                 placeholder=""
                 required
@@ -405,7 +402,7 @@ const Form = () => {
                     "text-[#476D85] group-data-[filled=true]:text-[#476D85]",
                   input: "text-[#002A47]",
                   inputWrapper:
-                    "border-1 group-data-[focus=true]:border-[#002A47]",
+                    "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#002A47]",
                 }}
                 placeholder=""
                 required
@@ -427,9 +424,9 @@ const Form = () => {
 
       {pageNumber === 3 && (
         <div id="page2">
-          <div className="w-full bg-[#E6E6E6] h-[6px]">
+          <div className="w-full bg-[#E6E6E6] h-[6px] rounded-[5px]">
             <div
-              className="bg-[#4F9EEA] h-[6px] transition-all duration-300 ease-in-out"
+              className="bg-[#4F9EEA] h-[6px] rounded-[5px] transition-all duration-300 ease-in-out"
               style={{ width: `${progress}%` }}
             />
           </div>
@@ -454,7 +451,7 @@ const Form = () => {
                     "text-[#476D85] group-data-[filled=true]:text-[#476D85]",
                   input: "text-[#002A47]",
                   inputWrapper:
-                    "border-1 group-data-[focus=true]:border-[#002A47]",
+                    "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#002A47]",
                 }}
                 placeholder=""
                 required
@@ -479,9 +476,9 @@ const Form = () => {
 
       {pageNumber === 4 && (
         <div id="page2">
-          <div className="w-full bg-[#E6E6E6] h-[6px]">
+          <div className="w-full bg-[#E6E6E6] h-[6px] rounded-[5px]">
             <div
-              className="bg-[#4F9EEA] h-[6px] transition-all duration-300 ease-in-out"
+              className="bg-[#4F9EEA] h-[6px] rounded-[5px] transition-all duration-300 ease-in-out"
               style={{ width: `${progress}%` }}
             />
           </div>
@@ -496,7 +493,7 @@ const Form = () => {
                 classNames={{
                   label:
                     "text-[#476D85] group-data-[filled=true]:text-[#476D85]",
-                  trigger: "border-1 group-data-[focus=true]:border-[#002A47]",
+                  trigger: "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#002A47]",
                 }}
               >
                 <SelectItem key="male">Male</SelectItem>
@@ -518,9 +515,9 @@ const Form = () => {
       )}
       {pageNumber === 5 && (
         <div id="page2">
-          <div className="w-full bg-[#E6E6E6] h-[6px]">
+          <div className="w-full bg-[#E6E6E6] h-[6px] rounded-[5px]">
             <div
-              className="bg-[#4F9EEA] h-[6px] transition-all duration-300 ease-in-out"
+              className="bg-[#4F9EEA] h-[6px] rounded-[5px] transition-all duration-300 ease-in-out"
               style={{ width: `${progress}%` }}
             />
           </div>
@@ -539,7 +536,7 @@ const Form = () => {
                     "text-[#476D85] group-data-[filled=true]:text-[#476D85]",
                   input: "text-[#002A47]",
                   inputWrapper:
-                    "border-1 group-data-[focus=true]:border-[#002A47]",
+                    "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#002A47]",
                 }}
               />
             </div>
@@ -557,9 +554,9 @@ const Form = () => {
       )}
       {pageNumber === 6 && (
         <div id="page2">
-          <div className="w-full bg-[#E6E6E6] h-[6px]">
+          <div className="w-full bg-[#E6E6E6] h-[6px] rounded-[5px]">
             <div
-              className="bg-[#4F9EEA] h-[6px] transition-all duration-300 ease-in-out"
+              className="bg-[#4F9EEA] h-[6px] rounded-[5px] transition-all duration-300 ease-in-out"
               style={{ width: `${progress}%` }}
             />
           </div>
@@ -574,7 +571,7 @@ const Form = () => {
                 classNames={{
                   label:
                     "text-[#476D85] group-data-[filled=true]:text-[#476D85]",
-                  trigger: "border-1 group-data-[focus=true]:border-[#002A47]",
+                  trigger: "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#002A47]",
                 }}
               >
                 <SelectItem key="friend">Friend</SelectItem>
@@ -734,7 +731,7 @@ const Form = () => {
               <p className="text-[16px] font-medium  leading-5 text-[#002A47]">
                 Custodia Basic Plan
               </p>
-              <div className="flex justify-between mt-1.5">
+              <div className="flex justify-between mt-[5px]">
                 <p className="text-[16px]  leading-5 text-[#002A47]">
                   1 quarter
                 </p>
@@ -744,20 +741,38 @@ const Form = () => {
               </div>
               <hr className="mt-[22px] mb-[22px] " />
               <form className="flex " onSubmit={discountCode}>
-                <input
+                {/* <input
                   type="text"
                   name="discount_code"
                   value={state.user.discount_code}
                   onChange={handleChange}
                   className="border h-[44px] md:h-[50px] border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5"
                   placeholder="Promo code"
+                /> */}
+                <Input
+                  label="Promo code"
+                  type="text"
+                  name="discount_code"
+                  value={state.user.discount_code}
+                  onChange={handleChange}
+                  size="sm"
+                  classNames={{
+                    label:
+                      "text-[#476D85] group-data-[filled=true]:text-[#476D85]",
+                    input: "text-[#002A47]",
+                    inputWrapper:
+                      "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#002A47]",
+                  }}
+                  placeholder=""
+                  variant="bordered"
+                  required
                 />
                 <div className="w-[120px] ml-4">
                   <SustainWhiteButton type="submit">Apply</SustainWhiteButton>
                 </div>
               </form>
               <hr className="mt-[24px] mb-[24px]" />
-              <div className="flex justify-between mt-1.5">
+              <div className="flex justify-between">
                 <p className="text-[16px]  leading-5 text-[#002A47]">
                   Subtotal
                 </p>
@@ -765,7 +780,7 @@ const Form = () => {
                   ₦{state.plan.price.toLocaleString()}
                 </p>
               </div>
-              <div className="flex justify-between mt-1.5">
+              <div className="flex justify-between mt-[16px]">
                 <p className="text-[16px]  leading-5 text-[#002A47]">
                   Promo discount
                 </p>
@@ -826,16 +841,18 @@ const Form = () => {
             <img src={circle.src} alt="" className="w-20" />
           </div>
           <p className="text-[22px] leading-[28px] md:text-[28px] md:leading-[35px] font-medium mt-4 mb-3 md:mt-[24px] md:mb-4 text-center">
-          An error occurred
+            An error occurred
           </p>
           <p className="text-[#476D85] text-[16px] leading-[22px] md:text-[18px] md:leading-[24px] text-center mb-7 md:mb-8">
-          Please make sure you entered a valid details and try again
+            Please make sure you entered a valid details and try again
           </p>
-          
-            <SustainButton className="self-center text-sm md:text-base font-medium" onClick={handleError}>
-              Try Again
-            </SustainButton>
-          
+
+          <SustainButton
+            className="self-center text-sm md:text-base font-medium"
+            onClick={handleError}
+          >
+            Try Again
+          </SustainButton>
         </div>
       )}
     </div>
