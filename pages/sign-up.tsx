@@ -10,7 +10,7 @@ const Start = () => {
     <div>
       <Head>
         <meta charSet="UTF-8" />
-        <title>Get started - Custodia Health</title>
+        <title>Sign Up - Custodia Health</title>
         <meta name="generator" content="SEOmatic" />
         <link href={favicon.src} rel="shortcut icon" type="image/png" />
         <meta
@@ -23,7 +23,7 @@ const Start = () => {
         />
         <meta
           name="description"
-          content="Fill this form to book a consultation at Custodia Health"
+          content="Join our evidence-based program that can help you reverse type 2 diabetes or lose weight sustainably"
         />
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta name="robots" content="all" />
@@ -32,11 +32,11 @@ const Start = () => {
         <meta content="website" property="og:type" />
         <meta content="https://custodiahealth.com/sign-up" property="og:url" />
         <meta
-          content="Get started - Custodia Health"
+          content="Sign Up - Custodia Health"
           property="og:title"
         />
         <meta
-          content="Fill this form to book a consultation at Custodia Health"
+          content="Join our evidence-based program that can help you reverse type 2 diabetes or lose weight sustainably"
           property="og:description"
         />
         <meta content={metaCard.src} property="og:image" />
@@ -67,11 +67,11 @@ const Start = () => {
         <meta name="twitter:creator" content="@custodiahealth" />
         <meta
           name="twitter:title"
-          content="Get started - Custodia Health"
+          content="Sign Up - Custodia Health"
         />
         <meta
           name="twitter:description"
-          content="Fill this form to book a consultation at Custodia Health"
+          content="Join our evidence-based program that can help you reverse type 2 diabetes or lose weight sustainably"
         />
         <meta
           name="twitter:image"

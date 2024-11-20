@@ -43,7 +43,7 @@ const SustainButton = styled(Button)({
   },
 });
 
-// Interfaces
+
 interface BlogAttributes {
   title: string;
   description: string;
@@ -97,12 +97,12 @@ const Blog: React.FC = () => {
   const [page, setPage] = useState(1);
   const [isNewsletterOpen, setIsNewsletterOpen] = useState(false);
 
-  // Function to open modal
+ 
   const openNewsletter = () => {
     setIsNewsletterOpen(true);
   };
 
-  // Function to close modal
+
   const closeNewsletter = () => {
     setIsNewsletterOpen(false);
   };

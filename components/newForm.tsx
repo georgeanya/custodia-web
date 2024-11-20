@@ -93,7 +93,7 @@ const Form = () => {
   });
 
   const [discountPrice, setDiscountPrice] = useState(0);
-  const [pageNumber, setPageNumber] = useState(7);
+  const [pageNumber, setPageNumber] = useState(1);
   const [isLoading, setIsLoading] = useState(true);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): any => {
