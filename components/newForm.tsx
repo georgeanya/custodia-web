@@ -316,7 +316,7 @@ const Form = () => {
                 </a>
               </p>
             </div>
-            <div className="mb-16 md:mb-36">
+            <div className="mb-16">
               {isLoading ? (
                 <SustainButton
                   className="self-center text-sm md:text-base font-medium"
@@ -409,7 +409,7 @@ const Form = () => {
               />
             </div>
 
-            <div className="mb-16 md:mb-36">
+            <div className="mb-16">
               <SustainButton
                 className="self-center text-sm md:text-base font-medium"
                 type="submit"
@@ -461,7 +461,7 @@ const Form = () => {
               </p>
             </div>
 
-            <div className="mb-16 md:mb-36">
+            <div className="mb-16">
               <SustainButton
                 className="self-center text-sm md:text-base font-medium"
                 type="submit"
@@ -493,7 +493,8 @@ const Form = () => {
                 classNames={{
                   label:
                     "text-[#476D85] group-data-[filled=true]:text-[#476D85]",
-                  trigger: "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#002A47]",
+                  trigger:
+                    "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#002A47]",
                 }}
               >
                 <SelectItem key="male">Male</SelectItem>
@@ -501,7 +502,7 @@ const Form = () => {
               </Select>
             </div>
 
-            <div className="mb-16 md:mb-36">
+            <div className="mb-16">
               <SustainButton
                 className="self-center text-sm md:text-base font-medium"
                 type="submit"
@@ -541,7 +542,7 @@ const Form = () => {
               />
             </div>
 
-            <div className="mb-16 md:mb-36">
+            <div className="mb-16">
               <SustainButton
                 className="self-center text-sm md:text-base font-medium"
                 onClick={nextPage}
@@ -571,7 +572,8 @@ const Form = () => {
                 classNames={{
                   label:
                     "text-[#476D85] group-data-[filled=true]:text-[#476D85]",
-                  trigger: "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#002A47]",
+                  trigger:
+                    "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#002A47]",
                 }}
               >
                 <SelectItem key="friend">Friend</SelectItem>
@@ -581,7 +583,7 @@ const Form = () => {
               </Select>
             </div>
 
-            <div className="mb-16 md:mb-36">
+            <div className="mb-16">
               {isLoading ? (
                 <SustainButton
                   className="self-center text-sm md:text-base font-medium"
@@ -709,7 +711,7 @@ const Form = () => {
           <p className="text-[#002A47] text-sm leading-[18px] text-center mt-6 mb-8 md:mb-10 px-[23px] md:px-0">
             Got a discount code? You can use it in the payment page
           </p>
-          <div className="mb-16 md:mb-36">
+          <div className="mb-16">
             <SustainButton
               className="self-center text-sm md:text-base font-medium"
               type="submit"
@@ -726,7 +728,7 @@ const Form = () => {
           <h1 className="mt-[32px] md:mt-[40px] leading-7  md:text-[24px] md:leading-[30px] mb-8 text-1lg text-center font-bold text-[#002A47]">
             Order summary
           </h1>
-          <div className="border rounded-2xl py-[24px] ">
+          <div className="border rounded-2xl pt-[24px] ">
             <div className="px-5 md:px-[30px] ">
               <p className="text-[16px] font-medium  leading-5 text-[#002A47]">
                 Custodia Basic Plan
@@ -800,7 +802,7 @@ const Form = () => {
             </div>
           </div>
           <form onSubmit={initializePayment}>
-            <div className="mb-16 md:mb-36 mt-10">
+            <div className="mb-16 mt-10">
               {isLoading ? (
                 <SustainButton
                   className="self-center text-sm md:text-base font-medium"
