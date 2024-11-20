@@ -154,7 +154,7 @@ const Newsletter: React.FC<NewsletterProps> = ({ isOpen, onClose }) => {
         >
           <div
             ref={modalRef}
-            className="relative bg-white rounded-lg shadow dark:bg-gray-700 px-8 py-[42px]"
+            className="relative bg-white rounded-lg shadow px-8 py-[42px]"
             // role="dialog"
             // aria-modal="true"
             // onClick={(e) => e.stopPropagation()}
