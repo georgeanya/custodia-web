@@ -1,37 +1,17 @@
 import Footer from "../components/footer2";
 import Navbar1 from "../components/navbar";
 import favicon from "../public/assets/favicon.png";
-import webinar from "../public/assets/webinar.svg";
 import metaCard from "../public/assets/custodia-metacard.png";
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
-import { styled } from "@mui/material/styles";
-import Button from "@mui/material/Button";
-import TextField from "@mui/material/TextField";
-import Link from "next/link";
 import axios from "axios";
 import circle from "../public/assets/circle.png";
 import lock from "../public/assets/lock.svg";
-import icon from "../public/assets/custodia-icon.svg";
 import Section5 from "../components/section5";
 import { Input } from "@nextui-org/react";
+import CenterButton from "@/components/centerButton";
 
-const SustainButton = styled(Button)({
-  background: "#4F9EEA !important",
-  fontFamily: "Circular Std",
-  fontSize: "15px",
-  fontWeight: "500",
-  color: "#f8f8f8",
-  cursor: "pointer",
-  padding: "16px 30px",
-  margin: "0px 0px",
-  width: "100%",
-  borderRadius: "32px",
-  textTransform: "none",
-  ["@media (max-width:780px)"]: {
-    padding: "14px 20px",
-  },
-});
+
 
 interface IState {
   user: {
@@ -67,21 +47,11 @@ const Webinar = () => {
     document.body.appendChild(script);
 
     return () => {
-      // Clean up the script when the component unmounts
       document.body.removeChild(script);
     };
   }, []);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): any => {
-    setState({
-      user: {
-        ...state.user,
-        [event.target.name]: event.target.value,
-      },
-    });
-  };
-
-  const handleSelect = (event: React.ChangeEvent<HTMLSelectElement>): any => {
     setState({
       user: {
         ...state.user,
@@ -265,7 +235,8 @@ const Webinar = () => {
                       onChange={handleChange}
                       size="md"
                       classNames={{
-                        label: "text-[#476D85] group-data-[filled=true]:text-[#476D85]",
+                        label:
+                          "text-[#476D85] group-data-[filled=true]:text-[#476D85]",
                         input: "text-[#002A47]",
                         inputWrapper:
                           "border-1 group-data-[focus=true]:border-[#002A47]",
@@ -283,7 +254,8 @@ const Webinar = () => {
                       value={state.user.last_name}
                       onChange={handleChange}
                       classNames={{
-                        label: "text-[#476D85] group-data-[filled=true]:text-[#476D85]",
+                        label:
+                          "text-[#476D85] group-data-[filled=true]:text-[#476D85]",
                         input: "text-[#002A47]",
                         inputWrapper:
                           "border-1 group-data-[focus=true]:border-[#002A47]",
@@ -307,7 +279,8 @@ const Webinar = () => {
                     value={state.user.email}
                     onChange={handleChange}
                     classNames={{
-                      label: "text-[#476D85] group-data-[filled=true]:text-[#476D85]",
+                      label:
+                        "text-[#476D85] group-data-[filled=true]:text-[#476D85]",
                       input: "text-[#002A47]",
                       inputWrapper:
                         "border-1 group-data-[focus=true]:border-[#002A47]",
@@ -327,7 +300,8 @@ const Webinar = () => {
                     value={state.user.phone_number}
                     onChange={handleChange}
                     classNames={{
-                      label: "text-[#476D85] group-data-[filled=true]:text-[#476D85]",
+                      label:
+                        "text-[#476D85] group-data-[filled=true]:text-[#476D85]",
                       input: "text-[#002A47]",
                       inputWrapper:
                         "border-1 group-data-[focus=true]:border-[#002A47]",
@@ -340,7 +314,8 @@ const Webinar = () => {
                   </p>
                 </div>
                 <div>
-                  <SustainButton type="submit">Book a seat</SustainButton>
+                  
+                  <CenterButton type="submit" title="Book a seat" />
                 </div>
               </form>
             </div>
@@ -357,11 +332,11 @@ const Webinar = () => {
                 You&apos;ll receive a confirmation email shortly and a brief
                 reminder before the webinar
               </p>
-              <Link href="https://chat.whatsapp.com/FRbf5Bs3IgE77YDfbZUV1U">
-                <SustainButton className="self-center text-sm md:text-base font-medium">
-                  Join our WhatsApp community
-                </SustainButton>
-              </Link>
+
+              <CenterButton
+                title="Join our WhatsApp community"
+                href="https://chat.whatsapp.com/FRbf5Bs3IgE77YDfbZUV1U"
+              />
             </div>
           </div>
           <div className={isError ? "block" : "hidden"}>
@@ -376,7 +351,7 @@ const Webinar = () => {
                 Please make sure you entered a valid email and phone number and
                 try again
               </p>
-              <SustainButton>Try again</SustainButton>
+              <CenterButton title="Try Again" />
             </div>
           </div>
         </div>

@@ -4,10 +4,11 @@ import Button from "@mui/material/Button";
 import Link from "next/link";
 
 interface CenterButtonProps {
-  href?: string; 
+  href?: string;
   title: string;
-  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void; 
-  container?: React.ReactNode; 
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  container?: React.ReactNode;
+  type?: "button" | "submit" | "reset";
 }
 
 const StyledButton = styled(Button)({
@@ -21,6 +22,7 @@ const StyledButton = styled(Button)({
   padding: "18.5px 30px",
   borderRadius: "32px",
   textTransform: "none",
+  width: "100%",
   fontWeight: 500,
   ["@media (max-width:780px)"]: {
     padding: "16px 30px",
@@ -34,18 +36,21 @@ const CenterButton: React.FC<CenterButtonProps> = ({
   title,
   onClick,
   container,
+  type = "button",
 }) => {
-  
   const button = href ? (
     <Link href={href} passHref>
-      <StyledButton onClick={onClick}>{title}</StyledButton>
+      <StyledButton onClick={onClick} type={type}>{title}</StyledButton>
     </Link>
   ) : (
-    <StyledButton onClick={onClick}>{title}</StyledButton>
+    <StyledButton onClick={onClick} type={type}>{title}</StyledButton>
   );
 
-
-  return container ? React.cloneElement(container as React.ReactElement, {}, button) : <div>{button}</div>;
+  return container ? (
+    React.cloneElement(container as React.ReactElement, {}, button)
+  ) : (
+    <div>{button}</div>
+  );
 };
 
 export default CenterButton;

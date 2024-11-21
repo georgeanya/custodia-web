@@ -1,29 +1,9 @@
 import React from "react";
 import Head from "next/head";
 import circle from "../public/assets/circle.png";
-import { styled } from "@mui/material/styles";
-import Button from "@mui/material/Button";
-import Link from "next/link";
 import favicon from "../public/assets/favicon.png";
-import metaCard from "../public/assets/custodia-metacard.png";
 import Navbar3 from "../components/navbar3";
-
-const SustainButton = styled(Button)({
-  background: "#4F9EEA !important",
-  fontFamily: "Circular Std",
-  fontSize: "15px",
-  fontWeight: "500",
-  color: "#f8f8f8",
-  cursor: "pointer",
-  padding: "16px 30px",
-  margin: "0px 0px",
-  width: "100%",
-  borderRadius: "32px",
-  textTransform: "none",
-  ["@media (max-width:780px)"]: {
-    padding: "14px 20px",
-  },
-});
+import CenterButton from "@/components/centerButton";
 
 const PaymentSuccesful = () => {
   return (
@@ -33,7 +13,6 @@ const PaymentSuccesful = () => {
         <title>Payment Successful - Custodia Health</title>
         <meta name="generator" content="SEOmatic" />
         <link href={favicon.src} rel="shortcut icon" type="image/png" />
-        
       </Head>
       <Navbar3 />
       <div className="max-w-m mx-5 md:mx-auto mt-[32px] md:mt-[40px]">
@@ -47,11 +26,10 @@ const PaymentSuccesful = () => {
           Thank you for joining Custodia. Our enrollment advisor will contact
           you in 24 hours to complete your enrollment
         </p>
-        <Link href="https://chat.whatsapp.com/FRbf5Bs3IgE77YDfbZUV1U">
-          <SustainButton className="self-center text-sm md:text-base font-medium">
-            Join our WhatsApp community
-          </SustainButton>
-        </Link>
+        <CenterButton
+          title="Join our WhatsApp community"
+          href="https://chat.whatsapp.com/FRbf5Bs3IgE77YDfbZUV1U"
+        />
       </div>
     </>
   );

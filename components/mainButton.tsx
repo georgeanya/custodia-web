@@ -4,9 +4,9 @@ import Button from "@mui/material/Button";
 import Link from "next/link";
 
 interface CustomButtonProps {
-  href?: string; // Optional href
+  href?: string;
   title: string;
-  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void; // Optional onClick
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 const StyledButton = styled(Button)({

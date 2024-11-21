@@ -221,24 +221,7 @@ const BlogPost = ({ blog }: { blog: Blog }) => {
           </div>
         </div>
       </div>
-      {/* Optionally include the newsletter form */}
-      {/* <div className="px-5 md:px-32 md:pt-28 pt-20 md:pb-28 pb-20 bg-[#EFF2FA]">
-        <p className="md:text-4xl text-2xl text-[#002A47] font-bold max-w-[476px]">
-          Stay updated by joining our newsletter
-        </p>
-        <p className=" text-bases md:text-xl text-[#002A47] max-w-[574px] mt-5 md:mt-6 mb-10 md:mb-12">
-          Subscribe to recieve updates about our blog posts and announcements
-          directly in your mailbox
-        </p>
-        <form action="" method="post" className="flex flex-wrap">
-          <input
-            type="text"
-            placeholder="Enter your email"
-            className="border mb-4 md:mb-0 h-12 md:h-15 md:max-w-[462px] border-gray-300 text-gray-900 text-sm rounded-2xl  block w-full p-2.5 md:mr-5"
-          />
-          <SustainButton>Subscribe</SustainButton>
-        </form>
-      </div> */}
+      
     </div>
   );
 };

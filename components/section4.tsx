@@ -1,27 +1,9 @@
 import React from "react";
 import { useState } from "react";
-import Button from "@mui/material/Button";
-import { styled } from "@mui/material/styles";
-import minus from "../public/assets/minus.png";
-import plus from "../public/assets/plus.png";
 import support from "../public/assets/support.svg";
 import FAQ2 from "./faq2";
-import Link from "next/link";
 import CustomButton from "./mainButton";
 
-const SustainButton = styled(Button)({
-  background: "#4F9EEA !important",
-  fontFamily: "Circular Std",
-  color: "#f8f8f8",
-  cursor: "pointer",
-  padding: "20px 30px",
-  margin: "0px 0px",
-  borderRadius: "32px",
-  textTransform: "none",
-  ["@media (max-width:780px)"]: {
-    padding: "16px 30px",
-  },
-});
 
 const Section4 = () => {
   const [faqs, setFaqs] = useState([

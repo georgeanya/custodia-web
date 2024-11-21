@@ -1,27 +1,9 @@
-import React, { useState, useMemo, useEffect, useRef } from "react";
-import { styled } from "@mui/material/styles";
-import Button from "@mui/material/Button";
+import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
-import Link from "next/link";
 import { Input } from "@nextui-org/react";
 import cancel from "../public/assets/cancel.svg";
+import CenterButton from "./centerButton";
 
-const SustainButton = styled(Button)({
-  background: "#4F9EEA !important",
-  fontFamily: "Circular Std",
-  fontSize: "15px",
-  fontWeight: "500",
-  color: "#f8f8f8",
-  cursor: "pointer",
-  padding: "16px 30px",
-  margin: "0px 0px",
-  width: "100%",
-  borderRadius: "32px",
-  textTransform: "none",
-  ["@media (max-width:780px)"]: {
-    padding: "14px 20px",
-  },
-});
 
 interface IState {
   user: {
@@ -137,15 +119,9 @@ const Newsletter: React.FC<NewsletterProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div
-      className="fixed inset-0 bg-black/30 backdrop-blur-sm"
-      
-      
-      
-    >
+    <div className="fixed inset-0 bg-black/30 backdrop-blur-sm">
       <div
         id="crud-modal"
-        
         className=" overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0  max-h-full"
       >
         <div
@@ -239,7 +215,7 @@ const Newsletter: React.FC<NewsletterProps> = ({ isOpen, onClose }) => {
                 />
               </div>
               <div className="mt-[30px]">
-                <SustainButton type="submit">Submit</SustainButton>
+                <CenterButton type="submit" title="Submit" />
               </div>
             </form>
           </div>
