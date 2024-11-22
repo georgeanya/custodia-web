@@ -21,7 +21,7 @@ const Footer = () => {
             Are you ready to start that journey? Join Custodia today!
           </p>
           <Link href="/sign-up">
-            <CustomButton href="/sign-up" title="Get Started now" />
+            <CustomButton href="/sign-up" title="Get started now" />
           </Link>
         </div>
         <hr className="h-[0.5px] border-t-[0.5px] md:mt-[150px] mt-[109px] md:mb-[90px] mb-[70px] text-[#C7CBD1]" />

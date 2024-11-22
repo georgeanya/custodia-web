@@ -76,7 +76,7 @@ const Section4 = () => {
                 />
               ))}
               <div className="mt-10 md:mt-15 ">
-                <CustomButton href="/sign-up" title="Get Started now" />
+                <CustomButton href="/sign-up" title="Get started now" />
               </div>
             </div>
           </div>

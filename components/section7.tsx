@@ -62,7 +62,7 @@ const Section7 = () => {
           </div>
         </div>
         <div className="mt-10 md:mt-[60px] ">
-          <CustomButton href="/sign-up" title="Get Started now" />
+          <CustomButton href="/sign-up" title="Get started now" />
         </div>
       </div>
     </div>
