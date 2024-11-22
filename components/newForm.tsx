@@ -634,7 +634,7 @@ const Form = () => {
           <h1 className="mt-[32px] md:mt-[40px] leading-7  md:text-[24px] md:leading-[30px] mb-8 text-1lg text-center font-bold text-[#002A47]">
             Order summary
           </h1>
-          <div className="border rounded-2xl pt-[24px] ">
+          <div className="border rounded-2xl py-[24px] ">
             <div className="px-5 md:px-[30px] ">
               <p className="text-[16px] font-medium  leading-5 text-[#002A47]">
                 Custodia Basic Plan
