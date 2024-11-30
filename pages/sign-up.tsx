@@ -23,7 +23,7 @@ const Start = () => {
         />
         <meta
           name="description"
-          content="Join our evidence-based program that can help you reverse type 2 diabetes or lose weight sustainably"
+          content=" Join our evidence-based program to sustainably reverse type 2 diabetes and lose weight. Transform your health with expert guidance and support"
         />
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta name="robots" content="all" />
@@ -36,7 +36,7 @@ const Start = () => {
           property="og:title"
         />
         <meta
-          content="Join our evidence-based program that can help you reverse type 2 diabetes or lose weight sustainably"
+          content=" Join our evidence-based program to sustainably reverse type 2 diabetes and lose weight. Transform your health with expert guidance and support"
           property="og:description"
         />
         <meta content={metaCard.src} property="og:image" />
@@ -71,7 +71,7 @@ const Start = () => {
         />
         <meta
           name="twitter:description"
-          content="Join our evidence-based program that can help you reverse type 2 diabetes or lose weight sustainably"
+          content=" Join our evidence-based program to sustainably reverse type 2 diabetes and lose weight. Transform your health with expert guidance and support"
         />
         <meta
           name="twitter:image"

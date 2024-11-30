@@ -128,7 +128,7 @@ const Faq = () => {
         />
         <meta
           name="description"
-          content="Custodia Health's frequenty asked questions"
+          content="Explore Custodia Health's FAQs on reversing type 2 diabetes, enrollment, pricing, and program details. Get clear answers to your wellness journey"
         />
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta name="robots" content="all" />
@@ -138,7 +138,7 @@ const Faq = () => {
         <meta content="https://custodiahealth.com/faq" property="og:url" />
         <meta content="FAQs - Custodia Health" property="og:title" />
         <meta
-          content="Custodia Health's frequenty asked questions"
+          content="Explore Custodia Health's FAQs on reversing type 2 diabetes, enrollment, pricing, and program details. Get clear answers to your wellness journey"
           property="og:description"
         />
         <meta content={metaCard.src} property="og:image" />
@@ -170,7 +170,7 @@ const Faq = () => {
         <meta name="twitter:title" content="FAQs - Custodia Health" />
         <meta
           name="twitter:description"
-          content="Custodia Health's frequenty asked questions"
+          content="Explore Custodia Health's FAQs on reversing type 2 diabetes, enrollment, pricing, and program details. Get clear answers to your wellness journey"
         />
         <meta
           name="twitter:image"

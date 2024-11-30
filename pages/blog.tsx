@@ -31,7 +31,7 @@ const BlogHome = () => {
         />
         <meta
           name="description"
-          content="Find insightful tips and tricks for taking control of your health, read our patient stories, and more"
+          content="Find health tips, inspiring patient stories, and expert insights to empower your health journey. Take charge of your well-being today!"
         />
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta name="robots" content="all" />
@@ -41,7 +41,7 @@ const BlogHome = () => {
         <meta content="https://custodiahealth.com/blog" property="og:url" />
         <meta content="Custodia Health Blog" property="og:title" />
         <meta
-          content="Find insightful tips and tricks for taking control of your health, read our patient stories, and more"
+          content="Find health tips, inspiring patient stories, and expert insights to empower your health journey. Take charge of your well-being today!"
           property="og:description"
         />
         <meta content={metaCard.src} property="og:image" />
@@ -73,7 +73,7 @@ const BlogHome = () => {
         <meta name="twitter:title" content="Custodia Health Blog" />
         <meta
           name="twitter:description"
-          content="Find insightful tips and tricks for taking control of your health, read our patient stories, and more"
+          content="Find health tips, inspiring patient stories, and expert insights to empower your health journey. Take charge of your well-being today!"
         />
         <meta
           name="twitter:image"

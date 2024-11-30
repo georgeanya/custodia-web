@@ -6,7 +6,6 @@ import metaCard from "../public/assets/custodia-metacard.png";
 import Head from "next/head";
 import CustomButton from "@/components/mainButton";
 
-
 const ErrorPage = () => {
   return (
     <div>
@@ -23,7 +22,10 @@ const ErrorPage = () => {
           name="keywords"
           content="diabetes, custodia health, prediabetes, diabetes reversal, reverse diabetes, high cholesterol, lifebox labs, hypertension"
         />
-        <meta name="description" content="Custodia Health's 404" />
+        <meta
+          name="description"
+          content="Page not found at Custodia Health? Don't worry! Navigate back to our homepage or start your enrollment journey with us today."
+        />
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta name="robots" content="all" />
         <meta content="598084287257839" property="fb:profile_id" />
@@ -31,7 +33,10 @@ const ErrorPage = () => {
         <meta content="website" property="og:type" />
         <meta content="https://custodiahealth.com/404" property="og:url" />
         <meta content="404 - Custodia Health" property="og:title" />
-        <meta content="Custodia Health's 404" property="og:description" />
+        <meta
+          content="Page not found at Custodia Health? Don't worry! Navigate back to our homepage or start your enrollment journey with us today."
+          property="og:description"
+        />
         <meta content={metaCard.src} property="og:image" />
         <meta content="1024" property="og:image:width" />
         <meta content="512" property="og:image:height" />
@@ -59,7 +64,10 @@ const ErrorPage = () => {
         <meta name="twitter:site" content="@custodiahealth" />
         <meta name="twitter:creator" content="@custodiahealth" />
         <meta name="twitter:title" content="404 - Custodia Health" />
-        <meta name="twitter:description" content="Custodia Health's 404" />
+        <meta
+          name="twitter:description"
+          content="Page not found at Custodia Health? Don't worry! Navigate back to our homepage or start your enrollment journey with us today."
+        />
         <meta
           name="twitter:image"
           content="https://custodiahealth.com/_next/static/media/custodia-metacard.9e18efee.png"

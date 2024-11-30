@@ -27,7 +27,7 @@ const Download = () => {
         />
         <meta
           name="description"
-          content="Download the Custodia Health on android and iOS"
+          content="Download the Custodia Health app on iOS and Android for easy access to tracking, resources, and messaging. Start your health journey anytime, anywhere!"
         />
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta name="robots" content="all" />
@@ -40,7 +40,7 @@ const Download = () => {
           property="og:title"
         />
         <meta
-          content="Download the Custodia Health on android and iOS"
+          content="Download the Custodia Health app on iOS and Android for easy access to tracking, resources, and messaging. Start your health journey anytime, anywhere!"
           property="og:description"
         />
         <meta content={metaCard.src} property="og:image" />
@@ -75,7 +75,7 @@ const Download = () => {
         />
         <meta
           name="twitter:description"
-          content="Download the Custodia Health on android and iOS"
+          content="Download the Custodia Health app on iOS and Android for easy access to tracking, resources, and messaging. Start your health journey anytime, anywhere!"
         />
         <meta
           name="twitter:image"

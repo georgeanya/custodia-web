@@ -23,7 +23,7 @@ const Research = () => {
         />
         <meta
           name="description"
-          content="The research behind Custodia Health's approach"
+          content="Explore the groundbreaking research behind Custodia Health's approach to type 2 diabetes remission through dietary changes and weight management."
         />
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta name="robots" content="all" />
@@ -33,7 +33,7 @@ const Research = () => {
         <meta content="https://custodiahealth.com/research" property="og:url" />
         <meta content="Research - Custodia Health" property="og:title" />
         <meta
-          content="The research behind Custodia Health's approach"
+          content="Explore the groundbreaking research behind Custodia Health's approach to type 2 diabetes remission through dietary changes and weight management."
           property="og:description"
         />
         <meta content={metaCard.src} property="og:image" />
@@ -65,7 +65,7 @@ const Research = () => {
         <meta name="twitter:title" content="Research - Custodia Health" />
         <meta
           name="twitter:description"
-          content="The research behind Custodia Health's approach"
+          content="Explore the groundbreaking research behind Custodia Health's approach to type 2 diabetes remission through dietary changes and weight management."
         />
         <meta
           name="twitter:image"
@@ -94,9 +94,9 @@ const Research = () => {
       <Navbar1 />
       <div className="px-5 md:px-[290px]">
         <div className=" md:mt-24 mt-[47px] pb-[90px] md:pb-[130px] container mx-auto">
-          <h2 className="text-4lg  md:text-[46px] leading-[58px] font-bold text-[#002A47]">
+          <h1 className="text-4lg  md:text-[46px] leading-[58px] font-bold text-[#002A47]">
             Research
-          </h2>
+          </h1>
           <p className="mt-4 md:mt-[24px] text-[15px] leading-[25px] md:text-[18px] md:leading-[30px] text-[#476D85]">
             <a
               href="https://en.wikipedia.org/wiki/Roy_Taylor_(diabetologist)"

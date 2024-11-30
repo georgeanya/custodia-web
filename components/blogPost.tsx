@@ -149,8 +149,7 @@ const BlogPost = ({ blog }: { blog: Blog }) => {
       <div className=" md:pt-[50px] pt-[60px] container mx-auto md:mb-[130px] mb-[90px]">
         <div className="flex text-[#4F9EEA] md:text-[14px] md:leading-[19px] text-[14px] leading-[16.5px]">
           <p>
-            {fetchedBlog.attributes.category?.data?.attributes?.name ||
-              "No Category"}
+            {fetchedBlog.attributes.category?.data?.attributes?.name}
           </p>
           <p className="px-1">•</p>
           <p>

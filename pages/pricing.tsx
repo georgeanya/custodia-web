@@ -26,7 +26,7 @@ const Pricing = (props: any) => {
         />
         <meta
           name="description"
-          content="Choose a membership plan that’s right for you"
+          content="Discover the perfect membership plan for your health journey. Explore tailored options including lifestyle coaching, meal planning, and medical supervision."
         />
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta name="robots" content="all" />
@@ -36,7 +36,7 @@ const Pricing = (props: any) => {
         <meta content="https://custodiahealth.com/pricing" property="og:url" />
         <meta content="Plans & pricing - Custodia Health" property="og:title" />
         <meta
-          content="Choose a membership plan that’s right for you"
+          content="Discover the perfect membership plan for your health journey. Explore tailored options including lifestyle coaching, meal planning, and medical supervision."
           property="og:description"
         />
         <meta content={metaCard.src} property="og:image" />
@@ -71,7 +71,7 @@ const Pricing = (props: any) => {
         />
         <meta
           name="twitter:description"
-          content="Choose a membership plan that’s right for you"
+          content="Discover the perfect membership plan for your health journey. Explore tailored options including lifestyle coaching, meal planning, and medical supervision."
         />
         <meta
           name="twitter:image"
