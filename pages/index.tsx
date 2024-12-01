@@ -37,6 +37,7 @@ const Home: NextPage = () => {
         <meta content="en_US" property="og:locale" />
         <meta content="website" property="og:type" />
         <meta content="https://custodiahealth.com/" property="og:url" />
+        <meta property="og:type" content="custodiahealth.com" />
         <meta
           content="Custodia Health - Type 2 Diabetes, Prediabetes, and Obesity Reversal"
           property="og:title"
