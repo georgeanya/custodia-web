@@ -113,14 +113,14 @@ const Download = () => {
               tracking, resources, messaging, and more
             </p>
             <div className="flex mt-7 md:mt-10">
-              <Link title="Custodia android app" href="https://play.google.com/store/apps/details?id=ng.lifebox.custodia">
+              <Link title="Custodia Health android app" href="https://play.google.com/store/apps/details?id=ng.lifebox.custodia">
                 <img
                   src={play.src}
                   className="mr-3 md:mr-4  md:h-[50px] h-[40px]"
                   alt="Play Store Icon"
                 />
               </Link>
-              <Link title="Custodia iOS app" href="https://apps.apple.com/ng/app/custodia-health/id6451072988">
+              <Link title="Custodia Health iOS app" href="https://apps.apple.com/ng/app/custodia-health/id6451072988">
                 <img
                   src={apple.src}
                   alt="Apple store Icon"
