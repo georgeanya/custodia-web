@@ -31,7 +31,6 @@ const Research = () => {
         <meta content="en_US" property="og:locale" />
         <meta content="website" property="og:type" />
         <meta content="https://custodiahealth.com/research" property="og:url" />
-        <meta property="og:type" content="custodiahealth.com" />
         <meta content="Research - Custodia Health" property="og:title" />
         <meta
           content="Explore the groundbreaking research behind Custodia Health's approach to type 2 diabetes remission through dietary changes and weight management."

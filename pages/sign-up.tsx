@@ -31,7 +31,6 @@ const Start = () => {
         <meta content="en_US" property="og:locale" />
         <meta content="website" property="og:type" />
         <meta content="https://custodiahealth.com/sign-up" property="og:url" />
-        <meta property="og:type" content="custodiahealth.com" />
         <meta
           content="Sign Up - Custodia Health"
           property="og:title"
