@@ -31,6 +31,7 @@ const Policy = () => {
           content="https://custodiahealth.com/privacy-policy"
           property="og:url"
         />
+        <meta property="og:type" content="custodiahealth.com" />
         <meta content="Privacy policy - Custodia Health" property="og:title" />
         <meta
           content="Custodia Health's privacy policy"
