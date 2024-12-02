@@ -136,7 +136,6 @@ const Faq = () => {
         <meta content="en_US" property="og:locale" />
         <meta content="website" property="og:type" />
         <meta content="https://custodiahealth.com/faq" property="og:url" />
-        <meta property="og:type" content="custodiahealth.com" />
         <meta content="FAQs - Custodia Health" property="og:title" />
         <meta
           content="Explore Custodia Health's FAQs on reversing type 2 diabetes, enrollment, pricing, and program details. Get clear answers to your wellness journey"

@@ -39,7 +39,6 @@ const BlogHome = () => {
         <meta content="en_US" property="og:locale" />
         <meta content="website" property="og:type" />
         <meta content="https://custodiahealth.com/blog" property="og:url" />
-        <meta property="og:type" content="custodiahealth.com" />
         <meta content="Custodia Health Blog" property="og:title" />
         <meta
           content="Find health tips, inspiring patient stories, and expert insights to empower your health journey. Take charge of your well-being today!"

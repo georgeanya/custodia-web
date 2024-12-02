@@ -41,7 +41,6 @@ const ForDoctors = () => {
           content="https://custodiahealth.com/healthcare-providers"
           property="og:url"
         />
-        <meta property="og:type" content="custodiahealth.com" />
         <meta
           content="Healthcare Providers - Custodia Health"
           property="og:title"

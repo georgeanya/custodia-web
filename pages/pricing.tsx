@@ -34,7 +34,6 @@ const Pricing = (props: any) => {
         <meta content="en_US" property="og:locale" />
         <meta content="website" property="og:type" />
         <meta content="https://custodiahealth.com/pricing" property="og:url" />
-        <meta property="og:type" content="custodiahealth.com" />
         <meta content="Plans & pricing - Custodia Health" property="og:title" />
         <meta
           content="Discover the perfect membership plan for your health journey. Explore tailored options including lifestyle coaching, meal planning, and medical supervision."

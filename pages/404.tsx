@@ -32,7 +32,6 @@ const ErrorPage = () => {
         <meta content="en_US" property="og:locale" />
         <meta content="website" property="og:type" />
         <meta content="https://custodiahealth.com/404" property="og:url" />
-        <meta property="og:type" content="custodiahealth.com" />
         <meta content="404 - Custodia Health" property="og:title" />
         <meta
           content="Page not found at Custodia Health? Don't worry! Navigate back to our homepage or start your enrollment journey with us today."
