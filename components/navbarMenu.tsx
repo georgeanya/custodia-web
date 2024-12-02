@@ -8,7 +8,7 @@ const NavbarMenu = ({ handleToggle }: any) => {
   return (
     <div className="px-5 pt-5 h-screen">
       <div className="flex justify-between">
-        <Link href="/">
+        <Link title="Custodia homepage" href="/">
           <img
             src={custodia.src}
             className="mr-3  self-center"
@@ -42,7 +42,7 @@ const NavbarMenu = ({ handleToggle }: any) => {
       </div>
       <ul className="pt-11">
         <li className="mb-7">
-          <Link
+          <Link title="For healthcare providers"
             href="/healthcare-providers"
             className="block text-sm font-medium"
           >
@@ -50,17 +50,17 @@ const NavbarMenu = ({ handleToggle }: any) => {
           </Link>
         </li>
         <li className="mb-7">
-          <Link href="/pricing" className="block text-sm font-medium">
+          <Link title="Pricing" href="/pricing" className="block text-sm font-medium">
             <p className="text-[#002A47]">Pricing</p>
           </Link>
         </li>
         <li className="mb-7">
-          <Link href="/blog" className="block text-sm font-medium">
+          <Link title="Blog" href="/blog" className="block text-sm font-medium">
             <p className="text-[#002A47]">Blog</p>
           </Link>
         </li>
         <li className="mb-9">
-          <Link href="/research" className="block text-sm font-medium">
+          <Link title="Research" href="/research" className="block text-sm font-medium">
             <p className="text-[#002A47]">Research</p>
           </Link>
         </li>

@@ -19,7 +19,7 @@ const Navbar1 = () => {
       <div className="px-5 md:px-32 py-5 ">
         <nav>
           <div className="container flex flex-wrap justify-between items-center mx-auto">
-            <Link href="/">
+            <Link title="Custodia homepage" href="/">
               <img
                 src={custodia.src}
                 className="mr-3 cursor-pointer self-center"
@@ -73,7 +73,7 @@ const Navbar1 = () => {
             >
               <ul className="flex flex-col mt-4 bg-gray-50 rounded-lg md:flex-row md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
                 <li className="mt-3.5 mx-5 cursor-pointer">
-                  <Link
+                  <Link title="For healthcare providers"
                     href="/healthcare-providers"
                     className="text-base pt-5 mt-5 text-[#002A47] rounded  hover:text-blue-700 "
                   >
@@ -81,7 +81,7 @@ const Navbar1 = () => {
                   </Link>
                 </li>
                 <li className="mt-3.5 mx-5 cursor-pointer">
-                  <Link
+                  <Link title="Pricing"
                     href="/pricing"
                     className="text-base pt-5 mt-5 text-[#002A47] rounded  hover:text-blue-700 "
                   >
@@ -89,7 +89,7 @@ const Navbar1 = () => {
                   </Link>
                 </li>
                 <li className="mt-3.5 mx-5 cursor-pointer">
-                  <Link
+                  <Link title="Blog"
                     href="/blog"
                     className="text-base pt-5 mt-5 text-[#002A47] rounded hover:text-blue-700 md:p-0 "
                   >
@@ -97,7 +97,7 @@ const Navbar1 = () => {
                   </Link>
                 </li>
                 <li className="mt-3.5 mx-5 cursor-pointer">
-                  <Link
+                  <Link title="Research"
                     href="/research"
                     className="text-base pt-5 mt-5 text-[#002A47] rounded  hover:text-blue-700 "
                   >

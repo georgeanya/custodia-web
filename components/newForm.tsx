@@ -281,14 +281,14 @@ const Form = () => {
                 By filling out this form, you agree to Custodia Health’s{" "}
                 <a
                   className="text-[#4F9EEA] underline font-medium"
-                  href="/terms-of-use"
+                  href="https://lifebox-labs.notion.site/Terms-of-use-1dc563d01e574d108fdc23f4c51d2ee1" title="Terms of use"
                 >
                   Terms of Use
                 </a>{" "}
                 and{" "}
                 <a
                   className="text-[#4F9EEA] underline font-medium"
-                  href="/privacy-policy"
+                  href="https://lifebox-labs.notion.site/Privacy-policy-9c564d4280694f34805e974ee3084c35" title="Privacy policy"
                 >
                   Privacy Policy
                 </a>

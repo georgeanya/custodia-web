@@ -9,7 +9,7 @@ const Navbar3 = () => {
       <div className="px-5 md:px-32 py-6 md:py-[27px] shadow-sm">
         <nav>
           <div className="container flex flex-wrap justify-center items-center mx-auto">
-            <Link href="/">
+            <Link title="Custodia homepage" href="/">
              
                 <img
                   src={custodia.src}
