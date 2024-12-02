@@ -67,7 +67,7 @@ const Footer = () => {
                 </Link>
               </p>
               <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
-                <Link href="https://lifebox-labs.notion.site/lifebox-labs/Terms-of-use-1dc563d01e574d108fdc23f4c51d2ee1">
+                <Link title="Terms of use" href="https://lifebox-labs.notion.site/lifebox-labs/Terms-of-use-1dc563d01e574d108fdc23f4c51d2ee1">
                   Terms of use
                 </Link>
               </p>
