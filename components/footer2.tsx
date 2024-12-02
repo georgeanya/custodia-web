@@ -26,21 +26,21 @@ const Footer = () => {
                 PRODUCT
               </h3>
               <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
-                <Link href="/pricing">Pricing</Link>
+                <Link title="Pricing" href="/pricing">Pricing</Link>
               </p>
               <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
-                <Link href="/healthcare-providers">
+                <Link title="For healthcare providers" href="/healthcare-providers">
                   For healthcare providers
                 </Link>
               </p>
               <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
-                <Link href="/research">Research</Link>
+                <Link title="Research" href="/research">Research</Link>
               </p>
               <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
-                <Link href="/faq">FAQs</Link>
+                <Link title="FAQs" href="/faq">FAQs</Link>
               </p>
               <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
-                <Link href="/download">Download our app</Link>
+                <Link title="Download our app" href="/download">Download our app</Link>
               </p>
             </div>
             <div className="w-40 md:w-[245px]">
@@ -48,15 +48,15 @@ const Footer = () => {
                 RESOURCES
               </h3>
               <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
-                <Link href="/404">Help center</Link>
+                <Link title="Help center" href="/404">Help center</Link>
               </p>
               <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
-                <Link href="https://lifebox-labs.notion.site/Privacy-policy-9c564d4280694f34805e974ee3084c35">
+                <Link title="Privacy policy" href="https://lifebox-labs.notion.site/Privacy-policy-9c564d4280694f34805e974ee3084c35">
                   Privacy policy
                 </Link>
               </p>
               <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
-                <Link href="https://lifebox-labs.notion.site/lifebox-labs/Terms-of-use-1dc563d01e574d108fdc23f4c51d2ee1">
+                <Link title="Terms of use" href="https://lifebox-labs.notion.site/lifebox-labs/Terms-of-use-1dc563d01e574d108fdc23f4c51d2ee1">
                   Terms of use
                 </Link>
               </p>
@@ -69,13 +69,13 @@ const Footer = () => {
                 COMPANY
               </h3>
               <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
-                <Link href="https://lifebox.ng/">About</Link>
+                <Link title="About" href="https://lifebox.ng/">About</Link>
               </p>
               <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
-                <Link href="/blog">Blog</Link>
+                <Link title="Blog" href="/blog">Blog</Link>
               </p>
               <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
-                <Link href="https://lifebox-labs.notion.site/Join-Lifebox-Labs-caed82beacb448cf9be9b380907caa19">
+                <Link title="Careers" href="https://lifebox-labs.notion.site/Join-Lifebox-Labs-caed82beacb448cf9be9b380907caa19">
                   Careers
                 </Link>
               </p>
@@ -88,10 +88,10 @@ const Footer = () => {
                 CONTACT
               </h3>
               <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
-                <Link href="tel:+2347040559724">+2347040559724</Link>
+                <Link title="Contact phone number" href="tel:+2347040559724">+2347040559724</Link>
               </p>
               <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
-                <Link href="mailto:hi@custodiahealth.com">
+                <Link title="Contact email address" href="mailto:hi@custodiahealth.com">
                   hi@custodiahealth.com
                 </Link>
               </p>
