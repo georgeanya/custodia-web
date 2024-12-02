@@ -19,7 +19,7 @@ const Navbar = () => {
       <div className="px-5 md:px-32 pt-5 md:pt-5 bg-[#F0F7FF]">
         <nav>
           <div className="container flex flex-wrap justify-between items-center mx-auto">
-            <Link href="/">
+            <Link title="Custodia homepage" href="/">
               <img
                 src={custodia.src}
                 className="mr-3 cursor-pointer self-center"
@@ -90,7 +90,7 @@ const Navbar = () => {
                   </Link>
                 </li> */}
                 <li className="mt-3.5 mx-5 cursor-pointer">
-                  <Link
+                  <Link title="For healthcare providers"
                     href="/healthcare-providers"
                     className="text-base pt-5 mt-5 text-[#002A47] rounded  hover:text-blue-700 "
                   >
@@ -98,7 +98,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li className="mt-3.5 mx-5 cursor-pointer">
-                  <Link
+                  <Link title="Pricing"
                     href="/pricing"
                     className="text-base pt-5 mt-5 text-[#002A47] rounded  hover:text-blue-700 "
                   >
@@ -106,7 +106,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li className="mt-3.5 mx-5 cursor-pointer">
-                  <Link
+                  <Link title="Blog"
                     href="/blog"
                     className="text-base pt-5 mt-5 text-[#002A47] rounded hover:text-blue-700 md:p-0 "
                   >
@@ -114,7 +114,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li className="mt-3.5 mx-5 cursor-pointer">
-                  <Link
+                  <Link title="Research"
                     href="/research"
                     className="text-base pt-5 mt-5 text-[#002A47] rounded  hover:text-blue-700 "
                   >

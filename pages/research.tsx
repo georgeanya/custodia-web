@@ -100,7 +100,7 @@ const Research = () => {
           </h1>
           <p className="mt-4 md:mt-[24px] text-[15px] leading-[25px] md:text-[18px] md:leading-[30px] text-[#476D85]">
             <a
-              href="https://en.wikipedia.org/wiki/Roy_Taylor_(diabetologist)"
+              href="https://en.wikipedia.org/wiki/Roy_Taylor_(diabetologist)" title="Professor Roy Taylor"
               className="text-[#4F9EEA] font-semibold"
             >
               Professor Roy Taylor
@@ -151,7 +151,7 @@ const Research = () => {
                 </p>
               </div>
               <a
-                href="https://www.researchgate.net/publication/321580682_Primary_care-led_weight_management_for_remission_of_type_2_diabetes_DiRECT_An_open-label_cluster-randomised_trial"
+                href="https://www.researchgate.net/publication/321580682_Primary_care-led_weight_management_for_remission_of_type_2_diabetes_DiRECT_An_open-label_cluster-randomised_trial" title="A Primary care-led weight management for remission of type 2 diabetes (DiRECT): an open-label, cluster-randomised trial"
                 className="mt-4 md:mt-5 font-medium text-base  md:text-llg md:leading-[26px] text-[#4F9EEA]"
               >
                 Read more
@@ -170,7 +170,7 @@ const Research = () => {
                 </p>
               </div>
               <a
-                href="https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/21656330/"
+                href="https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/21656330/" title="Reversal of type 2 diabetes: normalisation of beta cell function in association with decreased pancreas and liver riacylglycerol"
                 className="mt-4 md:mt-5 font-medium text-base  md:text-llg md:leading-[26px] text-[#4F9EEA]"
               >
                 Read more
@@ -189,7 +189,7 @@ const Research = () => {
                 </p>
               </div>
               <a
-                href="https://diabetesjournals.org/care/article/39/5/808/30678/Very-Low-Calorie-Diet-and-6-Months-of-Weight"
+                href="https://diabetesjournals.org/care/article/39/5/808/30678/Very-Low-Calorie-Diet-and-6-Months-of-Weight" title="Very Low-Calorie Diet and 6 Months of Weight Stability in Type 2 Diabetes: Pathophysiological Changes in Responders and Nonresponders"
                 className="mt-4 md:mt-5 font-medium text-base  md:text-llg md:leading-[26px] text-[#4F9EEA]"
               >
                 Read more
@@ -206,7 +206,7 @@ const Research = () => {
                 </p>
               </div>
               <a
-                href="https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/29143063/"
+                href="https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/29143063/" title="Translating aetiological insight into sustainable management of type 2 diabetes"
                 className="mt-4 md:mt-5 font-medium text-base  md:text-llg md:leading-[26px] text-[#4F9EEA]"
               >
                 Read more
@@ -224,7 +224,7 @@ const Research = () => {
                 </p>
               </div>
               <a
-                href="https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/37559961/"
+                href="https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/37559961/" title="What predicts drug-free type 2 diabetes remission? Insights from an 8-year general practice service evaluation of a lower carbohydrate diet with weight loss"
                 className="mt-4 md:mt-5 font-medium text-base  md:text-llg md:leading-[26px] text-[#4F9EEA]"
               >
                 Read more
@@ -242,7 +242,7 @@ const Research = () => {
                 </p>
               </div>
               <a
-                href="https://diabetes.jmir.org/2017/1/e5/"
+                href="https://diabetes.jmir.org/2017/1/e5/" title="A Novel Intervention Including Individualized Nutritional Recommendations Reduces Hemoglobin A1c Level, Medication Use, and Weight in Type 2 Diabetes"
                 className="mt-4 md:mt-5 font-medium text-base  md:text-llg md:leading-[26px] text-[#4F9EEA]"
               >
                 Read more

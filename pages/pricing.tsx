@@ -119,7 +119,7 @@ const Pricing = (props: any) => {
                 Get the tools and support you need to reverse your condition
                 with a{" "}
                 <a
-                  href="https://lifebox-labs.notion.site/Custodia-6-month-money-back-guarantee-9109266d94834c57b47a869a6bed308d"
+                  href="https://lifebox-labs.notion.site/Custodia-6-month-money-back-guarantee-9109266d94834c57b47a869a6bed308d" title="3-months money-back guarantee"
                   className="text-[#4F9EEA] font-bold"
                 >
                   3-month money-back guarantee

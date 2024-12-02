@@ -96,21 +96,21 @@ const Footer = () => {
                 </Link>
               </p>
               <div className="flex">
-                <Link href="https://facebook.com/custodiahealth">
+                <Link title="Custodia Facebook account" href="https://facebook.com/custodiahealth">
                   <img
                     src={fbook.src}
                     className="mr-5 cursor-pointer"
                     alt="facebook logo"
                   />
                 </Link>
-                <Link href="https://instagram.com/custodiahealth">
+                <Link title="Custodia Instagram account" href="https://instagram.com/custodiahealth">
                   <img
                     src={insta.src}
                     className="mr-5 cursor-pointer"
                     alt="instagram logo"
                   />
                 </Link>
-                <Link href="https://twitter.com/custodiahealth">
+                <Link title="Custodia X(Twitter) account" href="https://x.com/custodiahealth">
                   <img
                     src={twitter.src}
                     className="mr-5 cursor-pointer"
