@@ -111,7 +111,7 @@ const Pricing = (props: any) => {
                 BASIC
               </p>
               <p className="mt-2 text-1xxl md:text-[30px] leading-[38px] font-medium text-[#002A47] ">
-                ₦50,000
+                ₦60,000
                 <span className=" text-base">/quarterly</span>
               </p>
               <p className="mt-3  mb-5 md:text-[16px] text-[16px] leading-[22px] text-[#002A47] md:max-w-[320px]">
