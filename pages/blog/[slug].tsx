@@ -7,6 +7,7 @@ import Navbar1 from "../../components/navbar1";
 import favicon from "../../public/assets/favicon.png";
 import Head from "next/head";
 import BlogPost from "../../components/blogPost";
+import Script from 'next/script';
 
 interface Params extends ParsedUrlQuery {
   slug: string;
@@ -182,7 +183,7 @@ const BlogPage = ({ blog }: { blog: Blog | null }) => {
       <Navbar1 />
       <BlogPost blog={blog} />
       <Footer />
-      <script
+      <Script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: `{
@@ -217,7 +218,7 @@ const BlogPage = ({ blog }: { blog: Blog | null }) => {
             "dateModified": "${blog.attributes.updatedAt}"
           }`,
         }}
-      ></script>
+        />
     </div>
   );
 };
