@@ -157,7 +157,7 @@ const Pricing = (props: any) => {
                   alt="Icon"
                 />
                 <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
-                  Meal plans, lessons, and resources
+                  Unlimited consultations
                 </span>
               </div>
               <div className="flex mt-[18px] md:mt-5">
@@ -167,7 +167,17 @@ const Pricing = (props: any) => {
                   alt="Icon"
                 />
                 <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
-                  Personalized care plan
+                  Personalized nutrition and meal plan
+                </span>
+              </div>
+              <div className="flex mt-[18px] md:mt-5">
+                <img
+                  src={icon.src}
+                  className="self-center w-2.5 md:w-3"
+                  alt="Icon"
+                />
+                <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
+                  Practical educational resources
                 </span>
               </div>
               <div className="flex mt-[18px] md:mt-5">
