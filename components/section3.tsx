@@ -17,7 +17,7 @@ const Section3 = () => {
           <div className="mt-17 sm:max-w-s">
             <img src={blood.src} alt="Icon" />
             <p className="text-xl md:text-1xxl text-[#002A47] font-medium mt-5">
-              Put Diabetes in remission
+              Put diabetes in remission
             </p>
             <p className="text-base leading-6 md:text-lg md:leading-relaxed text-[#476D85] mt-2">
               Get your blood sugar back to normal levels and prevents associated
@@ -27,7 +27,7 @@ const Section3 = () => {
           <div className="mt-17 sm:max-w-s">
             <img src={pill.src} alt="Icon" />
             <p className="text-xl md:text-1xxl text-[#002A47] font-medium mt-5">
-              Reduce or eliminate medications
+              Reduce medications
             </p>
             <p className="text-base leading-6 md:text-lg md:leading-relaxed text-[#476D85] mt-2">
               Address the root cause of condition and stop your dependency on
