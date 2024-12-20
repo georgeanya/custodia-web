@@ -8,7 +8,7 @@ const Section2 = () => {
       <div className="md:pt-28 pt-20 md:pb-36 pb-24 flex flex-col container mx-auto md:flex-row md:justify-between">
         <div className="md:max-w-[550px]">
           <h2 className=" pb-[35px] md:pb-[50px] text-2xl leading-9 md:text-start md:text-4xl font-bold text-white pr-3 md:max-w-[535px]">
-            A holistic approach designed to treat the root cause
+          Our approach is designed to treat the root cause
           </h2>
           <p className="text-basex md:text-1lg md:leading-8 text-white font-normal md:pr-10">
             Medications only manage the symptoms of chronic metabolic diseases

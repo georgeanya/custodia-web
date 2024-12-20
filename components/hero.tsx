@@ -31,8 +31,7 @@ const Hero = () => {
             Reverse prediabetes, type 2 diabetes, and obesity 
           </h1>
           <p className="mt-5 md:mt-6 text-base font-normal lg:pr-8 lg:text-start lg:text-2lg text-[#476D85]">
-            Custodia&apos;s virtual care program helps people safely and
-            sustainably reverse chronic metabolic using simple lifestyle changes
+          Custodia is an online specialty clinic that helps people safely and sustainably reverse chronic metabolic diseases using simple lifestyle changes
           </p>
           <div className="mt-8 ">
             <CustomButton href="/sign-up" title="Get started now" />

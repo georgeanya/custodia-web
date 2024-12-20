@@ -32,7 +32,7 @@ const Home: NextPage = () => {
         "https://tiktok.com/@custodiahealth",
         "https://custodiahealth.com"
     ],
-    "description": "Custodia is an online nutrition clinic that safely reverses type 2 diabetes and obesity while removing the need for medication",
+    "description": "Custodia is an online specialty clinic that safely reverses type 2 diabetes and obesity while removing the need for medication",
     "email": "hi@custodiahealth.com",
     "telephone": "+234-704-055-9724",
     "contactPoint": [
