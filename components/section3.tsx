@@ -66,7 +66,7 @@ const Section3 = () => {
           <div className="mt-17 sm:max-w-s">
             <img src={lipids.src} alt="Icon" />
             <p className="text-xl md:text-1xxl text-[#002A47] font-medium mt-5">
-              Improved lipid profile
+              Improve lipid profile
             </p>
             <p className="text-base leading-6 md:text-lg md:leading-relaxed text-[#476D85] mt-2">
               Reduce your triglyceride levels, improve your cholesterol profile
