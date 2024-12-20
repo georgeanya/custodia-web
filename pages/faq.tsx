@@ -18,7 +18,7 @@ const Faq = () => {
             "name": "What is Custodia?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Custodia is an online specialty clinic that helps people reverse chronic metabolic diseases like type 2 diabetes and obesity, through sustainable lifestyle changes. It offers virtual care, personalized coaching, and medical supervision to address the root causes of these conditions."
+                "text": "Custodia is an online specialty clinic that helps people reverse chronic metabolic diseases like type 2 diabetes and obesity, through sustainable lifestyle changes. We offers virtual care, personalized coaching, and medical supervision to address the root causes of these conditions."
             }
         },
         {
@@ -132,7 +132,7 @@ const Faq = () => {
     {
       question: "What is Custodia?",
       answer:
-        "Custodia is an online specialty clinic that helps people reverse chronic metabolic diseases like type 2 diabetes and obesity, through sustainable lifestyle changes. It offers virtual care, personalized coaching, and medical supervision to address the root causes of these conditions.",
+        "Custodia is an online specialty clinic that helps people reverse chronic metabolic diseases like type 2 diabetes and obesity, through sustainable lifestyle changes. We offers virtual care, personalized coaching, and medical supervision to address the root causes of these conditions.",
       open: true,
     },
     {
