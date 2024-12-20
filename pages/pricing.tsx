@@ -147,7 +147,7 @@ const Pricing = (props: any) => {
                   alt="Icon"
                 />
                 <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
-                  Medical supervision
+                Continuous medical supervision
                 </span>
               </div>
               <div className="flex mt-[18px] md:mt-5">
@@ -167,7 +167,7 @@ const Pricing = (props: any) => {
                   alt="Icon"
                 />
                 <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
-                  Personalized nutrition and meal plan
+                  Personalized nutrition plan
                 </span>
               </div>
               <div className="flex mt-[18px] md:mt-5">

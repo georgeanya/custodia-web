@@ -9,7 +9,7 @@ const Section4 = () => {
     {
       question: "Virtual doctor consultations",
       answer:
-        "Access expert medical care from from the comfort of their homes. Our virtual consultations provide timely advice and support, ensuring they receive the care they need whenever they need it",
+        "They get expert medical care from from the comfort of their homes. Our virtual consultations provide timely advice and support, ensuring they receive the care they need whenever they need it",
       open: true,
     },
     {
