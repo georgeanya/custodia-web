@@ -31,7 +31,7 @@ const Hero = () => {
             Reverse prediabetes, type 2 diabetes, and obesity 
           </h1>
           <p className="mt-5 md:mt-6 text-base font-normal lg:pr-8 lg:text-start lg:text-2lg text-[#476D85]">
-          Lower your blood sugar, lose weight, and tranform your health with personalized nutrition and expert guidance from a doctor-led team
+          Lower your blood sugar, lose weight, and transform your health with personalized nutrition and expert guidance from a doctor-led team
           </p>
           <div className="mt-8 ">
             <CustomButton href="/sign-up" title="Get started now" />
