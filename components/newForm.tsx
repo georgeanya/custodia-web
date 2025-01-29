@@ -601,7 +601,7 @@ const Form = () => {
                   alt="Icon"
                 />
                 <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
-                  Practical educational resources
+                  Health tracking tools
                 </span>
               </div>
               <div className="flex mt-[18px] md:mt-5">
@@ -611,7 +611,7 @@ const Form = () => {
                   alt="Icon"
                 />
                 <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
-                  Private member community
+                Practical educational resources
                 </span>
               </div>
               <div className="flex mt-[18px] md:mt-5">
@@ -621,7 +621,7 @@ const Form = () => {
                   alt="Icon"
                 />
                 <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
-                  Discounts on lab tests
+                  Private member community
                 </span>
               </div>
             </div>
