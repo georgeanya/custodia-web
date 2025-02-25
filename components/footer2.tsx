@@ -5,8 +5,6 @@ import fbook from "../public/assets/fbook.svg";
 import insta from "../public/assets/insta.svg";
 import Link from "next/link";
 
-
-
 const Footer = () => {
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
@@ -126,6 +124,11 @@ const Footer = () => {
           ©{currentYear} Custodia Health, a Lifebox Labs company
         </p>
       </div>
+      <iframe
+        src="https://www.websitecarbon.com/badge/"
+        style={{ border: "none", width: "100%", height: "150px" }}
+        title="Website Carbon Badge"
+      />
     </div>
   );
 };

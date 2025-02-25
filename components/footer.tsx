@@ -1,14 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import twitter from "../public/assets/tw.svg";
 import sustain from "../public/assets/custodiaw.svg";
 import fbook from "../public/assets/fbook.svg";
 import insta from "../public/assets/insta.svg";
 import Link from "next/link";
 import CustomButton from "./mainButton";
+import  WebsiteCarbonBadge from 'react-websitecarbon-badge';
 
 const Footer = () => {
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://unpkg.com/website-carbon-badges@1.1.3/b.min.js";
+    script.defer = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   return (
     <div className="bg-[#0C1227] md:px-[125px] px-5">
@@ -133,10 +145,11 @@ const Footer = () => {
           </div>
         </div>
         <hr className="md:mt-[90px] mt-[70px] text-[#C7CBD1]" />
-        <p className="md:mt-[45px] mt-[35px] text-sm md:text-[15px] leading-[17px] md:leading-[18px] pb-[51px] md:pb-[65px] text-center md:text-start">
+        <p className="md:mt-[45px] mt-[35px] text-sm md:text-[15px] leading-[17px] md:leading-[18px] pb-[51px] md:pb-[45px] text-center md:text-start">
           ©{currentYear} Custodia Health, a Lifebox Labs company
         </p>
       </div>
+      <div className="pb-[65px]"><div id="wcb" className="carbonbadge inline-block py-5 px-7 bg-[#FFFFF]" data-url="https://custodiahealth.com/"></div></div>
     </div>
   );
 };
