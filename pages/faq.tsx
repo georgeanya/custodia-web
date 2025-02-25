@@ -9,29 +9,148 @@ import Head from "next/head";
 
 
 const Faq = () => {
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What is Custodia?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Custodia is an online specialty clinic that helps people reverse chronic metabolic diseases like type 2 diabetes and obesity, through sustainable lifestyle changes. We offers virtual care, personalized coaching, and medical supervision to address the root causes of these conditions."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How does Custodia work?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Custodia works by addresses the underlying causes of the condition and providing personalized treatment plans that include dietary changes, continuous monitoring, and support from health coaches and doctors. The approach focuses on reducing reliance on medications and promoting sustainable lifestyle changes to reverse chronic conditions."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How much does Custodia cost?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Custodia offers one membership plans: a Basic plan at ₦60,000 per quarter. The plan includes personal health coaching, unlimited consultations, continuous medical supervision, a personalized nutrition plan, and educational resources."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What do I get when I join Custodia?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Upon joining Custodia, you receive access to a personal health coach, medical supervision, unlimited consultations, meal plans, resources, and, depending on your plan, routine lab tests and health supplies."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Can type 2 diabetes be reversed?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, a lot of scientific studies have confirmed that through diet changes and weight loss, the process underlying type 2 diabetes can be put into remission without the help of medication."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Are medications included in the program?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No, there are no medications included in the treatment. Our goal is to reduce or eliminate your reliance on medication."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How is diabetes reversal measured?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Type 2 diabetes reversal is officially in remission when HbA1c levels drop to below 6.5% (48mmol/mol) and stay there for 3 months without the help of medication."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How long does the Custodia program last?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The duration of the Custodia program can vary based on individual needs and goals, but it is generally designed for ongoing, long-term support until the desired health outcomes are achieved."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How do I join Custodia?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Upon joining Custodia, you get personal health coaching, unlimited consultations, continuous medical supervision, a personalized nutrition plan, and educational resources."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "I don’t have a smartphone. Can I still join Custodia?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The program primarily operates through a mobile app, so a smartphone is essential for participating in the Custodia program effectively."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Do I have to visit a physical facility for the program?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No, Custodia is a fully virtual program. All consultations, coaching, and monitoring are done remotely through the app."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Can I join Custodia from outside Nigeria?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, you can. As long as you have a smartphone with internet access you can be a part of the program. If you are having difficulties joining the program, please send us an email at hi@custodiahealth.com"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Are there any additional costs for lab tests or medical devices?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "For those on the Comprehensive plan, routine lab tests and health supplies are included. However, the Basic plan does not cover these, so there may be additional costs depending on your needs"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What happens if I need to cancel my enrollment?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We really think you'll like our program, however if you would like to cancel your enrollment for any reason, simply send us an email at hi@custodiahealth.com"
+            }
+        }
+    ]
+}
+
   const [faqs, setFaqs] = useState([
     {
       question: "What is Custodia?",
       answer:
-        "Custodia is a digital health program designed to help people reverse chronic metabolic diseases, such as type 2 diabetes, through sustainable lifestyle changes. It offers virtual care, personalized coaching, and medical supervision to address the root causes of these conditions.",
+        "Custodia is an online specialty clinic that helps people reverse chronic metabolic diseases like type 2 diabetes and obesity, through sustainable lifestyle changes. We offers virtual care, personalized coaching, and medical supervision to address the root causes of these conditions.",
       open: true,
     },
     {
       question: "How does Custodia work?",
       answer:
-        "Custodia works by providing personalized health plans that include dietary changes, continuous monitoring, and support from health coaches and doctors. The program focuses on reducing reliance on medications and promoting sustainable lifestyle changes to reverse chronic conditions.",
+        "Custodia works by addresses the underlying causes of the condition and providing personalized treatment plans that include dietary changes, continuous monitoring, and support from health coaches and doctors. The approach focuses on reducing reliance on medications and promoting sustainable lifestyle changes to reverse chronic conditions.",
       open: false,
     },
     {
       question: "How much does Custodia cost?",
       answer:
-        "Custodia offers two membership plans: a Comprehensive plan at ₦180,000 biannually and a Basic plan at ₦40,000 per quarter. Both plans include health coaching, doctor supervision, meal plans, and other resources, but the Comprehensive plan also covers routine lab tests and unlimited health supplies.",
+        "Custodia offers one membership plans: a Basic plan at ₦60,000 per quarter. The plan includes personal health coaching, unlimited consultations, continuous medical supervision, a personalized nutrition plan, and educational resources.",
       open: false,
     },
     {
       question: "What do I get when I join Custodia?",
       answer:
-        "Upon joining Custodia, you receive access to a personal health coach, medical supervision, unlimited consultations, meal plans, resources, and, depending on your plan, routine lab tests and health supplies.",
+        "Upon joining Custodia, you get personal health coaching, unlimited consultations, continuous medical supervision, a personalized nutrition plan, and educational resources.",
       open: false,
     },
     {
@@ -43,7 +162,7 @@ const Faq = () => {
     {
       question: "Are medications included in the program?",
       answer:
-        "No, there are no medications included in the treatment. The goal of the program is to reduce or eliminate your reliance on medication.",
+        "No, there are no medications included in the treatment. Our goal is to reduce or eliminate your reliance on medication.",
       open: false,
     },
     {
@@ -194,6 +313,10 @@ const Faq = () => {
         <meta
           name="facebook-domain-verification"
           content="nkzhwppp6o24gs2ndw0p0pjyfvijts"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
         />
       </Head>
       <Navbar1 />

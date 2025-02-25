@@ -111,14 +111,14 @@ const Pricing = (props: any) => {
                 BASIC
               </p>
               <p className="mt-2 text-1xxl md:text-[30px] leading-[38px] font-medium text-[#002A47] ">
-                ₦50,000
+                ₦60,000
                 <span className=" text-base">/quarterly</span>
               </p>
               <p className="mt-3  mb-5 md:text-[16px] text-[16px] leading-[22px] text-[#002A47] md:max-w-[320px]">
                 Get the tools and support you need to reverse your condition
                 with a{" "}
                 <a
-                  href="https://lifebox-labs.notion.site/Custodia-6-month-money-back-guarantee-9109266d94834c57b47a869a6bed308d"
+                  href="https://lifebox-labs.notion.site/Custodia-6-month-money-back-guarantee-9109266d94834c57b47a869a6bed308d" title="3-months money-back guarantee"
                   className="text-[#4F9EEA] font-bold"
                 >
                   3-month money-back guarantee
@@ -147,7 +147,7 @@ const Pricing = (props: any) => {
                   alt="Icon"
                 />
                 <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
-                  Medical supervision
+                Continuous medical supervision
                 </span>
               </div>
               <div className="flex mt-[18px] md:mt-5">
@@ -157,7 +157,7 @@ const Pricing = (props: any) => {
                   alt="Icon"
                 />
                 <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
-                  Meal plans, lessons, and resources
+                  Unlimited consultations
                 </span>
               </div>
               <div className="flex mt-[18px] md:mt-5">
@@ -167,27 +167,37 @@ const Pricing = (props: any) => {
                   alt="Icon"
                 />
                 <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
-                  Personalized care plan
+                  Personalized nutrition plan
+                </span>
+              </div>
+              <div className="flex mt-[18px] md:mt-5">
+                <img
+                  src={icon.src}
+                  className="self-center w-2.5 md:w-3"
+                  alt="Icon"
+                />
+                <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
+                  Health tracking tools
                 </span>
               </div>
               <div className="flex mt-[18px] md:mt-5">
                 <img
                   src={icon.src}
                   className="md:self-center self-start w-2.5 md:w-3 mt-1 md:mt-0"
+                  alt="Icon"
+                />
+                <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
+                Practical educational resources
+                </span>
+              </div>
+              <div className="flex mt-[18px] md:mt-5">
+                <img
+                  src={icon.src}
+                  className="self-center w-2.5 md:w-3"
                   alt="Icon"
                 />
                 <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
                   Private member community
-                </span>
-              </div>
-              <div className="flex mt-[18px] md:mt-5">
-                <img
-                  src={icon.src}
-                  className="self-center w-2.5 md:w-3"
-                  alt="Icon"
-                />
-                <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
-                  Discounts on lab tests
                 </span>
               </div>
             </div>

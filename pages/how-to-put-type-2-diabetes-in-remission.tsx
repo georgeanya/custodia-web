@@ -118,7 +118,7 @@ const Webinar = () => {
         <meta content="en_US" property="og:locale" />
         <meta content="website" property="og:type" />
         <meta
-          content="https://custodiahealth.com/privacy-policy"
+          content="https://custodiahealth.com/how-tp-put-type-2-diabetes-in-remission"
           property="og:url"
         />
         <meta

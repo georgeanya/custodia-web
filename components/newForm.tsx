@@ -281,14 +281,14 @@ const Form = () => {
                 By filling out this form, you agree to Custodia Health’s{" "}
                 <a
                   className="text-[#4F9EEA] underline font-medium"
-                  href="/terms-of-use"
+                  href="https://lifebox-labs.notion.site/Terms-of-use-1dc563d01e574d108fdc23f4c51d2ee1" title="Terms of use"
                 >
                   Terms of Use
                 </a>{" "}
                 and{" "}
                 <a
                   className="text-[#4F9EEA] underline font-medium"
-                  href="/privacy-policy"
+                  href="https://lifebox-labs.notion.site/Privacy-policy-9c564d4280694f34805e974ee3084c35" title="Privacy policy"
                 >
                   Privacy Policy
                 </a>
@@ -571,7 +571,7 @@ const Form = () => {
                   alt="Icon"
                 />
                 <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
-                  Medical supervision
+                Continuous medical supervision
                 </span>
               </div>
               <div className="flex mt-[18px] md:mt-5">
@@ -581,7 +581,7 @@ const Form = () => {
                   alt="Icon"
                 />
                 <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
-                  Meal plans, lessons, and resources
+                  Unlimited consultations
                 </span>
               </div>
               <div className="flex mt-[18px] md:mt-5">
@@ -591,27 +591,37 @@ const Form = () => {
                   alt="Icon"
                 />
                 <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
-                  Personalized care plan
+                  Personalized nutrition plan
+                </span>
+              </div>
+              <div className="flex mt-[18px] md:mt-5">
+                <img
+                  src={icon.src}
+                  className="self-center w-2.5 md:w-3"
+                  alt="Icon"
+                />
+                <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
+                  Health tracking tools
                 </span>
               </div>
               <div className="flex mt-[18px] md:mt-5">
                 <img
                   src={icon.src}
                   className="md:self-center self-start w-2.5 md:w-3 mt-1 md:mt-0"
+                  alt="Icon"
+                />
+                <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
+                Practical educational resources
+                </span>
+              </div>
+              <div className="flex mt-[18px] md:mt-5">
+                <img
+                  src={icon.src}
+                  className="self-center w-2.5 md:w-3"
                   alt="Icon"
                 />
                 <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
                   Private member community
-                </span>
-              </div>
-              <div className="flex mt-[18px] md:mt-5">
-                <img
-                  src={icon.src}
-                  className="self-center w-2.5 md:w-3"
-                  alt="Icon"
-                />
-                <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
-                  Discounts on lab tests
                 </span>
               </div>
             </div>

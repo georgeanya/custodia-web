@@ -15,6 +15,66 @@ import metaCard from "../public/assets/home-metacard.jpg";
 import Footer from "../components/footer";
 
 const Home: NextPage = () => {
+  const homeStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://custodiahealth.com/#organization",
+    "name": "Custodia Health",
+    "image": "https://custodiahealth.com/custodia-logo.png",
+    "logo": "https://custodiahealth.com/custodia-logo.png",
+    "url": "https://custodiahealth.com",
+    "sameAs": [
+        "https://facebook.com/custodiahealth",
+        "https://x.com/custodiahealth",
+        "https://instagram.com/custodiahealth",
+        "https://youtube.com/@custodiahealth",
+        "https://linkedin.com/company/custodia-health",
+        "https://tiktok.com/@custodiahealth",
+        "https://custodiahealth.com"
+    ],
+    "description": "Custodia is an online specialty clinic that safely reverses type 2 diabetes and obesity while removing the need for medication",
+    "email": "hi@custodiahealth.com",
+    "telephone": "+234-704-055-9724",
+    "contactPoint": [
+        {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "telephone": "+234-704-055-9724",
+            "areaServed": "NG",
+            "email": "hi@custodiahealth.com",
+            "availableLanguage": "en-US"
+        }
+    ],
+    "founder": {
+        "@type": "Person",
+        "name": "Joseph Anya",
+        "sameAs": [
+            "https://x.com/josephanyaa",
+            "https://instagram.com/josephanyaa",
+            "https://linkedin.com/in/joseph-anya",
+            "https://f6s.com/josephanya",
+            "https://crunchbase.com/person/joseph-anya"
+        ],
+        "image": "https://pbs.twimg.com/profile_images/1790809642156621824/5GXlTd5F_400x400.jpg",
+        "birthPlace": "Lagos, Nigeria",
+        "birthDate": "1998-05-09T00:00:00+01:00",
+        "gender": "Male",
+        "nationality": "Nigeria",
+        "jobTitle": "Founder and CEO",
+        "alumniOf": "University of Lagos",
+        "brand": [
+            "Lifebox Labs, Custodia Health, Priv Heath"
+        ],
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Lifebox Labs"
+        }
+    },
+    "foundingDate": "2022-08-01T00:00:00+01:00",
+    "foundingLocation": "Lagos, Nigeria",
+    "parentOrganization": "Lifebox Labs"
+  }
+
   return (
     <div>
       <Head>
@@ -29,7 +89,7 @@ const Home: NextPage = () => {
         />
         <meta
           name="description"
-          content="Custodia Health is an online specialty clinic for safely reversing chronic metabolic disease like type 2 diabetes and prediabetes"
+          content="Custodia Health is an online specialty clinic for safely reversing chronic metabolic disease like type 2 diabetes and obesity"
         />
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta name="robots" content="all" />
@@ -42,7 +102,7 @@ const Home: NextPage = () => {
           property="og:title"
         />
         <meta
-          content="Custodia Health is an online specialty clinic for safely reversing chronic metabolic disease like type 2 diabetes and prediabetes"
+          content="Custodia Health is an online specialty clinic for safely reversing chronic metabolic disease like type 2 diabetes and obesity"
           property="og:description"
         />
         <meta content={metaCard.src} property="og:image" />
@@ -81,7 +141,7 @@ const Home: NextPage = () => {
         />
         <meta
           name="twitter:description"
-          content="Custodia Health is an online specialty clinic for safely reversing chronic metabolic disease like type 2 diabetes and prediabetes"
+          content="Custodia Health is an online specialty clinic for safely reversing chronic metabolic disease like type 2 diabetes and obesity"
         />
         <meta
           name="twitter:image"
@@ -117,6 +177,10 @@ const Home: NextPage = () => {
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "h4rdrt80ge");`}
         </script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(homeStructuredData) }}
+        />
       </Head>
       <Navbar />
       <Hero />
@@ -128,71 +192,6 @@ const Home: NextPage = () => {
       <Section7 />
       <Faq />
       <Footer />
-      
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: `{
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "@id": "https://custodiahealth.com/#organization",
-            "name": "Custodia Health",
-            "image": "https://custodiahealth.com/custodia-logo.png",
-            "logo": "https://custodiahealth.com/custodia-logo.png",
-            "url": "https://custodiahealth.com",
-            "sameAs": [
-                "https://facebook.com/custodiahealth",
-                "https://x.com/custodiahealth",
-                "https://instagram.com/custodiahealth",
-                "https://youtube.com/channel/UCiGJtOjJyegn_5naUTUFMuQ",
-                "https://linkedin.com/company/custodia-health",
-                "https://tiktok.com/@custodiahealth",
-                "https://custodiahealth.com"
-            ],
-            "description": "Custodia is an online nutrition clinic that safely reverses type 2 diabetes, obesity, and prediabetes without the use of medication",
-            "email": "hi@custodiahealth.com",
-            "telephone": "+234-704-055-9724",
-            "contactPoint": [
-                {
-                    "@type": "ContactPoint",
-                    "contactType": "customer support",
-                    "telephone": "+234-704-055-9724",
-                    "areaServed": "NG",
-                    "email": "hi@custodiahealth.com",
-                    "availableLanguage": "en-US"
-                }
-            ],
-            "founder": {
-                "@type": "Person",
-                "name": "Joseph Anya",
-                "sameAs": [
-                    "https://x.com/josephanyaa",
-                    "https://instagram.com/josephanyaa",
-                    "https://linkedin.com/in/joseph-anya",
-                    "https://f6s.com/josephanya",
-                    "https://crunchbase.com/person/joseph-anya"
-                ],
-                "image": "Paris",
-                "birthPlace": "Lagos, Nigeria",
-                "birthDate": "1998-05-09T00:00:00+01:00",
-                "gender": "Male",
-                "nationality": "Nigeria",
-                "jobTitle": "Founder and CEO",
-                "alumniOf": "University of Lagos",
-                "brand": [
-                    "Lifebox Labs, Custodia Health, Priv Heath"
-                ],
-                "worksFor": {
-                    "@type": "Organization",
-                    "name": "Lifebox Labs"
-                }
-            },
-            "foundingDate": "2022-08-01T00:00:00+01:00",
-            "foundingLocation": "Lagos, Nigeria",
-            "parentOrganization": "Lifebox Labs"
-          }`,
-        }}
-      ></script>
     </div>
   );
 };

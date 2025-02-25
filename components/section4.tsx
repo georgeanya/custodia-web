@@ -8,34 +8,34 @@ import CustomButton from "./mainButton";
 const Section4 = () => {
   const [faqs, setFaqs] = useState([
     {
-      question: "Personal health coach",
+      question: "Virtual doctor consultations",
       answer:
-        "You will get paired with a highly trained and compassionate health coach to keep you on track on your best days and your worst.",
+        "Access expert medical care from from the comfort of your home. Our virtual consultations provide timely advice and support, ensuring you receive the care you need whenever you need it",
       open: true,
     },
     {
-      question: "Continuous medical supervision",
+      question: "Personal health coaching",
       answer:
-        "You will get paired with a doctor who will monitor your biomarkers and safely de-prescribe any medications you no longer need",
+        "Get one-on-one guidance from expert health coaches who are with you every step of the way. They’ll keep you motivated, answer your questions, and provide support tailored to your unique lifestyle",
       open: false,
     },
 
     {
-      question: "Private member community",
+      question: "Continuous medical supervision",
       answer:
-        "You will get added to a peer group that allows you to share your experiences, challenegs and keep you encouraged",
+        "Health metrics like blood sugar can change quickly during diabetes reversal. Our medical team closely monitors your progress to ensure your safety and adjust your plan to keep you on track.",
       open: false,
     },
     {
-      question: "Exclusive resources",
+      question: "Personalized nutrition plan",
       answer:
-        "You will get engaging lessons on better eating, fitness, sleep, and stress management to educate you and inspire you to make better choices.",
+        "Your plan is designed just for you—taking into account your goals, preferences, and health needs. Enjoy meals that support your journey while still being delicious and satisfying",
       open: false,
     },
     {
-      question: "Starter kit and supplies",
+      question: "Educational resources",
       answer:
-        "You will get all the health devices and testing supplies you need shipped directly to you",
+        "Learn everything you need to take control of your health with our easy-to-understand guides, tools, and tips. We’ll help you turn small changes into lifelong success",
       open: false,
     },
   ]);

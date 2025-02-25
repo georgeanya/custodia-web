@@ -7,33 +7,33 @@ import CustomButton from "./mainButton";
 const Section4 = () => {
   const [faqs, setFaqs] = useState([
     {
-      question: "Personal health coach",
+      question: "Virtual doctor consultations",
       answer:
-        "They will get paired with a highly trained and compassionate health coach to keep them on track on their best days and their worst.",
+        "They get expert medical care from from the comfort of their homes. Our virtual consultations provide timely advice and support, ensuring they receive the care they need whenever they need it",
       open: true,
+    },
+    {
+      question: "Personal health coaching",
+      answer:
+        "They get one-on-one guidance from expert health coaches who are with then every step of the way to keep them motivated, answer their questions, and provide support tailored to their unique lifestyle",
+      open: false,
     },
     {
       question: "Continuous medical supervision",
       answer:
-        "They will get paired with a doctor who will monitor their biomarkers and safely de-prescribe any medications they no longer need.",
+        "Health metrics like blood sugar can change quickly during intensive lifestyle change. Our medical team closely monitors their progress to ensure their safety and adjust their plan to keep them on track",
       open: false,
     },
     {
-      question: "Private member community",
+      question: "Personalized nutrition plan",
       answer:
-        "They will get added to a peer group that allows them to share their experiences, challenegs and keep them encouraged",
+        "Their plan is designed just for them—taking into account their goals, preferences, and health needs. Thet get to enjoy meals that support their journey while still being delicious and satisfying",
       open: false,
     },
     {
-      question: "Exclusive resources",
+      question: "Educational resources",
       answer:
-        "They will get engaging lessons on better eating, fitness, sleep, and stress management to educate them and inspire them to make better choices.",
-      open: false,
-    },
-    {
-      question: "Starter kit and supplies",
-      answer:
-        "They will get all the health devices and testing supplies they need shipped directly to them",
+        "They learn everything they need to take control of their health with our easy-to-understand guides, tools, and tips.We help them turn small changes into lifelong success",
       open: false,
     },
   ]);

@@ -10,7 +10,7 @@ const Start = () => {
     <div>
       <Head>
         <meta charSet="UTF-8" />
-        <title>Sign Up - Custodia Health</title>
+        <title>Sign up - Custodia Health</title>
         <meta name="generator" content="SEOmatic" />
         <link href={favicon.src} rel="shortcut icon" type="image/png" />
         <meta
@@ -32,7 +32,7 @@ const Start = () => {
         <meta content="website" property="og:type" />
         <meta content="https://custodiahealth.com/sign-up" property="og:url" />
         <meta
-          content="Sign Up - Custodia Health"
+          content="Sign up - Custodia Health"
           property="og:title"
         />
         <meta
@@ -67,7 +67,7 @@ const Start = () => {
         <meta name="twitter:creator" content="@custodiahealth" />
         <meta
           name="twitter:title"
-          content="Sign Up - Custodia Health"
+          content="Sign up - Custodia Health"
         />
         <meta
           name="twitter:description"
