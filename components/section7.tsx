@@ -2,9 +2,9 @@ import React from "react";
 import one from "../public/assets/1.svg";
 import two from "../public/assets/2.svg";
 import three from "../public/assets/3.svg";
-import laptop from "../public/assets/laptop.png";
-import phone from "../public/assets/phone.png";
-import meal from "../public/assets/meal.png";
+import laptop from "../public/assets/laptop.jpeg";
+import phone from "../public/assets/phone.jpeg";
+import meal from "../public/assets/meal.jpeg";
 import CustomButton from "./mainButton";
 
 const Section7 = () => {
