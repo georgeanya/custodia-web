@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import support from "../public/assets/support.svg";
+import support from "../public/assets/support.jpeg";
 import FAQ2 from "./faq2";
 import CustomButton from "./mainButton";
 
