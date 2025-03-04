@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useCallback, useEffect } from "react";
-import hero from "../public/assets/hero.jpeg";
+import hero from "../public/assets/hero.png";
 import CustomButton from "./mainButton";
 
 const Hero = () => {
