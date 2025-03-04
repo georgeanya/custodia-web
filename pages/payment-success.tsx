@@ -24,7 +24,7 @@ const PaymentSuccesful = () => {
         </p>
         <p className="text-[#476D85] text-[16px] leading-[22px] md:text-[18px] md:leading-[24px] text-center mb-7 md:mb-8">
           Thank you for joining Custodia. Our enrollment advisor will contact
-          you in 24 hours to complete your enrollment
+          you in 24 hours to complete your enrollment.
         </p>
         <CenterButton
           title="Join our WhatsApp community"
