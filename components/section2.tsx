@@ -1,5 +1,5 @@
 import React from "react";
-import nuts from "../public/assets/nuts.jpeg";
+import nuts from "../public/assets/nuts.png";
 import CustomButton from "./mainButton";
 
 const Section2 = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import nuts from "../public/assets/meeting.jpeg";
+import consult from "../public/assets/consult.png";
 import CustomButton from "./mainButton";
 
 const Section2 = () => {
@@ -35,8 +35,8 @@ const Section2 = () => {
         </div>
         <div className="md:max-w-lg  ">
           <img
-            src={nuts.src}
-            alt="Food"
+            src={consult.src}
+            alt="Consultation"
             className="flex align-center md:pt-[146px] pt-[70px]"
           />
         </div>

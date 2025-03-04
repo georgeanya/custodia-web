@@ -2,7 +2,7 @@ import Head from "next/head";
 import React from "react";
 import Footer from "../components/footer";
 import Navbar1 from "../components/navbar1";
-import app from "../public/assets/app.jpeg";
+import app from "../public/assets/app.png";
 import apple from "../public/assets/apple.svg";
 import play from "../public/assets/play.svg";
 import favicon from "../public/assets/favicon.png";

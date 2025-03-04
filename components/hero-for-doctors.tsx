@@ -1,5 +1,5 @@
 import React from "react";
-import hero from "../public/assets/hero-for-doctors.jpeg";
+import hero from "../public/assets/doctor.png";
 import CustomButton from "./mainButton";
 
 const Hero = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import labs from "../public/assets/labs.svg";
+import labs from "../public/assets/labs.png";
 import CustomButton from "./mainButton";
 
 const Section7 = () => {
