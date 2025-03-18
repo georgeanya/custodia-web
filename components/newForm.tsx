@@ -189,7 +189,7 @@ const Form = () => {
         } else {
         }
       })
-      .catch((error) => {});
+      .catch((error) => { });
   };
 
   const initializePayment = (event: React.FormEvent<HTMLFormElement>): any => {
@@ -561,7 +561,7 @@ const Form = () => {
                   alt="Icon"
                 />
                 <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
-                  Personal lifestyle and diet coaching
+                  Consultation with a doctor and dietitian
                 </span>
               </div>
               <div className="flex mt-[18px] md:mt-5">
@@ -571,7 +571,17 @@ const Form = () => {
                   alt="Icon"
                 />
                 <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
-                Continuous medical supervision
+                  Continuous medical supervision
+                </span>
+              </div>
+              <div className="flex">
+                <img
+                  src={icon.src}
+                  className="self-center w-2.5 md:w-3"
+                  alt="Icon"
+                />
+                <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
+                  Personal lifestyle and diet coaching
                 </span>
               </div>
               <div className="flex mt-[18px] md:mt-5">
@@ -611,7 +621,7 @@ const Form = () => {
                   alt="Icon"
                 />
                 <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
-                Practical educational resources
+                  Practical educational resources
                 </span>
               </div>
               <div className="flex mt-[18px] md:mt-5">
