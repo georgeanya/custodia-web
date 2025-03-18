@@ -163,16 +163,6 @@ const Pricing = (props: any) => {
               <div className="flex mt-[18px] md:mt-5">
                 <img
                   src={icon.src}
-                  className="self-center w-2.5 md:w-3"
-                  alt="Icon"
-                />
-                <span className="ml-3 md:ml-4 flex self-center text-base leading-5  text-[#002A47]">
-                  Unlimited consultations
-                </span>
-              </div>
-              <div className="flex mt-[18px] md:mt-5">
-                <img
-                  src={icon.src}
                   className="md:self-center self-start w-2.5 md:w-3 mt-1 md:mt-0"
                   alt="Icon"
                 />
