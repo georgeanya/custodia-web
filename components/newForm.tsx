@@ -11,7 +11,7 @@ import {
   parseDate,
   getLocalTimeZone,
 } from "@internationalized/date";
-import { Select, SelectItem } from "@nextui-org/select";
+import { Select, SelectItem } from "@nextui-org/react";
 import CenterButton from "./centerButton";
 import LoadingButton from "./loadingButton";
 
@@ -444,7 +444,7 @@ const Form = () => {
             </div>
 
             <div className="mb-16">
-              <CenterButton title="Continue" onClick={nextPage} type="submit" />
+              <CenterButton title="Continue" onClick={nextPage}/>
             </div>
           </form>
         </div>
