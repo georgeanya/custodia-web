@@ -1,19 +1,60 @@
 import React, { useState, useMemo } from "react";
 import Footer from "../components/footer";
 import Navbar1 from "../components/navbar1";
-import image from "../public/assets/user.svg";
 import axios from "axios";
-import Link from "next/link";
 import { GetServerSideProps } from "next";
 import Head from "next/head";
 import favicon from "../public/assets/favicon.png";
 import metaCard from "../public/assets/custodia-metacard.png";
-import { styled } from "@mui/material/styles";
-import Button from "@mui/material/Button";
-import Blog from "../components/blog";
-import Newsletter from "@/components/newsletter";
+import BlogComponent from "../components/blog";
 
-const BlogHome = () => {
+// Interfaces
+interface BlogAttributes {
+  title: string;
+  description: string;
+  content: string;
+  slug: string;
+  category: {
+    data: {
+      attributes: {
+        name: string;
+      };
+    };
+  };
+  author: {
+    data: {
+      attributes: {
+        team: string;
+        name: string;
+      };
+    };
+  };
+  image: {
+    data: {
+      attributes: {
+        url: string;
+        name: string;
+      };
+    };
+  };
+}
+
+interface Blog {
+  id: number;
+  attributes: BlogAttributes;
+}
+
+interface BlogResponse {
+  data: Blog[];
+}
+
+interface BlogHomeProps {
+  initialBlogs: BlogResponse;
+  initialPage: number;
+}
+
+
+const BlogHome = ({ initialBlogs, initialPage }: BlogHomeProps) => {
   return (
     <div>
       <Head>
@@ -96,28 +137,39 @@ const BlogHome = () => {
         />
       </Head>
       <Navbar1 />
-      <Blog />
+       <BlogComponent initialBlogs={initialBlogs} initialPage={initialPage} />
       <Footer />
     </div>
   );
 };
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const { data } = await axios.get(
-    "https://custodia-health-blog.herokuapp.com/api/articles?populate[0]=category&populate[1]=author&populate[2]=image&sort=createdAt:desc",
-    {
-      headers: {
-        "Cache-Control": "no-cache",
-      },
-    }
-  );
+  try {
+    const page = 1;
+    const pageSize = 15;
+    const timestamp = new Date().getTime();
+    
+    const response = await axios.get<BlogResponse>(
+      `https://custodia-health-blog.herokuapp.com/api/articles?populate[0]=category&populate[1]=author&populate[2]=image&sort=createdAt:desc&_=${timestamp}&pagination[page]=${page}&pagination[pageSize]=15`
+    );
 
-  return {
-    props: {
-      blogs: data,
-      revalidate: 10, // Set the revalidation interval to 10 seconds
-    },
-  };
+    return {
+      props: {
+        initialBlogs: response.data,
+        initialPage: page,
+      },
+    };
+  } catch (error) {
+    console.error("Error fetching data in getServerSideProps:", error);
+    
+    
+    return {
+      props: {
+        initialBlogs: { data: [] },
+        initialPage: 1,
+      },
+    };
+  }
 };
 
 export default BlogHome;

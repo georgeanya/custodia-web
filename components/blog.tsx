@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo } from "react";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import axios from "axios";
@@ -26,7 +26,7 @@ const SustainOutlineButton = styled(Button)({
   },
 });
 
-interface BlogAttributes {
+interface BlogPostAttributes {
   title: string;
   description: string;
   content: string;
@@ -56,13 +56,18 @@ interface BlogAttributes {
   };
 }
 
-interface Blog {
+interface BlogPost {
   id: number;
-  attributes: BlogAttributes;
+  attributes: BlogPostAttributes;
 }
 
 interface BlogResponse {
-  data: Blog[];
+  data: BlogPost[];
+}
+
+interface BlogPageProps {
+  initialBlogs: BlogResponse;
+  initialPage: number;
 }
 
 type BlogCategory =
@@ -73,10 +78,11 @@ type BlogCategory =
   | "Research"
   | "Nutrition";
 
-const Blog: React.FC = () => {
-  const [blogs, setBlogs] = useState<BlogResponse | null>(null);
+const Blog: React.FC<BlogPageProps> = ({ initialBlogs, initialPage }) => {
+  const [blogs, setBlogs] = useState<BlogResponse | null>(initialBlogs);
   const [toggleState, setToggleState] = useState<BlogCategory>("All");
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(initialPage);
+  const [error, setError] = useState<string | null>(null);
   const [isNewsletterOpen, setIsNewsletterOpen] = useState(false);
 
   const openNewsletter = () => {
@@ -87,35 +93,31 @@ const Blog: React.FC = () => {
     setIsNewsletterOpen(false);
   };
 
-  const loadMorePosts = () => {
-    setPage((page) => page + 1);
+  const loadMorePosts = async () => {
+    try {
+      const nextPage = page + 1;
+      const timestamp = new Date().getTime();
+      const response = await axios.get<BlogResponse>(
+        `https://custodia-health-blog.herokuapp.com/api/articles?populate[0]=category&populate[1]=author&populate[2]=image&sort=createdAt:desc&_=${timestamp}&pagination[page]=${nextPage}&pagination[pageSize]=15`
+      );
+
+      setBlogs((prevBlogs) => {
+        if (!prevBlogs) {
+          return response.data;
+        } else {
+          return {
+            ...prevBlogs,
+            data: [...prevBlogs.data, ...response.data.data],
+          };
+        }
+      });
+      setPage(nextPage);
+      setError(null);
+    } catch (error) {
+      console.error("Error fetching more data:", error);
+      setError("Failed to load more blogs. Please try again later.");
+    }
   };
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const timestamp = new Date().getTime();
-        const response = await axios.get<BlogResponse>(
-          `https://custodia-health-blog.herokuapp.com/api/articles?populate[0]=category&populate[1]=author&populate[2]=image&sort=createdAt:desc&_=${timestamp}&pagination[page]=${page}&pagination[pageSize]=15`
-        );
-
-        setBlogs((prevBlogs) => {
-          if (!prevBlogs) {
-            return response.data;
-          } else {
-            return {
-              ...prevBlogs,
-              data: [...prevBlogs.data, ...response.data.data],
-            };
-          }
-        });
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    fetchData();
-  }, [page]);
 
   const blogsToDisplay = useMemo(() => {
     if (!blogs || !blogs.data) return [];
@@ -145,6 +147,10 @@ const Blog: React.FC = () => {
     return filteredBlogs.slice(7);
   }, [blogs, toggleState]);
 
+  const toggleTab = (index: BlogCategory) => {
+    setToggleState(index);
+  };
+
   if (!blogs) {
     return (
       <div className="flex justify-center py-[180px] md:py-[220px]">
@@ -171,15 +177,7 @@ const Blog: React.FC = () => {
     );
   }
 
-  const toggleTab = (index: BlogCategory) => {
-    setToggleState(index);
-  };
-
-  const handleSelect = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setToggleState(event.target.value as BlogCategory);
-  };
-
-  const blog = blogs.data[0] || ({} as Blog);
+  const blog = blogs.data[0] || ({} as BlogPost);
   const ImgUrl = blog.attributes?.image?.data?.attributes?.url || "";
 
   return (
@@ -281,9 +279,8 @@ const Blog: React.FC = () => {
           </ul>
         </div>
         <div className="mt-10 grid md:grid-cols-3 md:grid-rows-1 gap-15 md:mb-20 mb-15">
-          {blogsToDisplay.map((blogpost: any) => {
-            const blog = blogpost;
-            const { id, attributes } = blog;
+          {blogsToDisplay.map((blogpost) => {
+            const { id, attributes } = blogpost;
 
             return (
               <div
@@ -293,7 +290,7 @@ const Blog: React.FC = () => {
                 <div>
                   <Link href={`/blog/${attributes.slug}`}>
                     <img
-                      src={attributes.image.data.attributes.formats.medium.url}
+                      src={attributes.image.data.attributes.url}
                       alt={attributes.image.data.attributes.name}
                       className="cursor-pointer w-full md:w-[357px] md:h-[205.55px] rounded-[20px]"
                     />
@@ -315,10 +312,10 @@ const Blog: React.FC = () => {
                   />
                   <div className="ml-4 self-center">
                     <p className="text-[#002A47] text-sm md:text-base leading-5 font-medium">
-                      {blog.attributes.author.data.attributes.name}
+                      {attributes.author.data.attributes.name}
                     </p>
                     <p className="text-[#476D85] text-xs">
-                      {blog.attributes.author.data.attributes.team}
+                      {attributes.author.data.attributes.team}
                     </p>
                   </div>
                 </div>
@@ -342,9 +339,8 @@ const Blog: React.FC = () => {
         </div>
         <Newsletter isOpen={isNewsletterOpen} onClose={closeNewsletter} />
         <div className="mt-10 md:mt-20 grid md:grid-cols-3 md:grid-rows-1 gap-15 md:mb-20 mb-15">
-          {blogsToDisplay2?.map((blogpost: any) => {
-            const blog = blogpost;
-            const { id, attributes } = blog;
+          {blogsToDisplay2?.map((blogpost) => {
+            const { id, attributes } = blogpost;
 
             return (
               <div
@@ -354,7 +350,7 @@ const Blog: React.FC = () => {
                 <div>
                   <Link href={`/blog/${attributes.slug}`}>
                     <img
-                      src={attributes.image.data.attributes.formats.medium.url}
+                      src={attributes.image.data.attributes.url}
                       alt={attributes.image.data.attributes.name}
                       className="cursor-pointer w-full md:w-[357px] md:h-[205.55px] rounded-[20px]"
                     />
@@ -368,9 +364,6 @@ const Blog: React.FC = () => {
                       {attributes.title}
                     </p>
                   </Link>
-                  {/* <p className="text-[#476D85] mt-4 md:mt-5 text-base leading-6 md:leading-7 md:text-lg">
-                        {attributes.description}
-                      </p> */}
                 </div>
                 <div className="flex mt-3 md:mt-4">
                   <img
@@ -380,10 +373,10 @@ const Blog: React.FC = () => {
                   />
                   <div className="ml-4 self-center">
                     <p className="text-[#002A47] text-sm md:text-base leading-5 font-medium">
-                      {blog.attributes.author.data.attributes.name}
+                      {attributes.author.data.attributes.name}
                     </p>
                     <p className="text-[#476D85] text-xs">
-                      {blog.attributes.author.data.attributes.team}
+                      {attributes.author.data.attributes.team}
                     </p>
                   </div>
                 </div>
