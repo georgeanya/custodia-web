@@ -38,7 +38,7 @@ interface IState {
     email: string;
     phone_number: string;
     referrer: string;
-    dob: DateValue | null;
+    dob: any
     gender: string;
     discount_code: string;
   };
