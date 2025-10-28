@@ -146,7 +146,7 @@ const Footer = () => {
         </div>
         <hr className="md:mt-[90px] mt-[70px] text-[#C7CBD1]" />
         <p className="md:mt-[45px] mt-[35px] text-sm md:text-[15px] leading-[17px] md:leading-[18px] pb-[45px] md:pb-[45px] text-center md:text-start">
-          ©{currentYear} Custodia Health, a Lifebox Labs company
+          ©{currentYear} Custodia Health, a <a className="underline" target="_blank" href="https://lifebox.ng">Lifebox Labs</a> company
         </p>
       </div>
       <div className="pb-[51px] md:pb-[65px]"><div id="wcb" className="carbonbadge md:inline-block py-3 px-4 md:py-5 md:px-7 bg-white" data-url="https://custodiahealth.com/"></div></div>
