@@ -8,23 +8,18 @@ const Section2 = () => {
       <div className="md:pt-28 pt-20 md:pb-36 pb-24 container mx-auto flex flex-col md:flex-row md:justify-between">
         <div className="md:max-w-[550px]">
           <h2 className=" pb-[35px] md:pb-[50px] text-2xl leading-9 md:text-start md:text-4xl font-bold text-white pr-3 md:max-w-[535px]">
-            Your patients are in safe hands
+            We are your virtual care team, available 24/7
           </h2>
           <p className="text-basex md:text-1lg md:leading-8 text-white font-normal md:pr-10">
-            Our providers serve as dedicated metabolic disease specialists,
-            complementing your role as the primary care doctor for your
-            patients.
+            15-minute visits aren&apos;t enough to address complex behavioral changes needed for chronic condition management.
           </p>
           <hr className="my-6 md:my-8 mb-6 md:mb-8" />
           <p className="text-basex md:text-1lg md:leading-8 text-white font-normal md:pr-10">
-            They monitor biomarkers, provide metabolic health counseling, and
-            safely deprescribe medications when appropriate.
+            What happens between visits remains a mystery.  Patients struggle to maintain lifestyle changes without ongoing support.
           </p>
           <hr className="my-6 md:my-8 mb-6 md:mb-8" />
           <p className="text-basex md:text-1lg md:leading-8 text-white font-normal md:pr-10">
-            We understand the importance of collaboration and communication. We
-            keep you informed of any changes to your patient&apos;s medication
-            regimens, ensuring seamless coordination of care.
+            Custodia fills the gap between appointments. Think of us as an extension of your practice—providing the continuous support your patients need to make lasting changes.
           </p>
           <div className="mt-10 md:mt-15 ">
             <CustomButton

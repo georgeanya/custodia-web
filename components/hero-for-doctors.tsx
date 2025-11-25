@@ -8,12 +8,10 @@ const Hero = () => {
       <div className="container mx-auto md:pt-18 pb-20 md:pb-36 flex flex-col md:flex-row md:justify-between ">
         <div className="md:max-w-lg pt-15 pb-17 md:pb-0 md:pt-18">
           <h1 className="md:pr-14  text-4lg md:text-start md:text-5xl font-bold text-[#002A47]">
-            Effective{" "}
-            <span className="text-[#4F9EEA]">metabolic disease care</span> for
-            your patients
+            Extend your care between visits
           </h1>
-          <p className="mt-5 md:mt-6 text-base font-normal md:pr-8 md:text-start md:text-2lg text-[#476D85]">
-            Custodia is an online specialty clinic that helps patients safely and sustainably achieve diabetes remission and lose weight
+          <p className="mt-5 md:mt-6 text-base font-normal md:pr-8 md:text-start md:text-[22px] md:leading-8 text-[#476D85]">
+           Empower your patients with continuous support for chronic conditions. Custodia delivers proven outcomes while you focus on what matters most
           </p>
           <div className="mt-8">
             <CustomButton

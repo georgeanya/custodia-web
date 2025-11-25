@@ -11,10 +11,10 @@ const Section1 = () => {
        <div className="md:pt-28 pt-20 md:pb-36 pb-24  flex justify-between flex-col md:flex-row container mx-auto">
       <div className="md:max-w-[535px]">
         <h2 className=" text-[28px] leading-[35px] md:text-start md:text-4xl font-bold text-[#002A47]">
-          We treat multiple chronic metabolic diseases
+          Multi-condition virtual care programs for you
         </h2>
         <p className="mt-5 md:mt-6 text-base leading-6 md:text-start md:text-1lg text-[#002A47] md:max-w-3xl">
-          Whatever your condition is, we have a personalized program for you
+          We have a personalized program for whatever condition you have
         </p>
       </div>
       <div className="grid md:grid-cols-2 md:grid-rows-2 md:gap-y-6 gap-x-5 grid-rows-4 grid-cols-1 gap-y-[15px] mt-[42px] md:mt-0">

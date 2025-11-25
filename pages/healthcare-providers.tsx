@@ -5,7 +5,7 @@ import Section2 from "../components/section2-for-doctors";
 import Hero from "../components/hero-for-doctors";
 import Section4 from "../components/section4-for-doctors";
 import Section3 from "../components/section3-for-doctors";
-import Section5 from "../components/section5-for-doctors";
+import Section5 from "../components/section5";
 import Section7 from "../components/section7-for-doctors";
 import favicon from "../public/assets/favicon.png";
 import metaCard from "../public/assets/provider-metacard.jpg";
@@ -114,10 +114,9 @@ const ForDoctors = () => {
       <Hero />
       <Section1 />
       <Section2 />
-      <Section3 />
+      {/* <Section3 /> */}
       <Section4 />
       <Section5 />
-      <Section7 />
       <Footer />
     </div>
   );

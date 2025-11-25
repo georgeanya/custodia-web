@@ -14,7 +14,7 @@ const Section5 = () => {
           Don’t just take our word for it
         </h2>
         <p className="mt-5 md:mt-6 text-base md:text-start mb-7 md:mb-14 md:text-xl leading-6 md:max-w-xl text-[#002A47]">
-          See what some of our patients say about us.
+          See what some of our members say about us.
         </p>
         <div className="md:grid md:grid-cols-2 md:gap-7">
           <div className="mt-8 md:mt-0 px-5 py-10 md:px-12 md:py-14 rounded-2xl bg-[#F0F3F4] flex flex-col justify-between">
@@ -71,34 +71,34 @@ const Section5 = () => {
         <div className="flex flex-wrap justify-between mt-16">
           <div className="md:w-60 w-40 mb-10 md:mb-0">
             <p className="font-medium text-2xl leading-9 md:text-5lg text-[#4F9EEA]">
-              95%
+              54%
             </p>
             <p className="md:text-base md:leading-6 text-sm font-normal text-[#002A47] md:mt-3 mt-1">
-              of patients reduced or eliminated their medications
+              of members reduced or eliminated their medications
             </p>
           </div>
           <div className="md:w-60 w-40 mb-10 md:mb-0">
             <p className="font-medium text-2xl leading-9 md:text-5lg text-[#4F9EEA]">
-              1.5%
+              2.2%
             </p>
             <p className="md:text-base md:leading-6 text-sm font-normal text-[#002A47] md:mt-3 mt-1">
-              Average HbA1c reduction among 90% patients
+              Average HbA1c reduction among 90% of members
             </p>
           </div>
           <div className="md:w-60 w-40">
             <p className="font-medium text-2xl leading-9 md:text-5lg text-[#4F9EEA]">
-              ₦200,000
+              65%
             </p>
             <p className="md:text-base md:leading-6 text-sm font-normal text-[#002A47] md:mt-3 mt-1">
-              Average yearly cost savings on medications
+              of members achieve normal blood pressure after 6 months
             </p>
           </div>
           <div className="md:w-60 w-40">
             <p className="font-medium text-2xl leading-9 md:text-5lg text-[#4F9EEA]">
-              15%
+              90%
             </p>
             <p className="md:text-base md:leading-6 text-sm font-normal text-[#002A47] md:mt-3 mt-1">
-              Average weight loss after 6 months
+              of members are satisfied with care in program
             </p>
           </div>
         </div>

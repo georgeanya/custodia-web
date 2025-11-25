@@ -60,8 +60,7 @@ const Section4 = () => {
             Your patients get all the support they need
           </h2>
           <p className="mt-5 md:mt-6 mb-16 md:mb-24 text-base leading-6  md:text-start md:text-2lg md:max-w-xl text-[#002A47]">
-            We give your patients the tools and support they need to reverse
-            their condition and take control of their health.
+            We give your patients the tools and support they need to manage their condition and take control of their health.
           </p>
           <div className="max-w-xl min-w-full">
             <div>

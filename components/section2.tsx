@@ -8,21 +8,18 @@ const Section2 = () => {
       <div className="md:pt-28 pt-20 md:pb-36 pb-24 flex flex-col container mx-auto md:flex-row md:justify-between">
         <div className="md:max-w-[550px]">
           <h2 className=" pb-[35px] md:pb-[50px] text-2xl leading-9 md:text-start md:text-4xl font-bold text-white pr-3 md:max-w-[535px]">
-          Our approach is designed to treat the root cause
+          Traditional healthcare isn&apos;t built to support you daily
           </h2>
           <p className="text-basex md:text-1lg md:leading-8 text-white font-normal md:pr-10">
-            Medications only manage the symptoms of chronic metabolic diseases
-            without dealing with the underlying cause
+            Most people only see a doctor 2–4 times a year, but your blood sugar, blood pressure, weight, stress, and lifestyle change every single day.
           </p>
           <hr className="my-6 md:my-8 mb-6 md:mb-8" />
           <p className="text-basex md:text-1lg md:leading-8 text-white font-normal md:pr-10">
-            We focus on treating the root cause of the disease by changing what
-            you eat and helping you make sustainable lifestyle changes
+            That gap leads to rising blood sugar, blood pressure spikes, weight gain, and emergencies that could have been prevented
           </p>
           <hr className="my-6 md:my-8 mb-6 md:mb-8" />
           <p className="text-basex md:text-1lg md:leading-8 text-white font-normal md:pr-10">
-            Our doctors and health coaches support you and remotely monitor you
-            to help you go off medications safely and sustain your success
+            Custodia give you the support, monitoring, and guidance you need between doctor visits — when it matters most.
           </p>
           <div className="mt-10 md:mt-15 ">
             <CustomButton

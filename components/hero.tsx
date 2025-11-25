@@ -28,10 +28,10 @@ const Hero = () => {
       <div className="container mx-auto lg:pt-18 pb-20 lg:pb-36 flex flex-col lg:flex-row lg:justify-between ">
         <div className="md:max-w-lg  pt-15 pb-17 lg:pb-0 lg:pt-18">
           <h1 className="  text-4lg lg:text-start lg:text-5xl font-bold text-[#002A47] ">
-            Reverse prediabetes, type 2 diabetes, and obesity 
+            Care for diabetes between doctor&apos;s visits
           </h1>
-          <p className="mt-5 md:mt-6 text-base font-normal lg:pr-8 lg:text-start lg:text-2lg text-[#476D85]">
-          Lower your blood sugar, lose weight, and transform your health with personalized nutrition and expert guidance from a doctor-led team
+          <p className="mt-5 md:mt-6 text-base font-normal lg:text-start lg:text-[22px] md:leading-8 text-[#476D85]">
+          You see your doctor quarterly. But your condition needs daily care. That&apos;s where most people struggle—and where Custodia steps in.
           </p>
           <div className="mt-8 ">
             <CustomButton href="/sign-up" title="Get started now" />
