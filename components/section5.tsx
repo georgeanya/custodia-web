@@ -25,7 +25,7 @@ const Section5 = () => {
             </p>
             <div className="pt-10 flex ">
               <img
-                src={image.src}
+                src={image1.src}
                 alt="Avatar"
                 width="60px"
                 className="w-12 md:w-15"
@@ -57,10 +57,10 @@ const Section5 = () => {
                 />
                 <div className="self-center pl-3">
                   <p className="font-medium text-base leading-5 md:leading-6 md:text-lg text-[#002A47]">
-                    Uwa Uye
+                    Uwa Uyai
                   </p>
                   <p className="text-xs md:text-sm leading-4 text-[#476D85]">
-                    Abuja, Nigeria
+                    Lagos, Nigeria
                   </p>
                 </div>
               </div>

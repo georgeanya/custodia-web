@@ -9,7 +9,7 @@ const Faq = () => {
     {
       question: "What is Custodia?",
       answer:
-        "Custodia is an online specialty clinic that helps people reverse chronic metabolic diseases like type 2 diabetes and obesity, through sustainable lifestyle changes. We offers virtual care, personalized coaching, and medical supervision to address the root causes of these conditions.",
+        "Custodia is a virtual care program that empowers people to reverse chronic metabolic diseases like type 2 diabetes through sustainable lifestyle change.",
       open: true,
     },
     {
@@ -19,19 +19,19 @@ const Faq = () => {
       open: false,
     },
     {
-      question: "How much does Custodia cost?",
+      question: "Does Custodia replace my doctor? ",
       answer:
         "Custodia offers one membership plans: a Basic plan at ₦60,000 per quarter. The plan includes personal health coaching, unlimited consultations, continuous medical supervision, a personalized nutrition plan, and educational resources.",
       open: false,
     },
     {
-      question: "What do I get when I join Custodia?",
+      question: "What results can I expect?",
       answer:
         "Upon joining Custodia, you get personal health coaching, unlimited consultations, continuous medical supervision, a personalized nutrition plan, and educational resources.",
       open: false,
     },
     {
-      question: "Can type 2 diabetes be reversed?",
+      question: "Is Custodia right for me?",
       answer:
         "Yes, a lot of scientific studies have confirmed that through diet changes and weight loss, the process underlying type 2 diabetes can be put into remission without the help of medication.",
       open: false,

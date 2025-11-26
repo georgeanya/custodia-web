@@ -74,9 +74,9 @@ const Section4 = () => {
               ))}
               <div className="mt-10 md:mt-15 ">
                 <CustomButton
-                  href="https://forms.gle/RZ3DwhQ4wpSX3GAw5"
-                  title="Refer patients here"
-                />
+              href="https://forms.gle/RZ3DwhQ4wpSX3GAw5"
+              title="Join our partner program"
+            />
               </div>
             </div>
           </div>

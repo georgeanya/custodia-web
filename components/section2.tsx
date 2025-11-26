@@ -22,10 +22,7 @@ const Section2 = () => {
             Custodia give you the support, monitoring, and guidance you need between doctor visits — when it matters most.
           </p>
           <div className="mt-10 md:mt-15 ">
-            <CustomButton
-              href="/research"
-              title="Research behind our treatment"
-            />
+            <CustomButton href="/sign-up" title="Get started now" />
           </div>
         </div>
         <div className="md:max-w-lg  ">

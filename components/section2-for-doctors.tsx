@@ -23,8 +23,8 @@ const Section2 = () => {
           </p>
           <div className="mt-10 md:mt-15 ">
             <CustomButton
-              href="/research"
-              title="Research behind our treatment"
+              href="https://forms.gle/RZ3DwhQ4wpSX3GAw5"
+              title="Join our partner program"
             />
           </div>
         </div>

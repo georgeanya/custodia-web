@@ -8,36 +8,30 @@ import CustomButton from "./mainButton";
 const Section4 = () => {
   const [faqs, setFaqs] = useState([
     {
-      question: "Virtual doctor consultations",
+      question: "Personal health coaching",
       answer:
-        "Access expert medical care from from the comfort of your home. Our virtual consultations provide timely advice and support, ensuring you receive the care you need whenever you need it",
+        "You will get paired with an AI health coach that will guide you through dietary changes and lifestyle modifications and keep you on track.",
       open: true,
     },
     {
-      question: "Personal health coaching",
+      question: "Educational resources",
       answer:
         "Get one-on-one guidance from expert health coaches who are with you every step of the way. They’ll keep you motivated, answer your questions, and provide support tailored to your unique lifestyle",
       open: false,
     },
 
     {
-      question: "Continuous medical supervision",
+      question: "Member community",
       answer:
         "Health metrics like blood sugar can change quickly during diabetes reversal. Our medical team closely monitors your progress to ensure your safety and adjust your plan to keep you on track.",
       open: false,
     },
     {
-      question: "Personalized nutrition plan",
+      question: "Meal planning tools",
       answer:
         "Your plan is designed just for you—taking into account your goals, preferences, and health needs. Enjoy meals that support your journey while still being delicious and satisfying",
       open: false,
-    },
-    {
-      question: "Educational resources",
-      answer:
-        "Learn everything you need to take control of your health with our easy-to-understand guides, tools, and tips. We’ll help you turn small changes into lifelong success",
-      open: false,
-    },
+    }
   ]);
 
   const toggleFAQ = (index: number) => {
