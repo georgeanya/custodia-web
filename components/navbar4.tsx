@@ -97,14 +97,14 @@ const Navbar = () => {
                     <p className="text-[#002A47]">For healthcare providers</p>
                   </Link>
                 </li>
-                <li className="mt-3.5 mx-5 cursor-pointer">
+                {/* <li className="mt-3.5 mx-5 cursor-pointer">
                   <Link title="Pricing"
                     href="/pricing"
                     className="text-base pt-5 mt-5 text-[#002A47] rounded  hover:text-blue-700 "
                   >
                     <p className="text-[#002A47]">Pricing</p>
                   </Link>
-                </li>
+                </li> */}
                 <li className="mt-3.5 mx-5 cursor-pointer">
                   <Link title="Blog"
                     href="/blog"

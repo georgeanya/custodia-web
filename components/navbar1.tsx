@@ -9,7 +9,6 @@ const Navbar1 = () => {
   const [isToggled, setIsToggled] = useState(true);
   const handleToggleFunc = () => {
     setIsToggled(!isToggled);
-    // console.log("isToggle Clicked and is ", isToggled);
   };
   return (
     <div>
@@ -80,14 +79,14 @@ const Navbar1 = () => {
                     For healthcare providers
                   </Link>
                 </li>
-                <li className="mt-3.5 mx-5 cursor-pointer">
+                {/* <li className="mt-3.5 mx-5 cursor-pointer">
                   <Link title="Pricing"
                     href="/pricing"
                     className="text-base pt-5 mt-5 text-[#002A47] rounded  hover:text-blue-700 "
                   >
                     Pricing
                   </Link>
-                </li>
+                </li> */}
                 <li className="mt-3.5 mx-5 cursor-pointer">
                   <Link title="Blog"
                     href="/blog"

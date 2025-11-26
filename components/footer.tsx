@@ -48,9 +48,9 @@ const Footer = () => {
               <h3 className="md:mb-8 mb-[27px] mt-[60px] md:mt-0 text-[15px] leading-[18px] md:text-base font-medium">
                 PRODUCT
               </h3>
-              <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
+              {/* <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
                 <Link title="Pricing" href="/pricing">Pricing</Link>
-              </p>
+              </p> */}
               <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
                 <Link title="For healthcare providers" href="/healthcare-providers">
                   For healthcare providers
